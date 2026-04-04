@@ -44,8 +44,8 @@ deploy_backend() {
   npm run build
 
   # Verify build
-  if [ ! -f "dist/main.js" ]; then
-    echo -e "${RED}❌ Build failed: dist/main.js not found${NC}"
+  if [ ! -f "dist/src/main.js" ]; then
+    echo -e "${RED}❌ Build failed: dist/src/main.js not found${NC}"
     exit 1
   fi
   echo -e "${GREEN}✅ Build successful${NC}"

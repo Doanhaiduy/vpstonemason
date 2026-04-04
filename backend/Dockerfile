@@ -21,4 +21,4 @@ COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 COPY package*.json ./
 EXPOSE 4000
-CMD ["node", "dist/main"]
+CMD ["node", "dist/src/main.js"]
