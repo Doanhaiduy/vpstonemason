@@ -21,24 +21,37 @@ export function AdminImageField({
   const [mode, setMode] = useState<'upload' | 'url'>('upload');
   const [uploading, setUploading] = useState(false);
 
+  const getCloudinarySignature = useCallback(
+    async (targetFolder: string) => {
+      const payload = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ folder: targetFolder }),
+      };
+
+      // Prefer backend /api route, then fallback to frontend route when /api is proxied away.
+      const primary = await fetch('/api/cloudinary/sign', payload);
+      const response = primary.ok
+        ? primary
+        : await fetch('/cloudinary/sign', payload);
+
+      if (!response.ok) {
+        throw new Error('Cloudinary signing failed');
+      }
+
+      return response.json();
+    },
+    [],
+  );
+
   const uploadFile = useCallback(
     async (file: File | null) => {
       if (!file) return;
 
       setUploading(true);
       try {
-        const signRes = await fetch('/api/cloudinary/sign', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ folder }),
-        });
-
-        if (!signRes.ok) {
-          throw new Error('Cloudinary signing failed');
-        }
-
         const { cloudName, apiKey, timestamp, signature, folder: signedFolder } =
-          await signRes.json();
+          await getCloudinarySignature(folder);
 
         const formData = new FormData();
         formData.append('file', file);
@@ -67,7 +80,7 @@ export function AdminImageField({
         setUploading(false);
       }
     },
-    [folder, onChange],
+    [folder, getCloudinarySignature, onChange],
   );
 
   return (

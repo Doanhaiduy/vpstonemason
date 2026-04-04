@@ -22,6 +22,26 @@ export function CloudinaryUpload({
   const [mode, setMode] = useState<'upload' | 'url'>('upload');
   const [manualUrl, setManualUrl] = useState('');
 
+  const getCloudinarySignature = async (targetFolder: string) => {
+    const payload = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ folder: targetFolder }),
+    };
+
+    // Prefer backend /api route, then fallback to frontend route when /api is proxied away.
+    const primary = await fetch('/api/cloudinary/sign', payload);
+    const response = primary.ok
+      ? primary
+      : await fetch('/cloudinary/sign', payload);
+
+    if (!response.ok) {
+      throw new Error('Cloudinary signing failed');
+    }
+
+    return response.json();
+  };
+
   const uploadFiles = async (fileList: FileList | null) => {
     if (!fileList || fileList.length === 0) return;
 
@@ -35,23 +55,13 @@ export function CloudinaryUpload({
       const nextImages = [...images];
 
       for (const file of files) {
-        const signRes = await fetch('/api/cloudinary/sign', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ folder }),
-        });
-
-        if (!signRes.ok) {
-          throw new Error('Cloudinary signing failed');
-        }
-
         const {
           cloudName,
           apiKey,
           timestamp,
           signature,
           folder: signedFolder,
-        } = await signRes.json();
+        } = await getCloudinarySignature(folder);
 
         const formData = new FormData();
         formData.append('file', file);

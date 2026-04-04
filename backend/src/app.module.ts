@@ -14,6 +14,7 @@ import { BlogModule } from './modules/blog/blog.module';
 import { ShowroomModule } from './modules/showroom/showroom.module';
 import { MailModule } from './modules/mail/mail.module';
 import { CatalogModule } from './modules/catalog/catalog.module';
+import { CloudinaryModule } from './modules/cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -68,6 +69,7 @@ import { CatalogModule } from './modules/catalog/catalog.module';
     ShowroomModule,
     MailModule,
     CatalogModule,
+    CloudinaryModule,
   ],
   providers: [
     {
