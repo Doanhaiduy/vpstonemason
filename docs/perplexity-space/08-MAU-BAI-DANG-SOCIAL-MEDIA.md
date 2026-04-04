@@ -23,7 +23,7 @@ Swipe to see more angles! 👉
 
 Ready for your own kitchen transformation?
 📞 (03) 9000 0000
-🌐 vpstonemason.vercel.app
+🌐 pvstone.com.au
 📍 123 Stone Avenue, Richmond
 
 #KitchenRenovation #StoneBenchtops #MelbourneKitchen #[StoneType] #VPStoneMason #KitchenDesign #HomeRenovation #[Suburb]Homes #DreamKitchen #PremiumStone
@@ -72,7 +72,7 @@ Why we love it:
 See it in person at our Richmond showroom — photos can't capture how beautiful this stone truly is! 🏛️
 
 📞 (03) 9000 0000
-🌐 vpstonemason.vercel.app/stones/[slug]
+🌐 pvstone.com.au/stones/[slug]
 
 #[StoneName] #[StoneType] #StoneBenchtops #KitchenDesign #MelbourneHomes #PremiumStone #VPStoneMason #NaturalStone
 ```
@@ -308,7 +308,7 @@ ALL prices include:
 
 📞 (03) 9000 0000
 📍 Richmond showroom
-🌐 vpstonemason.vercel.app
+🌐 pvstone.com.au
 
 *T&Cs apply. While stocks last.
 

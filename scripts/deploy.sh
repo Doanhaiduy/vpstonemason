@@ -57,7 +57,7 @@ deploy_backend() {
   echo "  JWT_SECRET=<secure-random-string>"
   echo "  JWT_ACCESS_EXPIRATION=15m"
   echo "  JWT_REFRESH_EXPIRATION=7d"
-  echo "  FRONTEND_URL=https://your-frontend.vercel.app"
+  echo "  FRONTEND_URL=https://pvstone.com.au"
   echo "  NODE_ENV=production"
   echo ""
 
@@ -74,8 +74,8 @@ deploy_frontend() {
 
   echo -e "${YELLOW}☁️  Deploying to Vercel...${NC}"
   echo -e "${YELLOW}Set these environment variables in Vercel Dashboard:${NC}"
-  echo "  NEXT_PUBLIC_API_URL=https://your-backend.vercel.app/api"
-  echo "  NEXT_PUBLIC_SITE_URL=https://your-frontend.vercel.app"
+  echo "  NEXT_PUBLIC_API_URL=https://api.pvstone.com.au/api"
+  echo "  NEXT_PUBLIC_SITE_URL=https://pvstone.com.au"
   echo ""
 
   vercel $PROD_FLAG

@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
 
   return {
-    metadataBase: new URL(config.siteUrl || 'https://vpstonemason.vercel.app'),
+    metadataBase: new URL(config.siteUrl || 'https://pvstone.com.au'),
     title: {
       default: `${config.companyName} | ${config.tagline}`,
       template: `%s | ${config.companyName}`,

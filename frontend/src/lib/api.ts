@@ -1,5 +1,5 @@
 const PUBLIC_API_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'https://vpstonemason-api.vercel.app/api';
+  process.env.NEXT_PUBLIC_API_URL || 'https://pvstone.com.au/api';
 const INTERNAL_API_URL = process.env.INTERNAL_API_URL || PUBLIC_API_URL;
 const API_URL = typeof window === 'undefined' ? INTERNAL_API_URL : PUBLIC_API_URL;
 

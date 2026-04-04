@@ -160,8 +160,8 @@ To book your FREE consultation & on-site measure, we just need:
 
 Alternatively, you can:
 📞 Call us directly: (03) 9000 0000
-📧 Email: info@vpstonemason.com.au
-🌐 Book online: https://vpstonemason.vercel.app/contact
+📧 Email: info@pvstone.com.au
+🌐 Book online: https://pvstone.com.au/contact
 
 We typically schedule measures within 3-5 business days. Our team will be in touch shortly to confirm your appointment!
 
@@ -329,8 +329,8 @@ One of our stone specialists will be in touch within 24 hours to discuss your pr
 
 In the meantime, feel free to:
 🏛️ Visit our showroom: 123 Stone Avenue, Richmond VIC 3121
-📱 Browse our gallery: https://vpstonemason.vercel.app/stones
-📖 Read our blog: https://vpstonemason.vercel.app/blog
+📱 Browse our gallery: https://pvstone.com.au/stones
+📖 Read our blog: https://pvstone.com.au/blog
 
 We look forward to working with you!
 

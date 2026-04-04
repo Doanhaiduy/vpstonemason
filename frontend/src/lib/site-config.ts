@@ -63,15 +63,15 @@ const siteConfig: SiteConfig = {
   companyName: 'vpstonemason',
   tagline: 'Premium Stone Benchtops in Australia',
   phone: '(03) 9000 0000',
-  email: 'info@vpstonemason.com',
+  email: 'info@pvstone.com.au',
   address: {
     street: '123 Stone Avenue',
     suburb: 'Richmond',
     state: 'VIC',
     postcode: '3121',
   },
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://vpstonemason.vercel.app',
-  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://vpstonemason-api.vercel.app/api',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://pvstone.com.au',
+  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://pvstone.com.au/api',
   openingHours: [
     { day: 'Monday', open: '9:00 AM', close: '5:00 PM', closed: false },
     { day: 'Tuesday', open: '9:00 AM', close: '5:00 PM', closed: false },

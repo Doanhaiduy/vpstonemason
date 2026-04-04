@@ -40,11 +40,11 @@ export class MailService {
   }) {
     const mailTo = this.configService.get<string>(
       'MAIL_TO',
-      'admin@vpstonemason.com',
+      'admin@pvstone.com.au',
     );
     const mailFrom = this.configService.get<string>(
       'MAIL_FROM',
-      '"vpstonemason" <noreply@vpstonemason.com>',
+      '"vpstonemason" <noreply@pvstone.com.au>',
     );
 
     const subject = enquiry.stoneName
@@ -106,7 +106,7 @@ export class MailService {
 
     const mailFrom = this.configService.get<string>(
       'MAIL_FROM',
-      '"vpstonemason" <noreply@vpstonemason.com>',
+      '"vpstonemason" <noreply@pvstone.com.au>',
     );
 
     try {
@@ -122,7 +122,7 @@ export class MailService {
             <div style="padding: 32px; background: #fff; border: 1px solid #e7e5e4;">
               <p style="color: #1c1917; font-size: 16px;">Hi ${toName},</p>
               <p style="color: #44403c; line-height: 1.6;">Thank you for reaching out to vpstonemason. We've received your enquiry and our team will be in touch within 24 hours.</p>
-              <p style="color: #44403c; line-height: 1.6;">In the meantime, feel free to visit our showroom or browse our <a href="https://vpstonemason.vercel.app/catalog" style="color: #bf9b30;">stone collection</a>.</p>
+              <p style="color: #44403c; line-height: 1.6;">In the meantime, feel free to visit our showroom or browse our <a href="https://pvstone.com.au/catalog" style="color: #bf9b30;">stone collection</a>.</p>
               <p style="color: #44403c; line-height: 1.6;">Warm regards,<br/><strong>The vpstonemason Team</strong></p>
             </div>
           </div>

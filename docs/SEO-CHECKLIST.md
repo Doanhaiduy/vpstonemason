@@ -135,7 +135,7 @@ After deploying to production:
 
 1. Add property in Google Search Console
 2. Verify ownership (DNS TXT record or HTML tag)
-3. Submit sitemap: `https://vpstonemason.vercel.app/sitemap.xml`
+3. Submit sitemap: `https://pvstone.com.au/sitemap.xml`
 4. Request indexing for key pages
 5. Monitor Core Web Vitals
 6. Set up Google Business Profile linking to website

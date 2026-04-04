@@ -33,7 +33,7 @@ npm run start:dev      # Runs on http://localhost:4000
 ```bash
 cd backend
 npm run seed
-# Creates admin user: admin@vpstonemason.com / admin123
+# Creates admin user: admin@pvstone.com.au / admin123
 # Creates sample categories, stones, projects, and blog posts
 ```
 

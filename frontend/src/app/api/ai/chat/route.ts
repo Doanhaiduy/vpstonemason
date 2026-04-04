@@ -19,7 +19,7 @@ async function getSystemPrompt(): Promise<string> {
     const apiUrl =
       process.env.INTERNAL_API_URL ||
       process.env.NEXT_PUBLIC_API_URL ||
-      'https://vpstonemason-api.vercel.app/api';
+      'https://pvstone.com.au/api';
     const res = await fetch(`${apiUrl}/showroom`, { next: { revalidate: 300 } });
     if (res.ok) {
       const data = await res.json();
@@ -34,7 +34,7 @@ async function isAiEnabled(): Promise<boolean> {
     const apiUrl =
       process.env.INTERNAL_API_URL ||
       process.env.NEXT_PUBLIC_API_URL ||
-      'https://vpstonemason-api.vercel.app/api';
+      'https://pvstone.com.au/api';
     const res = await fetch(`${apiUrl}/showroom`, { next: { revalidate: 300 } });
     if (!res.ok) return true;
 

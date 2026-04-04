@@ -7,7 +7,7 @@ export const siteDefaults = {
   companyName: 'vpstonemason',
   tagline: 'Premium Stone Benchtops in Australia',
   phone: '(03) 9000 0000',
-  email: 'info@vpstonemason.com',
+  email: 'info@pvstone.com.au',
   address: {
     street: '123 Stone Avenue',
     suburb: 'Richmond',

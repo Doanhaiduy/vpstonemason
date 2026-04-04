@@ -26,7 +26,7 @@ const sidebarLinks = [
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vpstonemason.vercel.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://pvstone.com.au';
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
   const [isAuthReady, setIsAuthReady] = useState(false);

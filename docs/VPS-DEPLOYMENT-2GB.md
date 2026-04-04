@@ -6,7 +6,7 @@ This guide is optimized for your current VPS size.
 
 - Run only 3 containers on VPS: `nginx`, `frontend`, `backend`
 - Use external MongoDB (Atlas or your existing remote MongoDB)
-- Access app by VPS public IP first, add domain later
+- Access app by `https://pvstone.com.au` (recommended)
 
 Why this is optimal on 2GB RAM:
 
@@ -115,10 +115,10 @@ nano .env
 
 Set required values:
 
-- NEXT_PUBLIC_SITE_URL=http://YOUR_SERVER_IP
-- NEXT_PUBLIC_API_URL=http://YOUR_SERVER_IP/api
+- NEXT_PUBLIC_SITE_URL=https://pvstone.com.au
+- NEXT_PUBLIC_API_URL=https://pvstone.com.au/api
 - INTERNAL_API_URL=http://backend:4000/api
-- FRONTEND_URL=http://YOUR_SERVER_IP
+- FRONTEND_URL=https://pvstone.com.au
 - DATABASE_URL=your mongodb atlas url
 - MONGODB_URI=your mongodb atlas url
 - JWT_SECRET=long random string
@@ -132,18 +132,18 @@ openssl rand -base64 48
 If your local machine already has real values in `backend/.env` and `frontend/.env.local`,
 generate VPS `.env` automatically:
 
-bash scripts/generate-vps-env.sh YOUR_SERVER_IP .env.vps.prd
+bash scripts/generate-vps-env.sh pvstone.com.au .env.vps.prd
 
 Then upload to VPS:
 
-scp .env.vps.prd <vps_user>@YOUR_SERVER_IP:/opt/vpstonemason/.env
+scp .env.vps.prd <vps_user>@<vps_ip_or_host>:/opt/vpstonemason/.env
 
 This maps real values for:
 
 - `DATABASE_URL`, `MONGODB_URI`, `JWT_*`, `THROTTLE_*` from `backend/.env`
 - `CLOUDINARY_*` from `backend/.env`
 - `GEMINI_*` from `frontend/.env.local`
-- `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_API_URL`, `FRONTEND_URL` from your passed IP/URL
+- `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_API_URL`, `FRONTEND_URL` from your passed domain/URL
 
 ---
 
@@ -157,13 +157,19 @@ docker compose -f docker-compose.vps.yml ps
 
 ---
 
-## 7) Verify by IP (no domain yet)
+## 7) Verify deployment
 
-Replace YOUR_SERVER_IP and test:
+Test from the final domain:
 
-curl -I http://YOUR_SERVER_IP
-curl -I http://YOUR_SERVER_IP/api/showroom
-curl -I http://YOUR_SERVER_IP/api/catalog
+curl -I https://pvstone.com.au
+curl -I https://pvstone.com.au/api/showroom
+curl -I https://pvstone.com.au/api/catalog
+
+If SSL is not ready yet, temporarily test with HTTP:
+
+curl -I http://pvstone.com.au
+curl -I http://pvstone.com.au/api/showroom
+curl -I http://pvstone.com.au/api/catalog
 
 Expected:
 
@@ -211,14 +217,15 @@ df -h
 
 ---
 
-## 10) When domain is ready
+## 10) DNS and SSL checklist
 
-- Point domain A record to VPS IP
-- Change these values in .env:
-  - NEXT_PUBLIC_SITE_URL=https://your-domain.com
-  - NEXT_PUBLIC_API_URL=https://your-domain.com/api
-  - FRONTEND_URL=https://your-domain.com
-- Rebuild and restart:
+- Point A record of `pvstone.com.au` to your VPS public IP
+- Ensure ports 80 and 443 are open
+- If TLS is not active yet, temporarily set these in `.env`:
+  - NEXT_PUBLIC_SITE_URL=http://pvstone.com.au
+  - NEXT_PUBLIC_API_URL=http://pvstone.com.au/api
+  - FRONTEND_URL=http://pvstone.com.au
+- Rebuild and restart after any `.env` change:
   - docker compose -f docker-compose.vps.yml up -d --build
 
-You can add TLS later with Caddy or Nginx + Certbot.
+When TLS is configured (recommended), use `https://pvstone.com.au` values again.

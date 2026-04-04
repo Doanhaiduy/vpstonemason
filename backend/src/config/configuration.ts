@@ -19,7 +19,7 @@ export default () => {
       url:
         process.env.FRONTEND_URL ||
         (isProduction
-          ? 'https://vpstonemason.vercel.app'
+          ? 'https://pvstone.com.au'
           : 'http://localhost:3000'),
     },
     throttle: {

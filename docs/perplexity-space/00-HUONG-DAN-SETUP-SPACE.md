@@ -62,7 +62,7 @@ Upload tất cả các file `.md` trong folder `docs/perplexity-space/` (trừ f
 ## 4️⃣ LINK (Link chính)
 
 ```
-https://vpstonemason.vercel.app/
+https://pvstone.com.au/
 ```
 
 ---
@@ -73,12 +73,12 @@ Thêm các link sau vào Space để AI có thêm ngữ cảnh:
 
 ### Links Website của bạn:
 ```
-https://vpstonemason.vercel.app/stones
-https://vpstonemason.vercel.app/about
-https://vpstonemason.vercel.app/blog
-https://vpstonemason.vercel.app/projects
-https://vpstonemason.vercel.app/showroom
-https://vpstonemason.vercel.app/contact
+https://pvstone.com.au/stones
+https://pvstone.com.au/about
+https://pvstone.com.au/blog
+https://pvstone.com.au/projects
+https://pvstone.com.au/showroom
+https://pvstone.com.au/contact
 ```
 
 ### Links Nhà cung cấp / Thương hiệu đá:
@@ -137,7 +137,7 @@ Bạn là trợ lý kinh doanh chuyên nghiệp cho VPStoneMason & Co. — một
 - Giá benchtop tại Úc thường tính theo m² (mét vuông), bao gồm: fabrication + installation
 - Khu vực phục vụ chính: Melbourne và Victoria, có thể mở rộng regional Victoria
 - Thương hiệu: VPStoneMason & Co. — Family-owned, 15+ years experience, Australian craftsmanship
-- Website: https://vpstonemason.vercel.app/
+- Website: https://pvstone.com.au/
 - Khi viết content cho Facebook/Instagram: giọng văn thân thiện, chuyên nghiệp, luxury feel
 - Khi viết blog: chuẩn SEO, có heading structure, keyword tự nhiên
 - Luôn tham khảo các file tài liệu đã upload trong space trước khi trả lời

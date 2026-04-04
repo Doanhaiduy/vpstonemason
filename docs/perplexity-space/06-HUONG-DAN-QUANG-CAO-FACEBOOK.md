@@ -262,7 +262,7 @@ Transform your kitchen with stunning [Stone Name] benchtops 💎
 📍 Visit our Richmond showroom
 
 CTA Button: Get Quote
-Link: https://vpstonemason.vercel.app/contact
+Link: https://pvstone.com.au/contact
 ```
 
 **Template 2 — Before/After:**
@@ -279,7 +279,7 @@ Ready for YOUR transformation?
 👉 Book a FREE consultation today
 
 CTA Button: Learn More
-Link: https://vpstonemason.vercel.app/projects
+Link: https://pvstone.com.au/projects
 ```
 
 **Template 3 — Lead Generation:**
@@ -311,7 +311,7 @@ Primary Text:
 Join hundreds of happy homeowners across Melbourne.
 
 📞 (03) 9000 0000
-🌐 vpstonemason.vercel.app
+🌐 pvstone.com.au
 
 CTA Button: Book Consultation
 ```
@@ -331,7 +331,7 @@ VPStoneMason offers 100% CSF (Crystalline Silica Free) alternatives:
 Learn more about your safe options:
 
 CTA Button: Learn More
-Link: https://vpstonemason.vercel.app/stones?category=csf-stone
+Link: https://pvstone.com.au/stones?category=csf-stone
 ```
 
 ### 4.2 Image/Video Specs:

@@ -66,7 +66,7 @@ export default function AdminLoginPage() {
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                 <input type="email" value={email} onChange={e => setEmail(e.target.value)} required
-                  placeholder="admin@vpstonemason.com"
+                  placeholder="admin@pvstone.com.au"
                   className="w-full pl-11 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-slate-500 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all" />
               </div>
             </div>

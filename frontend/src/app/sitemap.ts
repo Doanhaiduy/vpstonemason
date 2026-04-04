@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://vpstonemason.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://pvstone.com.au';
 
 const staticPages = [
   { url: '', priority: 1.0, changeFrequency: 'weekly' as const },

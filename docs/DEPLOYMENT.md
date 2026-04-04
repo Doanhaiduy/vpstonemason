@@ -50,7 +50,7 @@ vercel env add MONGODB_URI           # same as DATABASE_URL (recommended)
 vercel env add JWT_SECRET            # generate: openssl rand -hex 32
 vercel env add JWT_ACCESS_EXPIRATION # 15m
 vercel env add JWT_REFRESH_EXPIRATION # 7d
-vercel env add FRONTEND_URL          # https://your-frontend.vercel.app
+vercel env add FRONTEND_URL          # https://pvstone.com.au
 vercel env add NODE_ENV              # production
 vercel env add CLOUDINARY_CLOUD_NAME
 vercel env add CLOUDINARY_API_KEY
@@ -60,7 +60,7 @@ vercel env add CLOUDINARY_API_SECRET
 vercel --prod
 ```
 
-**Note your backend URL** (e.g., `https://stone-backend.vercel.app`)
+**Note your backend URL** (e.g., `https://api.pvstone.com.au`)
 
 ## Step 3: Seed Database
 
@@ -81,8 +81,8 @@ cd frontend
 vercel
 
 # Set environment variables
-vercel env add NEXT_PUBLIC_API_URL   # https://stone-backend.vercel.app/api
-vercel env add NEXT_PUBLIC_SITE_URL  # https://your-frontend.vercel.app
+vercel env add NEXT_PUBLIC_API_URL   # https://api.pvstone.com.au/api (or backend vercel URL)
+vercel env add NEXT_PUBLIC_SITE_URL  # https://pvstone.com.au
 vercel env add GEMINI_API_KEY
 vercel env add GEMINI_MODEL          # gemini-3.1-pro-preview
 vercel env add CLOUDINARY_CLOUD_NAME
@@ -98,10 +98,10 @@ vercel --prod
 
 ```bash
 # Frontend
-vercel domains add vpstonemason.vercel.app --cwd frontend
+vercel domains add pvstone.com.au --cwd frontend
 
-# Backend
-vercel domains add vpstonemason-api.vercel.app --cwd backend
+# Backend (use API subdomain on Vercel)
+vercel domains add api.pvstone.com.au --cwd backend
 ```
 
 ---
@@ -129,7 +129,7 @@ bash scripts/deploy.sh backend      # Backend only
 | `JWT_SECRET` | ✅ | `a1b2c3d4...` (random 64 char hex) |
 | `JWT_ACCESS_EXPIRATION` | ❌ | `15m` |
 | `JWT_REFRESH_EXPIRATION` | ❌ | `7d` |
-| `FRONTEND_URL` | ✅ | `https://vpstonemason.vercel.app` |
+| `FRONTEND_URL` | ✅ | `https://pvstone.com.au` |
 | `NODE_ENV` | ✅ | `production` |
 | `CLOUDINARY_CLOUD_NAME` | ✅ | `your-cloud-name` |
 | `CLOUDINARY_API_KEY` | ✅ | `1234567890` |
@@ -139,8 +139,8 @@ bash scripts/deploy.sh backend      # Backend only
 
 | Variable | Required | Example |
 |----------|----------|---------|
-| `NEXT_PUBLIC_API_URL` | ✅ | `https://vpstonemason-api.vercel.app/api` |
-| `NEXT_PUBLIC_SITE_URL` | ✅ | `https://vpstonemason.vercel.app` |
+| `NEXT_PUBLIC_API_URL` | ✅ | `https://api.pvstone.com.au/api` |
+| `NEXT_PUBLIC_SITE_URL` | ✅ | `https://pvstone.com.au` |
 | `GEMINI_API_KEY` | ✅ | `AIza...` |
 | `GEMINI_MODEL` | ✅ | `gemini-3.1-pro-preview` |
 | `CLOUDINARY_CLOUD_NAME` | ✅ | `your-cloud-name` |
