@@ -1,0 +1,19 @@
+# Build and dependencies
+node_modules/
+.next/
+out/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Deployment metadata
+.vercel/
+

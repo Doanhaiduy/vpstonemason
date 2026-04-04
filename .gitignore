@@ -1,0 +1,43 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Git / deployment metadata
+.vercel/
+
+# Environment secrets (keep templates)
+**/.env
+**/.env.*
+!**/.env.example
+!/.env.vps.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node build outputs
+backend/node_modules/
+backend/dist/
+backend/coverage/
+backend/.nestjs/
+
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Python cache/artifacts (scripts)
+**/__pycache__/
+*.py[cod]
+
+# Temp crawl outputs
+scripts/_tmp_*.json
+
+# Optional local Docker volumes/state
+*.pid
+

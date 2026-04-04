@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --header-height: 80px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-stone-50 text-stone-900;
+  }
+
+  ::selection {
+    @apply bg-accent-gold/30 text-stone-900;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .admin-shell {
+    font-family: var(--font-inter), 'Segoe UI', sans-serif;
+    letter-spacing: 0.005em;
+  }
+
+  .admin-shell h1,
+  .admin-shell h2,
+  .admin-shell h3,
+  .admin-shell h4 {
+    font-family: var(--font-inter), 'Segoe UI', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .admin-shell input,
+  .admin-shell textarea,
+  .admin-shell select,
+  .admin-shell button {
+    font-family: inherit;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           bg-stone-900 text-white text-sm font-medium tracking-wider uppercase
+           transition-all duration-300 ease-out
+           hover:bg-stone-800 hover:shadow-lg hover:shadow-stone-900/20
+           active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           border-2 border-stone-900 text-stone-900 text-sm font-medium tracking-wider uppercase
+           transition-all duration-300 ease-out
+           hover:bg-stone-900 hover:text-white
+           active:scale-[0.98];
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           bg-accent-gold text-white text-sm font-medium tracking-wider uppercase
+           transition-all duration-300 ease-out
+           hover:bg-accent-gold-dark hover:shadow-lg hover:shadow-accent-gold/20
+           active:scale-[0.98];
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply font-display text-display-sm md:text-display text-stone-900;
+  }
+
+  .section-subtitle {
+    @apply text-stone-500 text-lg md:text-xl max-w-2xl;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-out
+           hover:shadow-xl hover:shadow-stone-900/10 hover:-translate-y-1;
+  }
+
+  .image-hover {
+    @apply overflow-hidden;
+  }
+
+  .image-hover img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .image-hover:hover img {
+    @apply scale-110;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-stone-200
+           text-stone-900 placeholder:text-stone-400
+           outline-none transition-all duration-200
+           focus:border-stone-900 focus:ring-1 focus:ring-stone-900;
+  }
+
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-stone-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-stone-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-stone-400;
+}

@@ -1,0 +1,253 @@
+/* ============================================================
+   ICON Collection Gallery — "Card Stacking" sticky scroll
+   Matches Caesarstone's vertical wipe pattern:
+   Each slide is sticky, stacking on top of the previous.
+   ============================================================ */
+
+/* ---- Outer container — total height = N slides × 100vh ---- */
+.galleryOuter {
+  position: relative;
+  width: 100%;
+}
+
+/* ---- Each slide: full viewport, sticky at top ---- */
+.gallerySlide {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Slab background (fills entire slide) ---- */
+.slabBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slabBgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Content wrapper (centered, on top of slab) ---- */
+.slideInner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(1.5rem, 5vw, 5rem);
+}
+
+/* ---- Top row: label, code+name, counter ---- */
+.topRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: clamp(5rem, 10vh, 7rem);
+  flex-shrink: 0;
+}
+
+.topLeft {
+  flex-shrink: 0;
+}
+
+.surfaceLabel {
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #7a7366;
+  font-weight: 500;
+  margin: 0;
+}
+
+.topCenter {
+  flex: 1;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.stoneCode {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.125rem, 1.8vw, 1.375rem);
+  color: #3d3935;
+  margin: 0 0 0.25rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.stoneName {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: #1f1d1b;
+  margin: 0;
+  font-weight: 400;
+}
+
+.topRight {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.counter {
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
+}
+
+.counterCurrent {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(0.9375rem, 1.3vw, 1.125rem);
+  color: #1f1d1b;
+  font-weight: 400;
+}
+
+.counterTotal {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(0.8125rem, 1.1vw, 0.9375rem);
+  color: #9c9582;
+  font-weight: 400;
+}
+
+/* ---- Center: Lifestyle image ---- */
+.lifestyleCenter {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  min-height: 0;
+}
+
+.lifestyleFrame {
+  width: clamp(280px, 38vw, 580px);
+  height: 100%;
+  max-height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.lifestyleImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---- Bottom row: View Colour button ---- */
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: clamp(2rem, 5vh, 4rem);
+  flex-shrink: 0;
+}
+
+.viewColourBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 2rem;
+  border: 1.5px solid #1f1d1b;
+  background: transparent;
+  color: #1f1d1b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.viewColourBtn:hover {
+  background: #1f1d1b;
+  color: #fff;
+}
+
+.viewColourBtn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.viewColourBtn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ============== RESPONSIVE ============== */
+
+@media (max-width: 768px) {
+  .gallerySlide {
+    height: 100svh;
+  }
+
+  .topRow {
+    padding-top: clamp(4rem, 8vh, 5.5rem);
+  }
+
+  .topCenter {
+    padding: 0 0.5rem;
+  }
+
+  .surfaceLabel {
+    font-size: 0.6875rem;
+  }
+
+  .stoneName {
+    font-size: 1.5rem;
+  }
+
+  .lifestyleFrame {
+    width: clamp(220px, 70vw, 380px);
+    max-height: 50vh;
+  }
+
+  .viewColourBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topRow {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .topLeft {
+    order: 1;
+    width: 50%;
+  }
+
+  .topRight {
+    order: 2;
+    width: 50%;
+  }
+
+  .topCenter {
+    order: 3;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0 0;
+  }
+
+  .stoneName {
+    font-size: 1.375rem;
+  }
+
+  .lifestyleFrame {
+    width: 85vw;
+    max-height: 45vh;
+  }
+}
