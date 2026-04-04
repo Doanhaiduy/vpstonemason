@@ -100,6 +100,10 @@ export const api = {
   // Catalog (3-tier: category → range → product)
   getCatalogCategories: () => fetchApi<any[]>('/catalog'),
   getCatalogTree: () => fetchApi<any[]>('/catalog/tree'),
+  getCatalogProducts: (params?: Record<string, string>) => {
+    const query = params ? '?' + new URLSearchParams(params).toString() : '';
+    return fetchApi<any>(`/catalog/products${query}`);
+  },
   getCatalogItem: (slug: string) => fetchApi<any>(`/catalog/${slug}`),
   getCatalogChildren: (slug: string) => fetchApi<any[]>(`/catalog/${slug}/children`),
   getCatalogBreadcrumb: (slug: string) => fetchApi<any[]>(`/catalog/${slug}/breadcrumb`),

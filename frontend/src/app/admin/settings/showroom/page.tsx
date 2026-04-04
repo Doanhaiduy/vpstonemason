@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Save, Eye, Check, Building2, Share2, Layout, Search, Loader2, CircleHelp } from 'lucide-react';
 import { adminApi } from '@/lib/api';
 import { openAdminPreview } from '@/lib/admin-preview';
+import { toGoogleMapsEmbedUrl } from '@/lib/google-maps';
 
 export default function ShowroomSettingsPage() {
   const [saved, setSaved] = useState(false);
@@ -63,7 +64,7 @@ export default function ShowroomSettingsPage() {
         heroCta2Text: form.heroCta2Text, heroCta2Link: form.heroCta2Link,
         aboutShort: form.aboutShort,
         socialLinks: { facebook: form.facebook, instagram: form.instagram, pinterest: form.pinterest, youtube: form.youtube },
-        googleMapsEmbed: form.googleMapsEmbed,
+        googleMapsEmbed: toGoogleMapsEmbedUrl(form.googleMapsEmbed),
         seoSettings: { metaTitle: form.seoMetaTitle, metaDescription: form.seoMetaDescription, ogImage: form.seoOgImage, keywords: form.seoKeywords.split(',').map(k => k.trim()).filter(Boolean) },
         footerTagline: form.footerTagline, copyrightText: form.copyrightText,
       });
@@ -83,7 +84,7 @@ export default function ShowroomSettingsPage() {
         state: form.state,
         postcode: form.postcode,
       },
-      googleMapsEmbed: form.googleMapsEmbed,
+      googleMapsEmbed: toGoogleMapsEmbedUrl(form.googleMapsEmbed),
     });
   };
 

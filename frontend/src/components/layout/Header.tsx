@@ -15,9 +15,10 @@ const navLinks = [
     href: '/catalog',
     label: 'Collections',
     children: [
-      { href: '/catalog/mineral', label: 'Mineral' },
-      { href: '/catalog/porcelain', label: 'Porcelain' },
-      { href: '/catalog/natural', label: 'Natural' },
+      { href: '/catalog/products', label: 'All Products' },
+      { href: '/catalog/artscut-zero', label: 'Artscut Zero' },
+      { href: '/catalog/portofino-porcelain', label: 'Portofino Porcelain' },
+      { href: '/catalog/ultra-thin-surfaces', label: 'Ultra Thin Surfaces' },
     ],
   },
   { href: '/projects', label: 'Projects' },

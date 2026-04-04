@@ -25,6 +25,16 @@ interface CatalogAdminQuery {
   isActive?: boolean;
 }
 
+interface CatalogProductsQuery {
+  search?: string;
+  category?: string;
+  range?: string;
+  finish?: string;
+  page?: number;
+  limit?: number;
+  sort?: string;
+}
+
 interface CatalogAdminPayload {
   type?: string;
   title?: string;
@@ -164,6 +174,106 @@ export class CatalogService {
     return { [sortBy]: 1 };
   }
 
+  private normalizeFilterValue(value?: string): string {
+    return String(value || '').trim().toLowerCase();
+  }
+
+  private normalizePublicSort(sort?: string):
+    | 'featured'
+    | 'title-asc'
+    | 'title-desc'
+    | 'newest' {
+    const normalized = this.normalizeFilterValue(sort);
+    if (
+      normalized === 'title-asc' ||
+      normalized === 'title-desc' ||
+      normalized === 'newest'
+    ) {
+      return normalized;
+    }
+    return 'featured';
+  }
+
+  private getSpecificationsEntries(
+    specifications: unknown,
+  ): Array<[string, string]> {
+    if (!specifications || typeof specifications !== 'object') {
+      return [];
+    }
+
+    if (specifications instanceof Map) {
+      return Array.from(specifications.entries()).map(([key, value]) => [
+        String(key || ''),
+        String(value || ''),
+      ]);
+    }
+
+    return Object.entries(specifications as Record<string, unknown>).map(
+      ([key, value]) => [String(key || ''), String(value || '')],
+    );
+  }
+
+  private extractFinishValue(specifications: unknown): string {
+    const entries = this.getSpecificationsEntries(specifications);
+
+    for (const [key, value] of entries) {
+      if (!/finish|surface/i.test(key)) continue;
+      const normalizedValue = String(value || '').trim();
+      if (normalizedValue) return normalizedValue;
+    }
+
+    return '';
+  }
+
+  private splitFacetValues(value: string): string[] {
+    return String(value || '')
+      .split(/[;,|/]/)
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+
+  private sortCatalogProducts(items: any[], sort: string): any[] {
+    const sorted = [...items];
+
+    if (sort === 'title-asc') {
+      sorted.sort((a, b) =>
+        String(a.title || '').localeCompare(String(b.title || ''), undefined, {
+          sensitivity: 'base',
+        }),
+      );
+      return sorted;
+    }
+
+    if (sort === 'title-desc') {
+      sorted.sort((a, b) =>
+        String(b.title || '').localeCompare(String(a.title || ''), undefined, {
+          sensitivity: 'base',
+        }),
+      );
+      return sorted;
+    }
+
+    if (sort === 'newest') {
+      sorted.sort((a, b) => {
+        const aTime = new Date(a.updatedAt || a.createdAt || 0).getTime();
+        const bTime = new Date(b.updatedAt || b.createdAt || 0).getTime();
+        return bTime - aTime;
+      });
+      return sorted;
+    }
+
+    // Featured/default ordering keeps CMS displayOrder first.
+    sorted.sort((a, b) => {
+      const orderDiff = Number(a.displayOrder || 0) - Number(b.displayOrder || 0);
+      if (orderDiff !== 0) return orderDiff;
+
+      return String(a.title || '').localeCompare(String(b.title || ''), undefined, {
+        sensitivity: 'base',
+      });
+    });
+    return sorted;
+  }
+
   /**
    * Get all top-level categories
    */
@@ -265,6 +375,219 @@ export class CatalogService {
     }
 
     return tree;
+  }
+
+  async getProducts(query: CatalogProductsQuery) {
+    const search = String(query.search || '').trim();
+    const categoryFilter = this.normalizeFilterValue(query.category);
+    const rangeFilter = this.normalizeFilterValue(query.range);
+    const finishFilter = this.normalizeFilterValue(query.finish);
+    const sort = this.normalizePublicSort(query.sort);
+    const page = Math.max(1, Number(query.page) || 1);
+    const limit = Math.min(60, Math.max(1, Number(query.limit) || 12));
+
+    const [categories, ranges] = await Promise.all([
+      this.catalogModel
+        .find({ type: 'category', isActive: true })
+        .select('_id title slug')
+        .lean()
+        .exec(),
+      this.catalogModel
+        .find({ type: 'range', isActive: true })
+        .select('_id title slug parentId')
+        .lean()
+        .exec(),
+    ]);
+
+    const categoriesById = new Map<string, any>();
+    for (const category of categories) {
+      categoriesById.set(String(category._id), category);
+    }
+
+    const rangesById = new Map<string, any>();
+    for (const range of ranges) {
+      rangesById.set(String(range._id), range);
+    }
+
+    const selectedCategory = categoryFilter
+      ? categories.find(
+          (category) =>
+            this.normalizeFilterValue(String(category.slug || '')) ===
+            categoryFilter,
+        ) || null
+      : null;
+
+    const selectedRange = rangeFilter
+      ? ranges.find(
+          (range) =>
+            this.normalizeFilterValue(String(range.slug || '')) === rangeFilter,
+        ) || null
+      : null;
+
+    let allowedRanges = ranges;
+    if (selectedCategory) {
+      const selectedCategoryId = String(selectedCategory._id);
+      allowedRanges = allowedRanges.filter(
+        (range) => String(range.parentId) === selectedCategoryId,
+      );
+    }
+
+    if (selectedRange) {
+      const selectedRangeId = String(selectedRange._id);
+      const rangeBelongsToCategory = !selectedCategory
+        ? true
+        : String(selectedRange.parentId) === String(selectedCategory._id);
+
+      allowedRanges =
+        rangeBelongsToCategory &&
+        allowedRanges.some((range) => String(range._id) === selectedRangeId)
+          ? [selectedRange]
+          : [];
+    }
+
+    const allowedRangeIds = allowedRanges
+      .map((range) => String(range._id))
+      .filter((id) => Types.ObjectId.isValid(id))
+      .map((id) => new Types.ObjectId(id));
+
+    const filter: any = {
+      type: 'product',
+      isActive: true,
+      parentId: { $in: allowedRangeIds },
+    };
+
+    if (search) {
+      const regex = new RegExp(this.escapeRegex(search), 'i');
+      filter.$or = [
+        { title: regex },
+        { description: regex },
+        { descriptionItem: regex },
+        { slug: regex },
+      ];
+    }
+
+    const products = await this.catalogModel
+      .find(filter)
+      .select(
+        '_id type title slug description descriptionItem imageMain imageItem imageDetail imageSub parentId sourceUrl specifications features displayOrder isActive createdAt updatedAt',
+      )
+      .lean()
+      .exec();
+
+    const enriched = products
+      .map((product: any) => {
+        const range = rangesById.get(String(product.parentId || ''));
+        if (!range) return null;
+
+        const category = categoriesById.get(String(range.parentId || ''));
+        if (!category) return null;
+
+        return {
+          ...product,
+          rangeSlug: String(range.slug || ''),
+          rangeTitle: String(range.title || ''),
+          categorySlug: String(category.slug || ''),
+          categoryTitle: String(category.title || ''),
+          finish: this.extractFinishValue(product.specifications),
+        };
+      })
+      .filter(Boolean) as any[];
+
+    const categoryFacetMap = new Map<
+      string,
+      { value: string; label: string; count: number }
+    >();
+    const rangeFacetMap = new Map<
+      string,
+      { value: string; label: string; count: number }
+    >();
+    const finishFacetMap = new Map<
+      string,
+      { value: string; label: string; count: number }
+    >();
+
+    for (const item of enriched) {
+      if (item.categorySlug) {
+        const existingCategoryFacet = categoryFacetMap.get(item.categorySlug) || {
+          value: item.categorySlug,
+          label: item.categoryTitle || item.categorySlug,
+          count: 0,
+        };
+        existingCategoryFacet.count += 1;
+        categoryFacetMap.set(item.categorySlug, existingCategoryFacet);
+      }
+
+      if (item.rangeSlug) {
+        const existingRangeFacet = rangeFacetMap.get(item.rangeSlug) || {
+          value: item.rangeSlug,
+          label: item.rangeTitle || item.rangeSlug,
+          count: 0,
+        };
+        existingRangeFacet.count += 1;
+        rangeFacetMap.set(item.rangeSlug, existingRangeFacet);
+      }
+
+      for (const finishToken of this.splitFacetValues(item.finish)) {
+        const normalizedToken = this.normalizeFilterValue(finishToken);
+        if (!normalizedToken) continue;
+
+        const existingFinishFacet = finishFacetMap.get(normalizedToken) || {
+          value: normalizedToken,
+          label: finishToken,
+          count: 0,
+        };
+        existingFinishFacet.count += 1;
+        finishFacetMap.set(normalizedToken, existingFinishFacet);
+      }
+    }
+
+    const finishFiltered = finishFilter
+      ? enriched.filter((item) => {
+          const finishTokens = this.splitFacetValues(item.finish).map((token) =>
+            this.normalizeFilterValue(token),
+          );
+
+          return (
+            finishTokens.includes(finishFilter) ||
+            this.normalizeFilterValue(item.finish).includes(finishFilter)
+          );
+        })
+      : enriched;
+
+    const sorted = this.sortCatalogProducts(finishFiltered, sort);
+    const total = sorted.length;
+    const totalPages = Math.max(1, Math.ceil(total / limit));
+    const currentPage = Math.min(page, totalPages);
+    const offset = (currentPage - 1) * limit;
+    const paginated = sorted.slice(offset, offset + limit);
+
+    return {
+      data: paginated,
+      pagination: {
+        page: currentPage,
+        limit,
+        total,
+        totalPages,
+      },
+      filters: {
+        categories: Array.from(categoryFacetMap.values()).sort((a, b) =>
+          a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }),
+        ),
+        ranges: Array.from(rangeFacetMap.values()).sort((a, b) =>
+          a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }),
+        ),
+        finishes: Array.from(finishFacetMap.values()).sort((a, b) =>
+          a.label.localeCompare(b.label, undefined, { sensitivity: 'base' }),
+        ),
+      },
+      applied: {
+        search,
+        category: selectedCategory ? String(selectedCategory.slug || '') : categoryFilter,
+        range: selectedRange ? String(selectedRange.slug || '') : rangeFilter,
+        finish: finishFilter,
+        sort,
+      },
+    };
   }
 
   /**

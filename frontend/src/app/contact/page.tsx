@@ -9,6 +9,7 @@ import { api } from '@/lib/api';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { getAdminPreviewDraft } from '@/lib/admin-preview';
+import { toGoogleMapsEmbedUrl } from '@/lib/google-maps';
 
 const PROJECT_TYPE_OPTIONS = [
   { value: 'Kitchen Benchtop', label: 'Kitchen Benchtop' },
@@ -54,9 +55,17 @@ export default function ContactPage() {
         ...config.address,
         ...(previewDraft.address || {}),
       },
-      googleMapsEmbed: previewDraft.googleMapsEmbed || config.googleMapsEmbed,
+      googleMapsEmbed: toGoogleMapsEmbedUrl(
+        previewDraft.googleMapsEmbed || config.googleMapsEmbed,
+        config.googleMapsEmbed,
+      ),
     };
   }, [config, isPreview]);
+
+  const mapEmbedUrl = useMemo(
+    () => toGoogleMapsEmbedUrl(viewConfig.googleMapsEmbed, config.googleMapsEmbed),
+    [viewConfig.googleMapsEmbed, config.googleMapsEmbed],
+  );
 
   const [form, setForm] = useState({
     name: '', email: '', phone: '', suburb: '',
@@ -218,7 +227,7 @@ export default function ContactPage() {
       </section>
 
       <section className="h-[400px] bg-stone-200">
-        <iframe src={viewConfig.googleMapsEmbed} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" />
+        <iframe src={mapEmbedUrl} width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" />
       </section>
     </>
   );

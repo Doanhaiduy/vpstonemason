@@ -6,13 +6,18 @@ const staticPages = [
   { url: '', priority: 1.0, changeFrequency: 'weekly' as const },
   { url: '/about', priority: 0.8, changeFrequency: 'monthly' as const },
   { url: '/catalog', priority: 0.9, changeFrequency: 'weekly' as const },
+  { url: '/catalog/products', priority: 0.9, changeFrequency: 'weekly' as const },
   { url: '/projects', priority: 0.8, changeFrequency: 'weekly' as const },
   { url: '/showroom', priority: 0.7, changeFrequency: 'monthly' as const },
   { url: '/blog', priority: 0.7, changeFrequency: 'weekly' as const },
   { url: '/contact', priority: 0.8, changeFrequency: 'monthly' as const },
 ];
 
-const catalogCategoryPages = ['/catalog/mineral', '/catalog/porcelain', '/catalog/natural'];
+const catalogCategoryPages = [
+  '/catalog/artscut-zero',
+  '/catalog/portofino-porcelain',
+  '/catalog/ultra-thin-surfaces',
+];
 
 const projectSlugs = [
   'modern-kitchen-renovation-brighton',

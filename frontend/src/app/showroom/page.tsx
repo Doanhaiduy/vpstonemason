@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { MapPin, Clock, Phone, Car, Navigation, CalendarCheck } from 'lucide-react';
 import { useSiteConfig } from '@/lib/SiteConfigContext';
+import { toGoogleMapsEmbedUrl } from '@/lib/google-maps';
 
 const showroomImages = [
   'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
@@ -14,6 +15,7 @@ const showroomImages = [
 export default function ShowroomPage() {
   const config = useSiteConfig();
   const formattedAddress = `${config.address.street}, ${config.address.suburb} ${config.address.state} ${config.address.postcode}`;
+  const mapEmbedUrl = toGoogleMapsEmbedUrl(config.googleMapsEmbed);
 
   return (
     <>
@@ -111,7 +113,7 @@ export default function ShowroomPage() {
       {/* Map */}
       <section className="h-[450px] bg-stone-200">
         <iframe
-          src={config.googleMapsEmbed}
+          src={mapEmbedUrl}
           width="100%"
           height="100%"
           style={{ border: 0 }}

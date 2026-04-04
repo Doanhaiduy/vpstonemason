@@ -93,6 +93,28 @@ export class CatalogController {
   }
 
   @Public()
+  @Get('products')
+  getProducts(
+    @Query('search') search?: string,
+    @Query('category') category?: string,
+    @Query('range') range?: string,
+    @Query('finish') finish?: string,
+    @Query('page') page?: string,
+    @Query('limit') limit?: string,
+    @Query('sort') sort?: string,
+  ) {
+    return this.catalogService.getProducts({
+      search,
+      category,
+      range,
+      finish,
+      page: page ? parseInt(page, 10) : 1,
+      limit: limit ? parseInt(limit, 10) : 12,
+      sort,
+    });
+  }
+
+  @Public()
   @Get(':slug')
   getBySlug(@Param('slug') slug: string) {
     return this.catalogService.getItemDetail(slug);

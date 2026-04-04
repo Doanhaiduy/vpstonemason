@@ -97,6 +97,7 @@ export default function CatalogPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
+                className="flex flex-wrap items-center gap-5"
               >
                 <a
                   href="#collections"
@@ -105,6 +106,14 @@ export default function CatalogPage() {
                   Explore Collections
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
+
+                <Link
+                  href="/catalog/products"
+                  className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase text-white/70 hover:text-accent-gold transition-colors duration-300 group"
+                >
+                  Browse All Products
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </motion.div>
             </motion.div>
           </div>

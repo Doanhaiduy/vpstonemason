@@ -4,15 +4,16 @@ import { useSiteConfig } from '@/lib/SiteConfigContext';
 
 const footerLinks = {
   'Collections': [
-    { href: '/catalog/mineral', label: 'Mineral' },
-    { href: '/catalog/porcelain', label: 'Porcelain' },
-    { href: '/catalog/natural', label: 'Natural' },
+    { href: '/catalog/products', label: 'All Products' },
+    { href: '/catalog/artscut-zero', label: 'Artscut Zero' },
+    { href: '/catalog/portofino-porcelain', label: 'Portofino Porcelain' },
+    { href: '/catalog/ultra-thin-surfaces', label: 'Ultra Thin Surfaces' },
     { href: '/catalog', label: 'All Collections' },
   ],
   'Services': [
-    { href: '/catalog/mineral', label: 'Kitchen Benchtops' },
-    { href: '/catalog/porcelain', label: 'Bathroom Vanities' },
-    { href: '/catalog/natural', label: 'Splashbacks' },
+    { href: '/catalog/artscut-zero', label: 'Kitchen Benchtops' },
+    { href: '/catalog/portofino-porcelain', label: 'Bathroom Vanities' },
+    { href: '/catalog/ultra-thin-surfaces', label: 'Splashbacks' },
     { href: '/catalog', label: 'Laundry Benchtops' },
     { href: '/catalog', label: 'Outdoor Kitchens' },
   ],

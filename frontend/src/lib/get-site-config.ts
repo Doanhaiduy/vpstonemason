@@ -1,6 +1,7 @@
 import siteConfig, { SiteConfig } from './site-config';
 import { unstable_cache } from 'next/cache';
 import { cache } from 'react';
+import { toGoogleMapsEmbedUrl } from './google-maps';
 
 /**
  * Get merged site config: DB (ShowroomSettings) → site-config.ts defaults
@@ -13,6 +14,9 @@ export async function getSiteConfig(): Promise<SiteConfig> {
 }
 
 function mergeWithDefaults(dbSettings: any): SiteConfig {
+  const fallbackMap = siteConfig.googleMapsEmbed;
+  const persistedMap = String(dbSettings.googleMapsEmbed || '').trim();
+
   return {
     companyName: dbSettings.companyName || siteConfig.companyName,
     tagline: dbSettings.tagline || siteConfig.tagline,
@@ -52,7 +56,7 @@ function mergeWithDefaults(dbSettings: any): SiteConfig {
     },
     aboutShort: dbSettings.aboutShort || siteConfig.aboutShort,
     geo: siteConfig.geo,
-    googleMapsEmbed: dbSettings.googleMapsEmbed || siteConfig.googleMapsEmbed,
+    googleMapsEmbed: toGoogleMapsEmbedUrl(persistedMap, fallbackMap),
     themeColor: siteConfig.themeColor,
     aiEnabled: dbSettings.aiEnabled ?? siteConfig.aiEnabled,
   };

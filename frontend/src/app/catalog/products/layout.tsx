@@ -1,0 +1,16 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'All Stone Products | Filtered Catalog',
+  description:
+    'Browse all stone products in one place with modern filtering by collection, range, finish, and keyword.',
+  alternates: { canonical: '/catalog/products' },
+};
+
+export default function CatalogProductsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return <>{children}</>;
+}

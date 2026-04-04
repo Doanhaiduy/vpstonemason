@@ -4,11 +4,13 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 import { useSiteConfig } from '@/lib/SiteConfigContext';
+import { toGoogleMapsEmbedUrl } from '@/lib/google-maps';
 
 export function ShowroomInfo() {
   const config = useSiteConfig();
 
   const formattedAddress = `${config.address.street}, ${config.address.suburb} ${config.address.state} ${config.address.postcode}`;
+  const mapEmbedUrl = toGoogleMapsEmbedUrl(config.googleMapsEmbed);
   
   // Format hours concisely for display
   const weekHours = config.openingHours.find(h => h.day === 'Monday')?.open 
@@ -30,7 +32,7 @@ export function ShowroomInfo() {
             className="relative aspect-[4/3] bg-stone-200 overflow-hidden"
           >
             <iframe
-              src={config.googleMapsEmbed}
+              src={mapEmbedUrl}
               width="100%"
               height="100%"
               style={{ border: 0 }}
