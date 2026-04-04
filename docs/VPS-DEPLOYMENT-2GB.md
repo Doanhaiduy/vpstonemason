@@ -65,12 +65,46 @@ sudo ufw status
 
 ---
 
-## 4) Pull source code
+## 4) Connect private GitHub repo and clone
+
+Repository:
+
+- https://github.com/Doanhaiduy/vpstonemason.git
+
+### Option A (recommended): SSH key
+
+Generate SSH key on VPS:
+
+ssh-keygen -t ed25519 -C "vps-vpstonemason" -f ~/.ssh/id_ed25519 -N ""
+cat ~/.ssh/id_ed25519.pub
+
+Then add this public key to GitHub:
+
+- GitHub account: Settings > SSH and GPG keys > New SSH key
+- or repository deploy key in Doanhaiduy/vpstonemason
+
+Test access:
+
+ssh -T git@github.com
+
+Clone repo:
 
 cd /opt
-sudo git clone <YOUR_REPO_GIT_URL> stone-showroom-web
-sudo chown -R $USER:$USER /opt/stone-showroom-web
-cd /opt/stone-showroom-web
+git clone git@github.com:Doanhaiduy/vpstonemason.git vpstonemason
+sudo chown -R $USER:$USER /opt/vpstonemason
+cd /opt/vpstonemason
+
+### Option B: HTTPS + Personal Access Token (PAT)
+
+cd /opt
+git clone https://github.com/Doanhaiduy/vpstonemason.git vpstonemason
+sudo chown -R $USER:$USER /opt/vpstonemason
+cd /opt/vpstonemason
+
+When prompted, use:
+
+- Username: your GitHub username
+- Password: your GitHub PAT (not GitHub account password)
 
 ---
 
@@ -92,6 +126,24 @@ Set required values:
 Tip: generate JWT secret quickly:
 
 openssl rand -base64 48
+
+### Auto-map from your real current config (recommended)
+
+If your local machine already has real values in `backend/.env` and `frontend/.env.local`,
+generate VPS `.env` automatically:
+
+bash scripts/generate-vps-env.sh YOUR_SERVER_IP .env.vps.prd
+
+Then upload to VPS:
+
+scp .env.vps.prd <vps_user>@YOUR_SERVER_IP:/opt/vpstonemason/.env
+
+This maps real values for:
+
+- `DATABASE_URL`, `MONGODB_URI`, `JWT_*`, `THROTTLE_*` from `backend/.env`
+- `CLOUDINARY_*` from `backend/.env`
+- `GEMINI_*` from `frontend/.env.local`
+- `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_API_URL`, `FRONTEND_URL` from your passed IP/URL
 
 ---
 
@@ -134,8 +186,8 @@ docker compose -f docker-compose.vps.yml restart
 
 ### Update code and redeploy
 
-cd /opt/stone-showroom-web
-git pull
+cd /opt/vpstonemason
+git pull origin main
 docker compose -f docker-compose.vps.yml up -d --build
 
 ### Stop all
