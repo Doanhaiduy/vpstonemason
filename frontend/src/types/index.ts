@@ -76,13 +76,18 @@ export interface BlogPost {
   slug: string;
   excerpt: string;
   content: string;
+  featuredImage?: string;
   thumbnail: string;
+  images?: string[];
+  authorName?: string;
+  category?: string;
   tags: string[];
   authorId?: { firstName: string; lastName: string };
   status: 'draft' | 'published';
   publishedAt: string;
   seoTitle?: string;
   seoDescription?: string;
+  readTime?: number;
   createdAt: string;
 }
 

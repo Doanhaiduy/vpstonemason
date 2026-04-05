@@ -22,7 +22,9 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "seed": "ts-node scripts/seed-catalog.ts",
     "seed:standalone": "ts-node scripts/seed-catalog.ts",
-    "seed:catalog": "ts-node scripts/seed-catalog.ts"
+    "seed:catalog": "ts-node scripts/seed-catalog.ts",
+    "seed:blog": "ts-node scripts/seed-blog.ts",
+    "migrate:catalog:cloudinary": "ts-node scripts/migrate-catalog-images-to-cloudinary.ts"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",

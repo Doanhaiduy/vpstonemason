@@ -45,17 +45,22 @@ export default function CreateBlogPostPage() {
     if (!aiTopic) { alert('Enter a topic first.'); return; }
     setGeneratingAi(true);
     try {
-      const res = await fetch('/api/ai/generate-blog', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ topic: aiTopic }),
+      const token = localStorage.getItem('accessToken') || '';
+      if (!token) {
+        alert('Please log in again to use AI generation.');
+        return;
+      }
+
+      const data = await adminApi.generateFullBlogPostAI(token, {
+        topic: aiTopic,
       });
-      const data = await res.json();
+
       if (data.title) setForm(p => ({
         ...p,
         title: data.title || p.title,
-        excerpt: data.excerpt || p.excerpt,
+        excerpt: data.description || p.excerpt,
         content: data.content || p.content,
-        tags: data.tags?.join(', ') || p.tags,
+        tags: Array.isArray(data.tags) ? data.tags.join(', ') : p.tags,
       }));
     } catch { alert('AI generation failed.'); }
     finally { setGeneratingAi(false); }

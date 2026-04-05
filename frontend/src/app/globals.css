@@ -115,6 +115,24 @@
   .glass-panel {
     @apply bg-white/80 backdrop-blur-xl border border-white/20 shadow-lg;
   }
+
+  .blog-prose {
+    @apply prose prose-stone prose-lg max-w-none
+           prose-headings:font-display prose-headings:text-stone-900 prose-headings:scroll-mt-32
+           prose-h2:mt-12 prose-h2:mb-5 prose-h2:text-3xl
+           prose-h3:mt-9 prose-h3:mb-4 prose-h3:text-2xl
+           prose-h4:mt-7 prose-h4:mb-3 prose-h4:text-xl
+           prose-p:text-stone-600 prose-p:leading-8
+           prose-strong:text-stone-900
+           prose-a:text-accent-gold-dark prose-a:font-medium prose-a:no-underline hover:prose-a:underline
+           prose-ul:my-6 prose-ol:my-6 prose-li:my-2 prose-li:marker:text-accent-gold-dark
+           prose-blockquote:border-l-accent-gold prose-blockquote:bg-stone-50 prose-blockquote:px-5 prose-blockquote:py-3 prose-blockquote:text-stone-700 prose-blockquote:not-italic
+           prose-hr:border-stone-200
+           prose-table:my-8 prose-table:w-full prose-table:border-collapse prose-table:overflow-hidden prose-table:rounded-xl prose-table:border prose-table:border-stone-200
+           prose-thead:bg-stone-900 prose-th:px-4 prose-th:py-3 prose-th:text-white prose-th:font-semibold
+           prose-td:border-t prose-td:border-stone-200 prose-td:px-4 prose-td:py-3
+           prose-img:my-8 prose-img:rounded-2xl prose-img:shadow-lg;
+  }
 }
 
 @layer utilities {
@@ -132,6 +150,10 @@
   .animate-delay-300 { animation-delay: 300ms; }
   .animate-delay-400 { animation-delay: 400ms; }
   .animate-delay-500 { animation-delay: 500ms; }
+
+  .safe-area-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+  }
 }
 
 /* Custom scrollbar */

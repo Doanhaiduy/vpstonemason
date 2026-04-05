@@ -11,6 +11,7 @@ import { UsersModule } from './modules/users/users.module';
 import { ProjectsModule } from './modules/projects/projects.module';
 import { EnquiriesModule } from './modules/enquiries/enquiries.module';
 import { BlogModule } from './modules/blog/blog.module';
+import { AiModule } from './modules/ai/ai.module';
 import { ShowroomModule } from './modules/showroom/showroom.module';
 import { MailModule } from './modules/mail/mail.module';
 import { CatalogModule } from './modules/catalog/catalog.module';
@@ -66,6 +67,7 @@ import { CloudinaryModule } from './modules/cloudinary/cloudinary.module';
     ProjectsModule,
     EnquiriesModule,
     BlogModule,
+    AiModule,
     ShowroomModule,
     MailModule,
     CatalogModule,

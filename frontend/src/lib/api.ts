@@ -176,6 +176,25 @@ export const adminApi = {
   deleteBlogPost: (token: string, id: string) =>
     fetchApi<any>(`/blog-posts/${id}`, { method: 'DELETE', token }),
 
+  // AI Blog generation (backend)
+  generateFullBlogPostAI: (
+    token: string,
+    data: { topic: string; keywords?: string[]; category?: string },
+  ) =>
+    fetchApi<{
+      slug: string;
+      title: string;
+      description: string;
+      content: string;
+      tags: string[];
+      totalTokens: number;
+      totalCost: number;
+    }>('/ai/generate/full', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      token,
+    }),
+
   // Showroom Settings
   getSettings: (token: string) => fetchApi<any>('/showroom', { token }),
   updateSettings: (token: string, data: any) =>

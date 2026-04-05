@@ -18,7 +18,19 @@ export class BlogPost {
   content: string;
 
   @Prop()
+  featuredImage: string;
+
+  @Prop()
   thumbnail: string;
+
+  @Prop({ type: [String], default: [] })
+  images: string[];
+
+  @Prop({ trim: true })
+  authorName: string;
+
+  @Prop({ trim: true })
+  category: string;
 
   @Prop({ type: [String], default: [] })
   tags: string[];
@@ -37,9 +49,13 @@ export class BlogPost {
 
   @Prop()
   seoDescription: string;
+
+  @Prop()
+  readTime: number;
 }
 
 export const BlogPostSchema = SchemaFactory.createForClass(BlogPost);
 BlogPostSchema.index({ status: 1, publishedAt: -1 });
 BlogPostSchema.index({ tags: 1 });
+BlogPostSchema.index({ category: 1, publishedAt: -1 });
 BlogPostSchema.index({ title: 'text' });
