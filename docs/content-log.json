@@ -1,0 +1,14 @@
+{
+  "lastSceneIndex": 4,
+  "history": [
+    {
+      "date": "2026-04-05",
+      "stoneName": "Amazonite OR AC1017",
+      "stoneCode": "AC1017",
+      "scenes": ["kitchen-island", "kitchen-l-shape", "bathroom-vanity", "bathroom-shower"],
+      "imagesGenerated": 6,
+      "videosGenerated": 2,
+      "captionLanguage": "vi"
+    }
+  ]
+}

@@ -30,6 +30,13 @@ backend/.nestjs/
 frontend/node_modules/
 frontend/.next/
 frontend/out/
+frontend/tsconfig.tsbuildinfo
+
+# Generated migration/report artifacts
+backend/scripts/output/cloudinary/migration-plan-*.json
+backend/scripts/output/cloudinary/migration-backup-*.json
+backend/scripts/output/cloudinary/range-hero-update-*.json
+backend/scripts/output/cloudinary/test-map.json
 
 # Python cache/artifacts (scripts)
 **/__pycache__/

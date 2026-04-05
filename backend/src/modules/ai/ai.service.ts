@@ -3,6 +3,7 @@ import {
   Injectable,
   InternalServerErrorException,
   Logger,
+  ServiceUnavailableException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import slugify from 'slugify';
@@ -100,8 +101,20 @@ export class AiService {
   constructor(private readonly configService: ConfigService) {}
 
   private get apiKey(): string | null {
-    const key = this.configService.get<string>('GEMINI_API_KEY');
-    return key?.trim() ? key.trim() : null;
+    const candidateEnvNames = [
+      'GEMINI_API_KEY',
+      'GOOGLE_API_KEY',
+      'GOOGLE_GENERATIVE_AI_API_KEY',
+    ];
+
+    for (const envName of candidateEnvNames) {
+      const value = this.configService.get<string>(envName);
+      if (value?.trim()) {
+        return value.trim();
+      }
+    }
+
+    return null;
   }
 
   private get model(): string {
@@ -411,7 +424,9 @@ Requirements:
     }
 
     if (!this.hasApiKey()) {
-      return this.buildFallbackFullPost(input);
+      throw new ServiceUnavailableException(
+        'AI generation is unavailable on backend. Missing GEMINI_API_KEY (or GOOGLE_API_KEY) in runtime environment.',
+      );
     }
 
     const normalizedKeywords = normalizeKeywords(input.keywords);

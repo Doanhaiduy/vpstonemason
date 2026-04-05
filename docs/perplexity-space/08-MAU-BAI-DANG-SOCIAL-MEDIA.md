@@ -1,4 +1,4 @@
-# MẪU BÀI ĐĂNG SOCIAL MEDIA — VPStoneMason & Co.
+# MẪU BÀI ĐĂNG SOCIAL MEDIA — PVstoneau
 
 > Templates bài đăng sẵn cho Facebook & Instagram, phân loại theo chủ đề.
 
@@ -22,11 +22,12 @@ The homeowner wanted a [modern/classic/luxury/warm] feel, and this [stone name] 
 Swipe to see more angles! 👉
 
 Ready for your own kitchen transformation?
-📞 (03) 9000 0000
-🌐 vpstonemason.vercel.app
+📞 0424439293
+📘 Fanpage: https://www.facebook.com/PVStonemason
+🌐 https://vpstonemason.vercel.app/
 📍 123 Stone Avenue, Richmond
 
-#KitchenRenovation #StoneBenchtops #MelbourneKitchen #[StoneType] #VPStoneMason #KitchenDesign #HomeRenovation #[Suburb]Homes #DreamKitchen #PremiumStone
+#KitchenRenovation #StoneBenchtops #MelbourneKitchen #[StoneType] #PVstoneau #KitchenDesign #HomeRenovation #[Suburb]Homes #DreamKitchen #PremiumStone
 ```
 
 ### Template 1.2 — Before/After:
@@ -45,9 +46,9 @@ Details:
 
 Thinking about your own kitchen makeover?
 👉 Book a FREE consultation today!
-📞 (03) 9000 0000
+📞 0424439293
 
-#BeforeAndAfter #KitchenMakeover #MelbourneRenovation #StoneBenchtops #VPStoneMason #KitchenTransformation #HomeImprovement
+#BeforeAndAfter #KitchenMakeover #MelbourneRenovation #StoneBenchtops #PVstoneau #KitchenTransformation #HomeImprovement
 ```
 
 ---
@@ -71,10 +72,10 @@ Why we love it:
 
 See it in person at our Richmond showroom — photos can't capture how beautiful this stone truly is! 🏛️
 
-📞 (03) 9000 0000
-🌐 vpstonemason.vercel.app/stones/[slug]
+📞 0424439293
+🌐 https://vpstonemason.vercel.app/stones/[slug]
 
-#[StoneName] #[StoneType] #StoneBenchtops #KitchenDesign #MelbourneHomes #PremiumStone #VPStoneMason #NaturalStone
+#[StoneName] #[StoneType] #StoneBenchtops #KitchenDesign #MelbourneHomes #PremiumStone #PVstoneau #NaturalStone
 ```
 
 ### Template 2.2 — Stone Comparison:
@@ -98,7 +99,7 @@ Swipe to compare these two beauties! 👉
 Comment below which one you'd pick! ⬇️
 A = [Stone A] | B = [Stone B]
 
-#StoneBenchtops #KitchenDesign #HomeRenovation #VPStoneMason #StoneComparison #MelbourneKitchen
+#StoneBenchtops #KitchenDesign #HomeRenovation #PVstoneau #StoneComparison #MelbourneKitchen
 ```
 
 ---
@@ -121,7 +122,7 @@ Keep your beautiful [stone type] looking brand new with these simple tips:
 
 Got questions about stone care? Drop them below! 👇
 
-#StoneCare #KitchenTips #BenchtopMaintenance #VPStoneMason #HomeHacks #MelbourneHomes
+#StoneCare #KitchenTips #BenchtopMaintenance #PVstoneau #HomeHacks #MelbourneHomes
 ```
 
 ### Template 3.2 — Buying Guide:
@@ -141,11 +142,11 @@ Planning a kitchen renovation? Read this first! 👇
 5️⃣ GET A PROPER QUOTE — Always get an on-site measure for accurate pricing!
 
 We offer FREE consultations & quotes 💎
-📞 (03) 9000 0000 | 📍 Richmond showroom
+📞 0424439293 | 📍 Richmond showroom
 
 Save this post for later! 🔖
 
-#KitchenRenovation #StoneBenchtops #BuyingGuide #MelbourneReno #VPStoneMason #HomeRenovationTips
+#KitchenRenovation #StoneBenchtops #BuyingGuide #MelbourneReno #PVstoneau #HomeRenovationTips
 ```
 
 ### Template 3.3 — CSF Education:
@@ -162,12 +163,12 @@ What does this mean for you?
 ✅ New CSF (Crystalline Silica Free) engineered stone is available
 ❌ Traditional quartz benchtops can no longer be sold
 
-At VPStoneMason, ALL our products are 100% compliant 🛡️
+At PVstoneau, ALL our products are 100% compliant 🛡️
 
 Have questions? We're here to help!
-📞 (03) 9000 0000
+📞 0424439293
 
-#CSFStone #EngineeredStoneBan #SilicaFree #AustralianRegulations #VPStoneMason #SafeStone #KitchenRenovation
+#CSFStone #EngineeredStoneBan #SilicaFree #AustralianRegulations #PVstoneau #SafeStone #KitchenRenovation
 ```
 
 ---
@@ -192,7 +193,7 @@ Each piece is:
 
 It's truly a combination of technology + craftsmanship! 🇦🇺
 
-#BehindTheScenes #StoneFabrication #CNCMachine #Stonemason #VPStoneMason #AustralianMade #Craftsmanship
+#BehindTheScenes #StoneFabrication #CNCMachine #Stonemason #PVstoneau #AustralianMade #Craftsmanship
 ```
 
 ### Template 4.2 — Installation Day:
@@ -211,7 +212,7 @@ What happens on installation day:
 
 The whole process takes just [X] hours! And we always leave the site spotless 🧹
 
-#InstallationDay #StoneBenchtops #MelbourneHomes #VPStoneMason #KitchenRenovation #[Suburb]
+#InstallationDay #StoneBenchtops #MelbourneHomes #PVstoneau #KitchenRenovation #[Suburb]
 ```
 
 ---
@@ -233,9 +234,9 @@ Thank you [Customer First Name] for trusting us with your [project type]! We're 
 Your words mean the world to us 💎
 
 Thinking about renovating? Join hundreds of happy Melbourne homeowners!
-📞 (03) 9000 0000
+📞 0424439293
 
-#CustomerReview #HappyCustomer #StoneBenchtops #VPStoneMason #Melbourne #5Stars #TestimonialThursday
+#CustomerReview #HappyCustomer #StoneBenchtops #PVstoneau #Melbourne #5Stars #TestimonialThursday
 ```
 
 ---
@@ -253,7 +254,7 @@ D) Modern Grey Porcelain 🩶
 
 Drop your choice in the comments! We'd love to know 👇
 
-#KitchenDesign #InteriorDesign #HomeRenovation #Poll #VPStoneMason #DesignInspiration
+#KitchenDesign #InteriorDesign #HomeRenovation #Poll #PVstoneau #DesignInspiration
 ```
 
 ### Template 6.2 — This or That:
@@ -267,7 +268,7 @@ Slide 4: Natural Stone vs Engineered
 
 Let us know your picks! 💬
 
-#ThisOrThat #KitchenDesign #StoneBenchtops #InteriorDesign #VPStoneMason
+#ThisOrThat #KitchenDesign #StoneBenchtops #InteriorDesign #PVstoneau
 ```
 
 ### Template 6.3 — Did You Know:
@@ -281,7 +282,7 @@ Let us know your picks! 💬
 
 Double tap if you learned something new! 👆
 
-#DidYouKnow #StoneFacts #NaturalStone #VPStoneMason #InterestingFacts
+#DidYouKnow #StoneFacts #NaturalStone #PVstoneau #InterestingFacts
 ```
 
 ---
@@ -306,13 +307,14 @@ ALL prices include:
 
 ⏰ Offer ends [Date] — don't miss out!
 
-📞 (03) 9000 0000
+📞 0424439293
 📍 Richmond showroom
-🌐 vpstonemason.vercel.app
+📘 Fanpage: https://www.facebook.com/PVStonemason
+🌐 https://vpstonemason.vercel.app/
 
 *T&Cs apply. While stocks last.
 
-#Sale #KitchenRenovation #StoneBenchtops #MelbourneDeals #VPStoneMason #LimitedOffer
+#Sale #KitchenRenovation #StoneBenchtops #MelbourneDeals #PVstoneau #LimitedOffer
 ```
 
 ---
@@ -328,7 +330,7 @@ Text overlay:
 → to perfect polish...
 → to YOUR dream kitchen 💎"
 Audio: Trending upbeat audio
-Caption: "The journey of your benchtop — from our workshop to your home! Which stone would you choose? 🪨✨ #StoneBenchtops #KitchenRenovation #VPStoneMason"
+Caption: "The journey of your benchtop — from our workshop to your home! Which stone would you choose? 🪨✨ #StoneBenchtops #KitchenRenovation #PVstoneau"
 ```
 
 ### Reel 2 — Touch Test:
@@ -339,7 +341,7 @@ Text overlay:
 Polished → smooth & glossy
 Honed → soft & silky
 Leathered → textured & grip"
-Caption: "Which finish do you prefer? Comment below! 👇 #StoneFinishes #BenchtopDesign #VPStoneMason"
+Caption: "Which finish do you prefer? Comment below! 👇 #StoneFinishes #BenchtopDesign #PVstoneau"
 ```
 
 ### Reel 3 — Myth Busting:
@@ -348,7 +350,7 @@ Caption: "Which finish do you prefer? Comment below! 👇 #StoneFinishes #Bencht
 Text overlay:
 "MYTH: Marble is too fragile for kitchens ❌
 TRUTH: With proper sealing, marble kitchens last decades! ✅"
-Caption: "Stop letting myths hold you back from your dream kitchen! 💎 #MarbleBenchtop #MythBusted #VPStoneMason"
+Caption: "Stop letting myths hold you back from your dream kitchen! 💎 #MarbleBenchtop #MythBusted #PVstoneau"
 ```
 
 ---
@@ -357,7 +359,7 @@ Caption: "Stop letting myths hold you back from your dream kitchen! 💎 #Marble
 
 ### Set A — General Posts:
 ```
-#StoneBenchtops #KitchenDesign #MelbourneHomes #HomeRenovation #KitchenRenovation #NaturalStone #PremiumStone #VPStoneMason #InteriorDesign #DreamKitchen
+#StoneBenchtops #KitchenDesign #MelbourneHomes #HomeRenovation #KitchenRenovation #NaturalStone #PremiumStone #PVstoneau #InteriorDesign #DreamKitchen
 ```
 
 ### Set B — Product Posts:

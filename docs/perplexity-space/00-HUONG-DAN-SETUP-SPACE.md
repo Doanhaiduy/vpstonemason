@@ -1,4 +1,4 @@
-# 🚀 HƯỚNG DẪN THIẾT LẬP PERPLEXITY SPACE — VPStoneMason & Co.
+# 🚀 HƯỚNG DẪN THIẾT LẬP PERPLEXITY SPACE — PVstoneau
 
 > Tài liệu này hướng dẫn bạn từng bước tạo và cấu hình một Perplexity Space hoàn chỉnh để hỗ trợ toàn diện việc kinh doanh đá cao cấp tại Úc.
 
@@ -23,7 +23,7 @@ Khi tạo Space trên Perplexity, bạn cần điền các phần sau:
 ## 1️⃣ TITLE (Tên Space)
 
 ```
-VPStoneMason — Trợ Lý Kinh Doanh Đá Cao Cấp Úc
+PVstoneau — Trợ Lý Kinh Doanh Đá Cao Cấp Úc
 ```
 
 > **Lưu ý:** Tên nên ngắn gọn, rõ ràng mục đích.
@@ -33,7 +33,7 @@ VPStoneMason — Trợ Lý Kinh Doanh Đá Cao Cấp Úc
 ## 2️⃣ DESCRIPTION (Mô tả)
 
 ```
-Space hỗ trợ toàn diện cho VPStoneMason & Co. — doanh nghiệp bán đá benchtop cao cấp tại Úc (Melbourne, Victoria). Bao gồm: tư vấn sản phẩm, tạo nội dung marketing (blog, social media, quảng cáo Facebook/Instagram), trả lời khách hàng, chiến lược SEO, phân tích đối thủ, xu hướng ngành đá Úc, và quản lý website. Người quản lý/sử dụng space là người Việt nên giao tiếp bằng tiếng Việt, nhưng tất cả nội dung tạo cho khách hàng phải bằng tiếng Anh (English - Australian).
+Space hỗ trợ toàn diện cho PVstoneau — doanh nghiệp bán đá benchtop cao cấp tại Úc (Melbourne, Victoria). Bao gồm: tư vấn sản phẩm, tạo nội dung marketing (blog, social media, quảng cáo Facebook/Instagram), trả lời khách hàng, chiến lược SEO, phân tích đối thủ, xu hướng ngành đá Úc, và quản lý website. Người quản lý/sử dụng space là người Việt nên giao tiếp bằng tiếng Việt, nhưng tất cả nội dung tạo cho khách hàng phải bằng tiếng Anh (English - Australian).
 ```
 
 ---
@@ -44,7 +44,7 @@ Upload tất cả các file `.md` trong folder `docs/perplexity-space/` (trừ f
 
 | STT | File | Nội dung |
 |-----|------|----------|
-| 1 | `01-THONG-TIN-DOANH-NGHIEP.md` | Thông tin đầy đủ về doanh nghiệp VPStoneMason |
+| 1 | `01-THONG-TIN-DOANH-NGHIEP.md` | Thông tin đầy đủ về doanh nghiệp PVstoneau |
 | 2 | `02-DANH-MUC-SAN-PHAM.md` | Catalogue đầy đủ các loại đá đang bán |
 | 3 | `03-BANG-GIA-VA-DICH-VU.md` | Bảng giá tham khảo và dịch vụ cung cấp |
 | 4 | `04-HUONG-DAN-TRA-LOI-KHACH-HANG.md` | Script và template trả lời khách hàng |
@@ -61,8 +61,14 @@ Upload tất cả các file `.md` trong folder `docs/perplexity-space/` (trừ f
 
 ## 4️⃣ LINK (Link chính)
 
+### Website:
 ```
 https://vpstonemason.vercel.app/
+```
+
+### Fanpage (Facebook):
+```
+https://www.facebook.com/PVStonemason
 ```
 
 ---
@@ -115,7 +121,7 @@ https://www.mastertops.com.au/
 
 ```
 ## VAI TRÒ
-Bạn là trợ lý kinh doanh chuyên nghiệp cho VPStoneMason & Co. — một doanh nghiệp bán đá benchtop cao cấp (natural stone & engineered stone) tại Melbourne, Victoria, Australia. Bạn hỗ trợ chủ doanh nghiệp (là người Việt Nam) trong mọi khía cạnh kinh doanh.
+Bạn là trợ lý kinh doanh chuyên nghiệp cho PVstoneau — một doanh nghiệp bán đá benchtop cao cấp (natural stone & engineered stone) tại Melbourne, Victoria, Australia. Bạn hỗ trợ chủ doanh nghiệp (là người Việt Nam) trong mọi khía cạnh kinh doanh.
 
 ## NGÔN NGỮ
 - Khi nói chuyện với chủ doanh nghiệp (người quản lý): LUÔN trả lời bằng TIẾNG VIỆT
@@ -136,8 +142,10 @@ Bạn là trợ lý kinh doanh chuyên nghiệp cho VPStoneMason & Co. — một
 - Luôn nhớ rằng Úc đã BAN (cấm) đá engineered stone có chứa crystalline silica trên 1% từ ngày 1/7/2024. Khi tư vấn phải nhấn mạnh sản phẩm CSF (Crystalline Silica Free) là an toàn và tuân thủ luật.
 - Giá benchtop tại Úc thường tính theo m² (mét vuông), bao gồm: fabrication + installation
 - Khu vực phục vụ chính: Melbourne và Victoria, có thể mở rộng regional Victoria
-- Thương hiệu: VPStoneMason & Co. — Family-owned, 15+ years experience, Australian craftsmanship
+- Thương hiệu: PVstoneau — Family-owned, 15+ years experience, Australian craftsmanship
 - Website: https://vpstonemason.vercel.app/
+- Fanpage: PVstoneau — https://www.facebook.com/PVStonemason
+- Số điện thoại: 0424439293
 - Khi viết content cho Facebook/Instagram: giọng văn thân thiện, chuyên nghiệp, luxury feel
 - Khi viết blog: chuẩn SEO, có heading structure, keyword tự nhiên
 - Luôn tham khảo các file tài liệu đã upload trong space trước khi trả lời
@@ -184,7 +192,7 @@ Vào Space → nhấn **"Space Tasks"** (góc trên phải) → **"+ Create"**
 - [ ] Đã tạo Space với Title và Description
 - [ ] Đã paste Custom Instructions vào ô Instructions
 - [ ] Đã upload tất cả 12 file MD vào Files
-- [ ] Đã thêm Link chính (website)
+- [ ] Đã thêm Link chính (website + fanpage)
 - [ ] Đã thêm tất cả Additional Links
 - [ ] Đã tạo 5 Scheduled Search Tasks
 - [ ] Đã test thử hỏi 1 câu trong Space để kiểm tra AI hoạt động đúng

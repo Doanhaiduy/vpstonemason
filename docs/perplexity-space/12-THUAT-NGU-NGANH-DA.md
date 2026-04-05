@@ -1,4 +1,4 @@
-# THUẬT NGỮ NGÀNH ĐÁ — ANH-VIỆT — VPStoneMason & Co.
+# THUẬT NGỮ NGÀNH ĐÁ — ANH-VIỆT — PVstoneau
 
 > Từ điển thuật ngữ chuyên ngành đá benchtop, giúp chủ doanh nghiệp (người Việt) hiểu rõ các khái niệm tiếng Anh trong ngành.
 

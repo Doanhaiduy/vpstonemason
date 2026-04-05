@@ -1,4 +1,4 @@
-# HƯỚNG DẪN QUẢNG CÁO FACEBOOK & INSTAGRAM — VPStoneMason & Co.
+# HƯỚNG DẪN QUẢNG CÁO FACEBOOK & INSTAGRAM — PVstoneau
 
 > Hướng dẫn chi tiết từ A-Z cách chạy quảng cáo Facebook/Instagram Ads cho ngành đá benchtop tại Úc.
 
@@ -16,7 +16,7 @@
 ### 1.2 Công cụ cần có:
 | Công cụ | Mục đích | Cách setup |
 |---------|----------|------------|
-| **Facebook Business Page** | Trang doanh nghiệp chính | facebook.com/pages/create |
+| **Facebook Business Page** | Trang doanh nghiệp chính | https://www.facebook.com/PVStonemason |
 | **Instagram Business Account** | Tài khoản IG doanh nghiệp | Chuyển từ personal → business trong Settings |
 | **Meta Business Suite** | Quản lý cả FB + IG | business.facebook.com |
 | **Meta Ads Manager** | Tạo & quản lý quảng cáo | adsmanager.facebook.com |
@@ -258,7 +258,7 @@ Transform your kitchen with stunning [Stone Name] benchtops 💎
 ✅ Professional installation in as little as 5 days
 ✅ Free consultation & quote
 
-📞 (03) 9000 0000
+📞 0424439293
 📍 Visit our Richmond showroom
 
 CTA Button: Get Quote
@@ -304,14 +304,15 @@ CTA Button: Get Quote
 
 **Template 4 — Testimonial/Social Proof:**
 ```
-Headline: See Why Melbourne Homeowners Choose VPStoneMason
+Headline: See Why Melbourne Homeowners Choose PVstoneau
 Primary Text:
 ⭐⭐⭐⭐⭐ "Absolutely thrilled with our new kitchen benchtops. The team was professional from measure to install. Highly recommend!" — James & Sarah M., Brighton
 
 Join hundreds of happy homeowners across Melbourne.
 
-📞 (03) 9000 0000
-🌐 vpstonemason.vercel.app
+📞 0424439293
+📘 Fanpage: https://www.facebook.com/PVStonemason
+🌐 https://vpstonemason.vercel.app/
 
 CTA Button: Book Consultation
 ```
@@ -322,7 +323,7 @@ Headline: Safe, Stunning & Compliant Stone Benchtops
 Primary Text:
 Did you know? Since July 2024, traditional engineered stone is banned in Australia due to silica health risks.
 
-VPStoneMason offers 100% CSF (Crystalline Silica Free) alternatives:
+PVstoneau offers 100% CSF (Crystalline Silica Free) alternatives:
 🪨 Same beautiful aesthetics
 🛡️ Zero health risk to fabricators
 ✅ Fully compliant with Australian regulations

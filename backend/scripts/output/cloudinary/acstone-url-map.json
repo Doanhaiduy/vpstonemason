@@ -1,0 +1,1146 @@
+{
+  "generatedAt": "2026-04-04T14:08:54.066Z",
+  "cloudinaryFolder": "vpstonemason/catalog/acstone",
+  "mappings": {
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC1017-0-0-1-2-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311559/vpstonemason/catalog/acstone/ac1017-0-0-1-2-500x653-662af4b02f7c.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1017-0-0-1-2-500x653-662af4b02f7c",
+      "uploadedAt": "2026-04-04T14:06:01.317Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC1017-0-0-1-2.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311559/vpstonemason/catalog/acstone/ac1017-0-0-1-2-1f119826a747.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1017-0-0-1-2-1f119826a747",
+      "uploadedAt": "2026-04-04T14:06:01.499Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC6011-2-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311560/vpstonemason/catalog/acstone/ac6011-2-1-7173e8900fee.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6011-2-1-7173e8900fee",
+      "uploadedAt": "2026-04-04T14:06:02.449Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC1019-0-0-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311560/vpstonemason/catalog/acstone/ac1019-0-0-1-scaled-500x653-097c673ce343.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1019-0-0-1-scaled-500x653-097c673ce343",
+      "uploadedAt": "2026-04-04T14:06:02.901Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC1016-0-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311561/vpstonemason/catalog/acstone/ac1016-0-0-1-1-500x653-0e7c1d0471d5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1016-0-0-1-1-500x653-0e7c1d0471d5",
+      "uploadedAt": "2026-04-04T14:06:03.156Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC1019-0-0-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311561/vpstonemason/catalog/acstone/ac1019-0-0-1-scaled-9f65bbe4dda5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1019-0-0-1-scaled-9f65bbe4dda5",
+      "uploadedAt": "2026-04-04T14:06:03.540Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC1022-Empira-Verde-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311562/vpstonemason/catalog/acstone/ac1022-empira-verde-0-1-500x653-5376f0ba071a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1022-empira-verde-0-1-500x653-5376f0ba071a",
+      "uploadedAt": "2026-04-04T14:06:04.233Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC6012-0-1-1-2600x1300.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311562/vpstonemason/catalog/acstone/ac6012-0-1-1-2600x1300-4694bcd6f66d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6012-0-1-1-2600x1300-4694bcd6f66d",
+      "uploadedAt": "2026-04-04T14:06:04.546Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC1008G-GOLDEN-STRIKE-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311563/vpstonemason/catalog/acstone/ac1008g-golden-strike-500x653-2479c54886c2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1008g-golden-strike-500x653-2479c54886c2",
+      "uploadedAt": "2026-04-04T14:06:05.034Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC1016-0-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311563/vpstonemason/catalog/acstone/ac1016-0-0-1-1-416a1e1e7138.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1016-0-0-1-1-416a1e1e7138",
+      "uploadedAt": "2026-04-04T14:06:05.240Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC1015-0-1-2-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311563/vpstonemason/catalog/acstone/ac1015-0-1-2-500x653-bf24d7e7b515.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1015-0-1-2-500x653-bf24d7e7b515",
+      "uploadedAt": "2026-04-04T14:06:05.720Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC1011-0-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311564/vpstonemason/catalog/acstone/ac1011-0-1-scaled-500x653-cd6033ec49b0.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1011-0-1-scaled-500x653-cd6033ec49b0",
+      "uploadedAt": "2026-04-04T14:06:06.532Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC1015-0-1-2.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311564/vpstonemason/catalog/acstone/ac1015-0-1-2-2c2ab23bf95f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1015-0-1-2-2c2ab23bf95f",
+      "uploadedAt": "2026-04-04T14:06:06.533Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC1012-scaled-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311565/vpstonemason/catalog/acstone/ac1012-scaled-500x653-92552b990ac6.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1012-scaled-500x653-92552b990ac6",
+      "uploadedAt": "2026-04-04T14:06:07.620Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC1008G-GOLDEN-STRIKE.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311565/vpstonemason/catalog/acstone/ac1008g-golden-strike-e553041c4fb1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1008g-golden-strike-e553041c4fb1",
+      "uploadedAt": "2026-04-04T14:06:07.702Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC1011-0-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311566/vpstonemason/catalog/acstone/ac1011-0-1-scaled-d440c53bf7fa.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1011-0-1-scaled-d440c53bf7fa",
+      "uploadedAt": "2026-04-04T14:06:08.365Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC9003-0-1-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311566/vpstonemason/catalog/acstone/ac9003-0-1-1-min-scaled-500x653-b402633bdc07.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9003-0-1-1-min-scaled-500x653-b402633bdc07",
+      "uploadedAt": "2026-04-04T14:06:08.786Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC1012-scaled.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311567/vpstonemason/catalog/acstone/ac1012-scaled-2c7840080f18.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1012-scaled-2c7840080f18",
+      "uploadedAt": "2026-04-04T14:06:09.699Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/09/AC6009-Borghini-Gold-0-1-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311567/vpstonemason/catalog/acstone/ac6009-borghini-gold-0-1-1-1-500x653-1899167e5d8b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6009-borghini-gold-0-1-1-1-500x653-1899167e5d8b",
+      "uploadedAt": "2026-04-04T14:06:09.739Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC9003-0-1-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311568/vpstonemason/catalog/acstone/ac9003-0-1-1-min-scaled-deca7ed0607f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9003-0-1-1-min-scaled-deca7ed0607f",
+      "uploadedAt": "2026-04-04T14:06:10.211Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC5002-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311568/vpstonemason/catalog/acstone/ac5002-0-1-500x653-d82ad05a6cb2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5002-0-1-500x653-d82ad05a6cb2",
+      "uploadedAt": "2026-04-04T14:06:11.338Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC5002-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311570/vpstonemason/catalog/acstone/ac5002-0-1-2db946bf9290.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5002-0-1-2db946bf9290",
+      "uploadedAt": "2026-04-04T14:06:11.988Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/09/AC6009-Borghini-Gold-0-1-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311570/vpstonemason/catalog/acstone/ac6009-borghini-gold-0-1-1-1-9417f53330e0.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6009-borghini-gold-0-1-1-1-9417f53330e0",
+      "uploadedAt": "2026-04-04T14:06:12.016Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/AC6010-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311570/vpstonemason/catalog/acstone/ac6010-0-1-1-500x653-353cfb66b353.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6010-0-1-1-500x653-353cfb66b353",
+      "uploadedAt": "2026-04-04T14:06:12.078Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC9002-0-1-3-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311571/vpstonemason/catalog/acstone/ac9002-0-1-3-500x653-3fc5117d0905.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9002-0-1-3-500x653-3fc5117d0905",
+      "uploadedAt": "2026-04-04T14:06:12.922Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC9001-3-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311571/vpstonemason/catalog/acstone/ac9001-3-scaled-500x653-da9c730dfb7b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9001-3-scaled-500x653-da9c730dfb7b",
+      "uploadedAt": "2026-04-04T14:06:13.931Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC9002-0-1-3.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311572/vpstonemason/catalog/acstone/ac9002-0-1-3-4ce9cb0058c1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9002-0-1-3-4ce9cb0058c1",
+      "uploadedAt": "2026-04-04T14:06:14.147Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/AC6010-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311572/vpstonemason/catalog/acstone/ac6010-0-1-1-0b034a34981f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6010-0-1-1-0b034a34981f",
+      "uploadedAt": "2026-04-04T14:06:15.126Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC9005-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311573/vpstonemason/catalog/acstone/ac9005-0-1-500x653-109cbca6e68e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9005-0-1-500x653-109cbca6e68e",
+      "uploadedAt": "2026-04-04T14:06:15.312Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC9005-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311574/vpstonemason/catalog/acstone/ac9005-0-1-6df4b2b8f215.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9005-0-1-6df4b2b8f215",
+      "uploadedAt": "2026-04-04T14:06:16.006Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/07/AC9001-3-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311574/vpstonemason/catalog/acstone/ac9001-3-scaled-89a9c802727c.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9001-3-scaled-89a9c802727c",
+      "uploadedAt": "2026-04-04T14:06:16.430Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC7005-0-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311574/vpstonemason/catalog/acstone/ac7005-0-0-1-1-500x653-b3a389785d34.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac7005-0-0-1-1-500x653-b3a389785d34",
+      "uploadedAt": "2026-04-04T14:06:16.596Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC999-Imperial-Statuario--500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311575/vpstonemason/catalog/acstone/ac999-imperial-statuario-500x653-c7f6b9d98ce5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac999-imperial-statuario-500x653-c7f6b9d98ce5",
+      "uploadedAt": "2026-04-04T14:06:17.280Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC6012-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311576/vpstonemason/catalog/acstone/ac6012-0-1-1-500x653-a135ef8b40e2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6012-0-1-1-500x653-a135ef8b40e2",
+      "uploadedAt": "2026-04-04T14:06:18.101Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC7005-0-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311576/vpstonemason/catalog/acstone/ac7005-0-0-1-1-e629317553ed.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac7005-0-0-1-1-e629317553ed",
+      "uploadedAt": "2026-04-04T14:06:18.167Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC999-Imperial-Statuario-.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311576/vpstonemason/catalog/acstone/ac999-imperial-statuario-5d7b8e5d45f1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac999-imperial-statuario-5d7b8e5d45f1",
+      "uploadedAt": "2026-04-04T14:06:18.438Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/AC9006-0-1-2-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311576/vpstonemason/catalog/acstone/ac9006-0-1-2-500x653-ff2b643b8e69.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9006-0-1-2-500x653-ff2b643b8e69",
+      "uploadedAt": "2026-04-04T14:06:18.777Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC5000-Natural-White-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311577/vpstonemason/catalog/acstone/ac5000-natural-white-500x653-c84dd0871426.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5000-natural-white-500x653-c84dd0871426",
+      "uploadedAt": "2026-04-04T14:06:19.159Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC5000-Natural-White.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311577/vpstonemason/catalog/acstone/ac5000-natural-white-81bba4c1e969.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5000-natural-white-81bba4c1e969",
+      "uploadedAt": "2026-04-04T14:06:19.701Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC9009-0-0-1-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311577/vpstonemason/catalog/acstone/ac9009-0-0-1-1-scaled-500x653-d48f899b52f1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9009-0-0-1-1-scaled-500x653-d48f899b52f1",
+      "uploadedAt": "2026-04-04T14:06:19.820Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/AC9006-0-1-2.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311578/vpstonemason/catalog/acstone/ac9006-0-1-2-b9a378e53a13.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9006-0-1-2-b9a378e53a13",
+      "uploadedAt": "2026-04-04T14:06:20.245Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC5001-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311578/vpstonemason/catalog/acstone/ac5001-0-1-1-500x653-e7ecfd474184.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5001-0-1-1-500x653-e7ecfd474184",
+      "uploadedAt": "2026-04-04T14:06:20.531Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC9009-0-0-1-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311579/vpstonemason/catalog/acstone/ac9009-0-0-1-1-scaled-2071bf8b239a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9009-0-0-1-1-scaled-2071bf8b239a",
+      "uploadedAt": "2026-04-04T14:06:21.565Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC5001-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311580/vpstonemason/catalog/acstone/ac5001-0-1-1-90924d43d663.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5001-0-1-1-90924d43d663",
+      "uploadedAt": "2026-04-04T14:06:22.105Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC7003-0-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311580/vpstonemason/catalog/acstone/ac7003-0-0-1-1-500x653-55bcc0c0160f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac7003-0-0-1-1-500x653-55bcc0c0160f",
+      "uploadedAt": "2026-04-04T14:06:22.848Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/AC6011-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311581/vpstonemason/catalog/acstone/ac6011-0-1-b62a270eeae9.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6011-0-1-b62a270eeae9",
+      "uploadedAt": "2026-04-04T14:06:23.787Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/Full-slab-image-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311582/vpstonemason/catalog/acstone/full-slab-image-scaled-500x653-55253e995770.jpg",
+      "publicId": "vpstonemason/catalog/acstone/full-slab-image-scaled-500x653-55253e995770",
+      "uploadedAt": "2026-04-04T14:06:24.422Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/03/AC7003-0-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311582/vpstonemason/catalog/acstone/ac7003-0-0-1-1-396b32d7e16d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac7003-0-0-1-1-396b32d7e16d",
+      "uploadedAt": "2026-04-04T14:06:24.713Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/04/AC9000-0-scaled-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311583/vpstonemason/catalog/acstone/ac9000-0-scaled-500x653-c97dc6e71266.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9000-0-scaled-500x653-c97dc6e71266",
+      "uploadedAt": "2026-04-04T14:06:25.428Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/Full-slab-image-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311584/vpstonemason/catalog/acstone/full-slab-image-scaled-44f0ba45d14b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/full-slab-image-scaled-44f0ba45d14b",
+      "uploadedAt": "2026-04-04T14:06:26.429Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/AC6011-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311584/vpstonemason/catalog/acstone/ac6011-0-1-500x653-63a30bdbd4a8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac6011-0-1-500x653-63a30bdbd4a8",
+      "uploadedAt": "2026-04-04T14:06:26.813Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC5003-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311585/vpstonemason/catalog/acstone/ac5003-0-1-500x653-7f1a8cb38508.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5003-0-1-500x653-7f1a8cb38508",
+      "uploadedAt": "2026-04-04T14:06:27.264Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC1018-0-0-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311586/vpstonemason/catalog/acstone/ac1018-0-0-1-scaled-500x653-5e067bff48d7.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1018-0-0-1-scaled-500x653-5e067bff48d7",
+      "uploadedAt": "2026-04-04T14:06:28.331Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC5003-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311586/vpstonemason/catalog/acstone/ac5003-0-1-a2cf19c16a89.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5003-0-1-a2cf19c16a89",
+      "uploadedAt": "2026-04-04T14:06:28.834Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC073-Angel-Falls-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311587/vpstonemason/catalog/acstone/ac073-angel-falls-500x653-8897f8d8a885.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac073-angel-falls-500x653-8897f8d8a885",
+      "uploadedAt": "2026-04-04T14:06:29.545Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/04/AC9000-0-scaled.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311587/vpstonemason/catalog/acstone/ac9000-0-scaled-f406a1c8705d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9000-0-scaled-f406a1c8705d",
+      "uploadedAt": "2026-04-04T14:06:29.878Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC1018-0-0-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311588/vpstonemason/catalog/acstone/ac1018-0-0-1-scaled-ef58aae1b5cc.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac1018-0-0-1-scaled-ef58aae1b5cc",
+      "uploadedAt": "2026-04-04T14:06:30.189Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC602-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311588/vpstonemason/catalog/acstone/ac602-0-1-500x653-3708f954e114.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac602-0-1-500x653-3708f954e114",
+      "uploadedAt": "2026-04-04T14:06:30.636Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC915-Black-Swan-0-0-1-3-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311589/vpstonemason/catalog/acstone/ac915-black-swan-0-0-1-3-500x653-efa1500c26b8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac915-black-swan-0-0-1-3-500x653-efa1500c26b8",
+      "uploadedAt": "2026-04-04T14:06:31.348Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC602-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311589/vpstonemason/catalog/acstone/ac602-0-1-dbcda0b786b0.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac602-0-1-dbcda0b786b0",
+      "uploadedAt": "2026-04-04T14:06:31.381Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC111-CAlacatta-Plato-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311590/vpstonemason/catalog/acstone/ac111-calacatta-plato-500x653-151f9cea322b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac111-calacatta-plato-500x653-151f9cea322b",
+      "uploadedAt": "2026-04-04T14:06:32.103Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC915-Black-Swan-0-0-1-3.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311591/vpstonemason/catalog/acstone/ac915-black-swan-0-0-1-3-2ef529a9cd51.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac915-black-swan-0-0-1-3-2ef529a9cd51",
+      "uploadedAt": "2026-04-04T14:06:33.135Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC073-Angel-Falls.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311591/vpstonemason/catalog/acstone/ac073-angel-falls-796e65349eea.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac073-angel-falls-796e65349eea",
+      "uploadedAt": "2026-04-04T14:06:33.297Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC555-Classic-Calacatta-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311591/vpstonemason/catalog/acstone/ac555-classic-calacatta-500x653-5b6a9e18f0ec.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac555-classic-calacatta-500x653-5b6a9e18f0ec",
+      "uploadedAt": "2026-04-04T14:06:33.754Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC111-CAlacatta-Plato.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311592/vpstonemason/catalog/acstone/ac111-calacatta-plato-4dc76fb3e1b6.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac111-calacatta-plato-4dc76fb3e1b6",
+      "uploadedAt": "2026-04-04T14:06:34.539Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/ACDDD-Dolce-Tree-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311592/vpstonemason/catalog/acstone/acddd-dolce-tree-500x653-fa63bbd7f1a8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/acddd-dolce-tree-500x653-fa63bbd7f1a8",
+      "uploadedAt": "2026-04-04T14:06:34.546Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC078-Earth-Core-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311593/vpstonemason/catalog/acstone/ac078-earth-core-500x653-643ad7e433d3.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac078-earth-core-500x653-643ad7e433d3",
+      "uploadedAt": "2026-04-04T14:06:35.429Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC555-Classic-Calacatta.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311593/vpstonemason/catalog/acstone/ac555-classic-calacatta-ab26dded29b9.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac555-classic-calacatta-ab26dded29b9",
+      "uploadedAt": "2026-04-04T14:06:36.096Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/ACDDD-Dolce-Tree.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311594/vpstonemason/catalog/acstone/acddd-dolce-tree-9d2a64e64241.jpg",
+      "publicId": "vpstonemason/catalog/acstone/acddd-dolce-tree-9d2a64e64241",
+      "uploadedAt": "2026-04-04T14:06:36.848Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/11/AC5007-0-scaled-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311595/vpstonemason/catalog/acstone/ac5007-0-scaled-500x653-7ac23a8cb8fb.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5007-0-scaled-500x653-7ac23a8cb8fb",
+      "uploadedAt": "2026-04-04T14:06:36.973Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/01/AC076-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311595/vpstonemason/catalog/acstone/ac076-scaled-500x653-82d2c49ed052.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac076-scaled-500x653-82d2c49ed052",
+      "uploadedAt": "2026-04-04T14:06:37.723Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC078-Earth-Core.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311595/vpstonemason/catalog/acstone/ac078-earth-core-299840916914.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac078-earth-core-299840916914",
+      "uploadedAt": "2026-04-04T14:06:37.876Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC888-Statuario-Enato-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311596/vpstonemason/catalog/acstone/ac888-statuario-enato-500x653-cd6b92e3b66e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac888-statuario-enato-500x653-cd6b92e3b66e",
+      "uploadedAt": "2026-04-04T14:06:38.571Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/11/AC5007-0-scaled.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311596/vpstonemason/catalog/acstone/ac5007-0-scaled-f0937bfaf661.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5007-0-scaled-f0937bfaf661",
+      "uploadedAt": "2026-04-04T14:06:39.108Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/01/AC076-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311597/vpstonemason/catalog/acstone/ac076-scaled-68b34741c124.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac076-scaled-68b34741c124",
+      "uploadedAt": "2026-04-04T14:06:39.497Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/11/AC5018-0-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311597/vpstonemason/catalog/acstone/ac5018-0-scaled-500x653-c7effa7f48fd.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5018-0-scaled-500x653-c7effa7f48fd",
+      "uploadedAt": "2026-04-04T14:06:39.761Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC3000-Venus-Line-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311598/vpstonemason/catalog/acstone/ac3000-venus-line-500x653-094a814d69ce.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac3000-venus-line-500x653-094a814d69ce",
+      "uploadedAt": "2026-04-04T14:06:40.490Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC888-Statuario-Enato.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311599/vpstonemason/catalog/acstone/ac888-statuario-enato-38bdc5c0818a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac888-statuario-enato-38bdc5c0818a",
+      "uploadedAt": "2026-04-04T14:06:41.046Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC9051--500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311599/vpstonemason/catalog/acstone/ac9051-500x653-a5e6d39e8878.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9051-500x653-a5e6d39e8878",
+      "uploadedAt": "2026-04-04T14:06:41.745Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC3000-Venus-Line.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311600/vpstonemason/catalog/acstone/ac3000-venus-line-0e748710dca5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac3000-venus-line-0e748710dca5",
+      "uploadedAt": "2026-04-04T14:06:42.808Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/11/AC5018-0-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311601/vpstonemason/catalog/acstone/ac5018-0-scaled-f4308eb9d3df.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac5018-0-scaled-f4308eb9d3df",
+      "uploadedAt": "2026-04-04T14:06:42.874Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/04/AC008M-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311601/vpstonemason/catalog/acstone/ac008m-scaled-500x653-f8a52a5fdddf.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac008m-scaled-500x653-f8a52a5fdddf",
+      "uploadedAt": "2026-04-04T14:06:43.455Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/04/AC008M-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311601/vpstonemason/catalog/acstone/ac008m-scaled-6cd6caf79bcb.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac008m-scaled-6cd6caf79bcb",
+      "uploadedAt": "2026-04-04T14:06:43.679Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC902-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311602/vpstonemason/catalog/acstone/ac902-0-1-1-500x653-81d156f6be3a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac902-0-1-1-500x653-81d156f6be3a",
+      "uploadedAt": "2026-04-04T14:06:44.137Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC918-Snow-White-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311603/vpstonemason/catalog/acstone/ac918-snow-white-500x653-b32fe6ceef9d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac918-snow-white-500x653-b32fe6ceef9d",
+      "uploadedAt": "2026-04-04T14:06:44.860Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC9051-.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311602/vpstonemason/catalog/acstone/ac9051-a690e220f994.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9051-a690e220f994",
+      "uploadedAt": "2026-04-04T14:06:44.897Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC079-1-500x653.png": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311604/vpstonemason/catalog/acstone/ac079-1-500x653-f1b69a7e9e63.png",
+      "publicId": "vpstonemason/catalog/acstone/ac079-1-500x653-f1b69a7e9e63",
+      "uploadedAt": "2026-04-04T14:06:45.866Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC902-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311604/vpstonemason/catalog/acstone/ac902-0-1-1-3b69f8e5202f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac902-0-1-1-3b69f8e5202f",
+      "uploadedAt": "2026-04-04T14:06:46.136Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC9091-White-Jade-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311605/vpstonemason/catalog/acstone/ac9091-white-jade-500x653-51ca9260de7e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9091-white-jade-500x653-51ca9260de7e",
+      "uploadedAt": "2026-04-04T14:06:47.254Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC918-Snow-White.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311605/vpstonemason/catalog/acstone/ac918-snow-white-b8847e864843.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac918-snow-white-b8847e864843",
+      "uploadedAt": "2026-04-04T14:06:47.512Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC003-0-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311606/vpstonemason/catalog/acstone/ac003-0-1-scaled-500x653-08538b59b308.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac003-0-1-scaled-500x653-08538b59b308",
+      "uploadedAt": "2026-04-04T14:06:48.216Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC079-1.png": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311606/vpstonemason/catalog/acstone/ac079-1-f7155be89732.png",
+      "publicId": "vpstonemason/catalog/acstone/ac079-1-f7155be89732",
+      "uploadedAt": "2026-04-04T14:06:48.783Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/WechatIMG6-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311607/vpstonemason/catalog/acstone/wechatimg6-500x653-19d2a038a426.jpg",
+      "publicId": "vpstonemason/catalog/acstone/wechatimg6-500x653-19d2a038a426",
+      "uploadedAt": "2026-04-04T14:06:49.523Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC9091-White-Jade.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311607/vpstonemason/catalog/acstone/ac9091-white-jade-d487a98abbe5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac9091-white-jade-d487a98abbe5",
+      "uploadedAt": "2026-04-04T14:06:49.657Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC900WHITE-CANVAS-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311608/vpstonemason/catalog/acstone/ac900white-canvas-500x653-f6ef5e007623.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac900white-canvas-500x653-f6ef5e007623",
+      "uploadedAt": "2026-04-04T14:06:50.314Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/WechatIMG6.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311610/vpstonemason/catalog/acstone/wechatimg6-f4c14efdbdd1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/wechatimg6-f4c14efdbdd1",
+      "uploadedAt": "2026-04-04T14:06:52.113Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC003-0-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311610/vpstonemason/catalog/acstone/ac003-0-1-scaled-375a92b38a74.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac003-0-1-scaled-375a92b38a74",
+      "uploadedAt": "2026-04-04T14:06:52.512Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC900WHITE-CANVAS.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311610/vpstonemason/catalog/acstone/ac900white-canvas-26a22ed46c4f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac900white-canvas-26a22ed46c4f",
+      "uploadedAt": "2026-04-04T14:06:52.605Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8517ALPINE-SNOW-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311610/vpstonemason/catalog/acstone/ac8517alpine-snow-500x653-994ad7b84517.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8517alpine-snow-500x653-994ad7b84517",
+      "uploadedAt": "2026-04-04T14:06:52.878Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8101-Daisy-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311611/vpstonemason/catalog/acstone/ac8101-daisy-500x653-c0457aa95963.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8101-daisy-500x653-c0457aa95963",
+      "uploadedAt": "2026-04-04T14:06:53.269Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC8201-Diamond-Black-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311612/vpstonemason/catalog/acstone/ac8201-diamond-black-0-1-500x653-6ce0c4f46c12.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8201-diamond-black-0-1-500x653-6ce0c4f46c12",
+      "uploadedAt": "2026-04-04T14:06:54.098Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8517ALPINE-SNOW.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311612/vpstonemason/catalog/acstone/ac8517alpine-snow-dfd029964b0e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8517alpine-snow-dfd029964b0e",
+      "uploadedAt": "2026-04-04T14:06:54.876Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8101-Daisy.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311613/vpstonemason/catalog/acstone/ac8101-daisy-af59cd5ab068.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8101-daisy-af59cd5ab068",
+      "uploadedAt": "2026-04-04T14:06:55.379Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8123-Diamond-White-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311613/vpstonemason/catalog/acstone/ac8123-diamond-white-500x653-a616074b5b07.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8123-diamond-white-500x653-a616074b5b07",
+      "uploadedAt": "2026-04-04T14:06:55.679Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8125-Magnolia-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311614/vpstonemason/catalog/acstone/ac8125-magnolia-500x653-0f3d0d93e0f1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8125-magnolia-500x653-0f3d0d93e0f1",
+      "uploadedAt": "2026-04-04T14:06:56.547Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC8201-Diamond-Black-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311614/vpstonemason/catalog/acstone/ac8201-diamond-black-0-1-18aeb60bbd1f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8201-diamond-black-0-1-18aeb60bbd1f",
+      "uploadedAt": "2026-04-04T14:06:56.670Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8128-OCEAN-GREY-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311615/vpstonemason/catalog/acstone/ac8128-ocean-grey-500x653-71102a047527.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8128-ocean-grey-500x653-71102a047527",
+      "uploadedAt": "2026-04-04T14:06:57.463Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8123-Diamond-White.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311615/vpstonemason/catalog/acstone/ac8123-diamond-white-8c96d0435dd0.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8123-diamond-white-8c96d0435dd0",
+      "uploadedAt": "2026-04-04T14:06:57.990Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8128-OCEAN-GREY.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311616/vpstonemason/catalog/acstone/ac8128-ocean-grey-488b712b6065.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8128-ocean-grey-488b712b6065",
+      "uploadedAt": "2026-04-04T14:06:58.277Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8122-Pearl-Sand-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311616/vpstonemason/catalog/acstone/ac8122-pearl-sand-500x653-e4a032025ce7.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8122-pearl-sand-500x653-e4a032025ce7",
+      "uploadedAt": "2026-04-04T14:06:58.738Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2079-1-15-e1770786458934.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311617/vpstonemason/catalog/acstone/ac2079-1-15-e1770786458934-b650cadf6390.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2079-1-15-e1770786458934-b650cadf6390",
+      "uploadedAt": "2026-04-04T14:06:59.647Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2085-0-0-Invisible-Select-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311618/vpstonemason/catalog/acstone/ac2085-0-0-invisible-select-scaled-500x653-d377f7869144.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2085-0-0-invisible-select-scaled-500x653-d377f7869144",
+      "uploadedAt": "2026-04-04T14:07:00.429Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8122-Pearl-Sand.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311618/vpstonemason/catalog/acstone/ac8122-pearl-sand-bc4f12d51515.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8122-pearl-sand-bc4f12d51515",
+      "uploadedAt": "2026-04-04T14:07:00.750Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2083-0-Left-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311619/vpstonemason/catalog/acstone/ac2083-0-left-1-scaled-500x653-ab5851439d61.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2083-0-left-1-scaled-500x653-ab5851439d61",
+      "uploadedAt": "2026-04-04T14:07:01.372Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC8125-Magnolia.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311619/vpstonemason/catalog/acstone/ac8125-magnolia-4aeca249e488.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac8125-magnolia-4aeca249e488",
+      "uploadedAt": "2026-04-04T14:07:01.700Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2085-0-0-Invisible-Select-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311620/vpstonemason/catalog/acstone/ac2085-0-0-invisible-select-scaled-ba5e0780e253.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2085-0-0-invisible-select-scaled-ba5e0780e253",
+      "uploadedAt": "2026-04-04T14:07:02.369Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2097-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311620/vpstonemason/catalog/acstone/ac2097-0-1-500x653-50190aa0792d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2097-0-1-500x653-50190aa0792d",
+      "uploadedAt": "2026-04-04T14:07:02.621Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2083-0-Left-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311621/vpstonemason/catalog/acstone/ac2083-0-left-1-scaled-d3df78de8b5b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2083-0-left-1-scaled-d3df78de8b5b",
+      "uploadedAt": "2026-04-04T14:07:03.222Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2078-Palissandro-Blue-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311621/vpstonemason/catalog/acstone/ac2078-palissandro-blue-0-1-500x653-21a1837a54ce.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2078-palissandro-blue-0-1-500x653-21a1837a54ce",
+      "uploadedAt": "2026-04-04T14:07:03.331Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2089-0-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311622/vpstonemason/catalog/acstone/ac2089-0-0-1-1-500x653-18253ebde72c.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2089-0-0-1-1-500x653-18253ebde72c",
+      "uploadedAt": "2026-04-04T14:07:04.374Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2097-0-1-2600x1297.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311622/vpstonemason/catalog/acstone/ac2097-0-1-2600x1297-0d2dfe9fcc7c.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2097-0-1-2600x1297-0d2dfe9fcc7c",
+      "uploadedAt": "2026-04-04T14:07:04.906Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2079-0-0-1-2-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311623/vpstonemason/catalog/acstone/ac2079-0-0-1-2-500x653-8353fcb1a0aa.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2079-0-0-1-2-500x653-8353fcb1a0aa",
+      "uploadedAt": "2026-04-04T14:07:05.648Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2078-Palissandro-Blue-0-1-2600x1300.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311623/vpstonemason/catalog/acstone/ac2078-palissandro-blue-0-1-2600x1300-9abc03df68af.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2078-palissandro-blue-0-1-2600x1300-9abc03df68af",
+      "uploadedAt": "2026-04-04T14:07:05.779Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2079-0-0-1-2.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311624/vpstonemason/catalog/acstone/ac2079-0-0-1-2-670f1aae67e7.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2079-0-0-1-2-670f1aae67e7",
+      "uploadedAt": "2026-04-04T14:07:06.679Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2077-Breccia-Rosa-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311624/vpstonemason/catalog/acstone/ac2077-breccia-rosa-0-1-500x653-26ca39ce6ce2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2077-breccia-rosa-0-1-500x653-26ca39ce6ce2",
+      "uploadedAt": "2026-04-04T14:07:06.764Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/01/AC2076-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311625/vpstonemason/catalog/acstone/ac2076-0-1-500x653-c317d57ccc3c.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2076-0-1-500x653-c317d57ccc3c",
+      "uploadedAt": "2026-04-04T14:07:07.526Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2077-Breccia-Rosa-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311625/vpstonemason/catalog/acstone/ac2077-breccia-rosa-0-1-372179e32122.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2077-breccia-rosa-0-1-372179e32122",
+      "uploadedAt": "2026-04-04T14:07:07.778Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/high-sierra-ac2073-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311626/vpstonemason/catalog/acstone/high-sierra-ac2073-500x653-d0b050079b90.jpg",
+      "publicId": "vpstonemason/catalog/acstone/high-sierra-ac2073-500x653-d0b050079b90",
+      "uploadedAt": "2026-04-04T14:07:08.980Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2089-0-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311628/vpstonemason/catalog/acstone/ac2089-0-0-1-1-d52f517f3bf1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2089-0-0-1-1-d52f517f3bf1",
+      "uploadedAt": "2026-04-04T14:07:09.959Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/01/AC2076-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311627/vpstonemason/catalog/acstone/ac2076-0-1-29473413b51e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2076-0-1-29473413b51e",
+      "uploadedAt": "2026-04-04T14:07:10.212Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2073-High-Sierra-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311628/vpstonemason/catalog/acstone/ac2073-high-sierra-0-1-min-scaled-b9b225981910.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2073-high-sierra-0-1-min-scaled-b9b225981910",
+      "uploadedAt": "2026-04-04T14:07:10.569Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2070-Rose-Gold-0-1-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311628/vpstonemason/catalog/acstone/ac2070-rose-gold-0-1-500x653-e2ae49052d36.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2070-rose-gold-0-1-500x653-e2ae49052d36",
+      "uploadedAt": "2026-04-04T14:07:10.719Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2070-Rose-Gold-0-1.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311629/vpstonemason/catalog/acstone/ac2070-rose-gold-0-1-a6f654a7cb0a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2070-rose-gold-0-1-a6f654a7cb0a",
+      "uploadedAt": "2026-04-04T14:07:10.964Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2052-Taj-Veil-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311629/vpstonemason/catalog/acstone/ac2052-taj-veil-0-1-500x653-c010fb3a2e50.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2052-taj-veil-0-1-500x653-c010fb3a2e50",
+      "uploadedAt": "2026-04-04T14:07:11.564Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2053-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311630/vpstonemason/catalog/acstone/ac2053-0-1-1-e9603ee8ef24.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2053-0-1-1-e9603ee8ef24",
+      "uploadedAt": "2026-04-04T14:07:13.353Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2026/02/AC2052-Taj-Veil-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311631/vpstonemason/catalog/acstone/ac2052-taj-veil-0-1-1ded48b4d2bd.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2052-taj-veil-0-1-1ded48b4d2bd",
+      "uploadedAt": "2026-04-04T14:07:13.480Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2053-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311631/vpstonemason/catalog/acstone/ac2053-0-1-1-500x653-d46b46e9aaa9.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2053-0-1-1-500x653-d46b46e9aaa9",
+      "uploadedAt": "2026-04-04T14:07:13.818Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2051-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311632/vpstonemason/catalog/acstone/ac2051-0-1-1-500x653-f5b814830364.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2051-0-1-1-500x653-f5b814830364",
+      "uploadedAt": "2026-04-04T14:07:14.014Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC2088-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311632/vpstonemason/catalog/acstone/ac2088-0-1-1-500x653-ae1f63f15757.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2088-0-1-1-500x653-ae1f63f15757",
+      "uploadedAt": "2026-04-04T14:07:15.293Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2025/11/AC2051-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311633/vpstonemason/catalog/acstone/ac2051-0-1-1-40e87b9e25c3.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2051-0-1-1-40e87b9e25c3",
+      "uploadedAt": "2026-04-04T14:07:15.790Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC2088-0-1-1-1200x599.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311633/vpstonemason/catalog/acstone/ac2088-0-1-1-1200x599-2e2cbce2335c.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2088-0-1-1-1200x599-2e2cbce2335c",
+      "uploadedAt": "2026-04-04T14:07:15.834Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC2086-Golden-Breeze-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311634/vpstonemason/catalog/acstone/ac2086-golden-breeze-0-1-500x653-ec8f1c6fee1b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2086-golden-breeze-0-1-500x653-ec8f1c6fee1b",
+      "uploadedAt": "2026-04-04T14:07:16.006Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC2086-Golden-Breeze-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311634/vpstonemason/catalog/acstone/ac2086-golden-breeze-0-1-2ffaee35722d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2086-golden-breeze-0-1-2ffaee35722d",
+      "uploadedAt": "2026-04-04T14:07:16.546Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC2093-Taj-Ivory-0-1-1-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311634/vpstonemason/catalog/acstone/ac2093-taj-ivory-0-1-1-500x653-2a3916eb528a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2093-taj-ivory-0-1-1-500x653-2a3916eb528a",
+      "uploadedAt": "2026-04-04T14:07:16.591Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2068-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311635/vpstonemason/catalog/acstone/ac2068-0-1-1-500x653-cf3628b7d956.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2068-0-1-1-500x653-cf3628b7d956",
+      "uploadedAt": "2026-04-04T14:07:17.365Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/11/AC2093-Taj-Ivory-0-1-1.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311636/vpstonemason/catalog/acstone/ac2093-taj-ivory-0-1-1-d59f8f30806d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2093-taj-ivory-0-1-1-d59f8f30806d",
+      "uploadedAt": "2026-04-04T14:07:18.102Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2063-Taj-Mahal-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311636/vpstonemason/catalog/acstone/ac2063-taj-mahal-0-1-min-scaled-500x653-4ecbf7882956.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2063-taj-mahal-0-1-min-scaled-500x653-4ecbf7882956",
+      "uploadedAt": "2026-04-04T14:07:18.257Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2062-Cement-Grey-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311637/vpstonemason/catalog/acstone/ac2062-cement-grey-0-1-min-scaled-500x653-9339992b0ac8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2062-cement-grey-0-1-min-scaled-500x653-9339992b0ac8",
+      "uploadedAt": "2026-04-04T14:07:19.226Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2068-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311637/vpstonemason/catalog/acstone/ac2068-0-1-1-d07d4a2c9205.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2068-0-1-1-d07d4a2c9205",
+      "uploadedAt": "2026-04-04T14:07:19.382Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2063-Taj-Mahal-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311638/vpstonemason/catalog/acstone/ac2063-taj-mahal-0-1-min-scaled-aaa91290ce4f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2063-taj-mahal-0-1-min-scaled-aaa91290ce4f",
+      "uploadedAt": "2026-04-04T14:07:20.062Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2060-0-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311638/vpstonemason/catalog/acstone/ac2060-0-1-500x653-01e2fe0aece7.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2060-0-1-500x653-01e2fe0aece7",
+      "uploadedAt": "2026-04-04T14:07:20.156Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2062-Cement-Grey-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311639/vpstonemason/catalog/acstone/ac2062-cement-grey-0-1-min-scaled-7d7a4f0b3e3e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2062-cement-grey-0-1-min-scaled-7d7a4f0b3e3e",
+      "uploadedAt": "2026-04-04T14:07:21.019Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2050-Arabescato-Grigio-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311639/vpstonemason/catalog/acstone/ac2050-arabescato-grigio-0-1-min-scaled-500x653-756ebe988008.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2050-arabescato-grigio-0-1-min-scaled-500x653-756ebe988008",
+      "uploadedAt": "2026-04-04T14:07:21.416Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2046-Amazon-Green-0-0-1-Left-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311640/vpstonemason/catalog/acstone/ac2046-amazon-green-0-0-1-left-scaled-500x653-1ad05b917ee4.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2046-amazon-green-0-0-1-left-scaled-500x653-1ad05b917ee4",
+      "uploadedAt": "2026-04-04T14:07:22.196Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2060-0-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311640/vpstonemason/catalog/acstone/ac2060-0-1-ebfdb503ebc4.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2060-0-1-ebfdb503ebc4",
+      "uploadedAt": "2026-04-04T14:07:23.149Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2050-Arabescato-Grigio-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311641/vpstonemason/catalog/acstone/ac2050-arabescato-grigio-0-1-min-scaled-a6b38f0b9264.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2050-arabescato-grigio-0-1-min-scaled-a6b38f0b9264",
+      "uploadedAt": "2026-04-04T14:07:23.447Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2041-0-1-New-Noir-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311641/vpstonemason/catalog/acstone/ac2041-0-1-new-noir-500x653-8c6c4bf35aa0.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2041-0-1-new-noir-500x653-8c6c4bf35aa0",
+      "uploadedAt": "2026-04-04T14:07:23.878Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2041-0-1-New-Noir.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311642/vpstonemason/catalog/acstone/ac2041-0-1-new-noir-de2636a407eb.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2041-0-1-new-noir-de2636a407eb",
+      "uploadedAt": "2026-04-04T14:07:24.456Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2040-New-Rosetta-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311643/vpstonemason/catalog/acstone/ac2040-new-rosetta-0-1-min-scaled-500x653-6f2b3bebca01.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2040-new-rosetta-0-1-min-scaled-500x653-6f2b3bebca01",
+      "uploadedAt": "2026-04-04T14:07:25.114Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2081-0-1-1-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311643/vpstonemason/catalog/acstone/ac2081-0-1-1-1-scaled-500x653-ba9be6720136.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2081-0-1-1-1-scaled-500x653-ba9be6720136",
+      "uploadedAt": "2026-04-04T14:07:25.815Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2040-New-Rosetta-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311644/vpstonemason/catalog/acstone/ac2040-new-rosetta-0-1-min-scaled-1b4ad7ed22f2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2040-new-rosetta-0-1-min-scaled-1b4ad7ed22f2",
+      "uploadedAt": "2026-04-04T14:07:26.241Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2046-Amazon-Green-0-0-1-Left-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311644/vpstonemason/catalog/acstone/ac2046-amazon-green-0-0-1-left-scaled-ff6922941aac.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2046-amazon-green-0-0-1-left-scaled-ff6922941aac",
+      "uploadedAt": "2026-04-04T14:07:26.492Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/06/AC2049-0-1-Crema-Luna-3-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311645/vpstonemason/catalog/acstone/ac2049-0-1-crema-luna-3-500x653-433080e919c3.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2049-0-1-crema-luna-3-500x653-433080e919c3",
+      "uploadedAt": "2026-04-04T14:07:26.908Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2081-0-1-1-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311645/vpstonemason/catalog/acstone/ac2081-0-1-1-1-scaled-9c5fdf65f090.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2081-0-1-1-1-scaled-9c5fdf65f090",
+      "uploadedAt": "2026-04-04T14:07:27.514Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/10/AC2009-Classic-Enato-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311645/vpstonemason/catalog/acstone/ac2009-classic-enato-scaled-500x653-3651b2ec7e54.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2009-classic-enato-scaled-500x653-3651b2ec7e54",
+      "uploadedAt": "2026-04-04T14:07:27.664Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/06/AC2049-0-1-Crema-Luna-3.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311646/vpstonemason/catalog/acstone/ac2049-0-1-crema-luna-3-801f98378f74.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2049-0-1-crema-luna-3-801f98378f74",
+      "uploadedAt": "2026-04-04T14:07:28.333Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC2039-0-1-Calacatta-Supreme-left-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311646/vpstonemason/catalog/acstone/ac2039-0-1-calacatta-supreme-left-500x653-edc84ba962d1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2039-0-1-calacatta-supreme-left-500x653-edc84ba962d1",
+      "uploadedAt": "2026-04-04T14:07:28.443Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/10/AC2009-Classic-Enato-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311647/vpstonemason/catalog/acstone/ac2009-classic-enato-scaled-eb38e2eb037a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2009-classic-enato-scaled-eb38e2eb037a",
+      "uploadedAt": "2026-04-04T14:07:29.314Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2036-Midnight-500x653.png": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311647/vpstonemason/catalog/acstone/ac2036-midnight-500x653-caab5f5fd626.png",
+      "publicId": "vpstonemason/catalog/acstone/ac2036-midnight-500x653-caab5f5fd626",
+      "uploadedAt": "2026-04-04T14:07:29.447Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2035M-BIANCA-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311648/vpstonemason/catalog/acstone/ac2035m-bianca-500x653-9b1f4f64440f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2035m-bianca-500x653-9b1f4f64440f",
+      "uploadedAt": "2026-04-04T14:07:30.122Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2036-Midnight.png": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311648/vpstonemason/catalog/acstone/ac2036-midnight-a06947fc6e0b.png",
+      "publicId": "vpstonemason/catalog/acstone/ac2036-midnight-a06947fc6e0b",
+      "uploadedAt": "2026-04-04T14:07:30.214Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2032G-STATUARIO-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311649/vpstonemason/catalog/acstone/ac2032g-statuario-500x653-3392d01ff891.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2032g-statuario-500x653-3392d01ff891",
+      "uploadedAt": "2026-04-04T14:07:30.932Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2035M-BIANCA.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311649/vpstonemason/catalog/acstone/ac2035m-bianca-1b2d59f07e5a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2035m-bianca-1b2d59f07e5a",
+      "uploadedAt": "2026-04-04T14:07:31.513Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC2039-0-1-Calacatta-Supreme-left.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311650/vpstonemason/catalog/acstone/ac2039-0-1-calacatta-supreme-left-709b0ef851d4.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2039-0-1-calacatta-supreme-left-709b0ef851d4",
+      "uploadedAt": "2026-04-04T14:07:32.018Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC2031-newslab-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311650/vpstonemason/catalog/acstone/ac2031-newslab-500x653-26facb1f3974.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2031-newslab-500x653-26facb1f3974",
+      "uploadedAt": "2026-04-04T14:07:32.393Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC2029-New-Marquina-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311651/vpstonemason/catalog/acstone/ac2029-new-marquina-0-1-1-500x653-5806e3b1328f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2029-new-marquina-0-1-1-500x653-5806e3b1328f",
+      "uploadedAt": "2026-04-04T14:07:33.296Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2032G-STATUARIO.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311651/vpstonemason/catalog/acstone/ac2032g-statuario-9f13423380e8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2032g-statuario-9f13423380e8",
+      "uploadedAt": "2026-04-04T14:07:33.313Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2075-Mojave-Desert-0-1.jpg-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311652/vpstonemason/catalog/acstone/ac2075-mojave-desert-0-1-jpg-500x653-d91bd27f2c01.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2075-mojave-desert-0-1-jpg-500x653-d91bd27f2c01",
+      "uploadedAt": "2026-04-04T14:07:34.110Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC2031-newslab.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311652/vpstonemason/catalog/acstone/ac2031-newslab-39a9a3fefa15.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2031-newslab-39a9a3fefa15",
+      "uploadedAt": "2026-04-04T14:07:34.323Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2072-Capitan-Rock-0-1-1-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311653/vpstonemason/catalog/acstone/ac2072-capitan-rock-0-1-1-500x653-6c8ad3e2abef.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2072-capitan-rock-0-1-1-500x653-6c8ad3e2abef",
+      "uploadedAt": "2026-04-04T14:07:35.241Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/06/AC2029-New-Marquina-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311653/vpstonemason/catalog/acstone/ac2029-new-marquina-0-1-1-39e5d5d0bfe9.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2029-new-marquina-0-1-1-39e5d5d0bfe9",
+      "uploadedAt": "2026-04-04T14:07:35.339Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2075-Mojave-Desert-0-1.jpg.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311654/vpstonemason/catalog/acstone/ac2075-mojave-desert-0-1-jpg-bfd0f8373110.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2075-mojave-desert-0-1-jpg-bfd0f8373110",
+      "uploadedAt": "2026-04-04T14:07:35.996Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2069-Pandora-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311654/vpstonemason/catalog/acstone/ac2069-pandora-0-1-min-scaled-500x653-9c7bb5974810.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2069-pandora-0-1-min-scaled-500x653-9c7bb5974810",
+      "uploadedAt": "2026-04-04T14:07:36.003Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2067-Grigio-Grandeur-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311654/vpstonemason/catalog/acstone/ac2067-grigio-grandeur-0-1-min-scaled-500x653-4cb25745b57e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2067-grigio-grandeur-0-1-min-scaled-500x653-4cb25745b57e",
+      "uploadedAt": "2026-04-04T14:07:36.769Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2072-Capitan-Rock-0-1-1.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311655/vpstonemason/catalog/acstone/ac2072-capitan-rock-0-1-1-d452984b1eb7.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2072-capitan-rock-0-1-1-d452984b1eb7",
+      "uploadedAt": "2026-04-04T14:07:37.662Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2069-Pandora-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311656/vpstonemason/catalog/acstone/ac2069-pandora-0-1-min-scaled-56ece406c97a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2069-pandora-0-1-min-scaled-56ece406c97a",
+      "uploadedAt": "2026-04-04T14:07:38.031Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2065-Aurelius-Lux-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311656/vpstonemason/catalog/acstone/ac2065-aurelius-lux-0-1-min-scaled-500x653-97eed99a7565.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2065-aurelius-lux-0-1-min-scaled-500x653-97eed99a7565",
+      "uploadedAt": "2026-04-04T14:07:38.472Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2067-Grigio-Grandeur-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311656/vpstonemason/catalog/acstone/ac2067-grigio-grandeur-0-1-min-scaled-e0204f7d1fb5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2067-grigio-grandeur-0-1-min-scaled-e0204f7d1fb5",
+      "uploadedAt": "2026-04-04T14:07:38.793Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2061-New-York-0-1-min-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311657/vpstonemason/catalog/acstone/ac2061-new-york-0-1-min-scaled-500x653-4704105c525a.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2061-new-york-0-1-min-scaled-500x653-4704105c525a",
+      "uploadedAt": "2026-04-04T14:07:39.291Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2065-Aurelius-Lux-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311657/vpstonemason/catalog/acstone/ac2065-aurelius-lux-0-1-min-scaled-010c97f4f4b2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2065-aurelius-lux-0-1-min-scaled-010c97f4f4b2",
+      "uploadedAt": "2026-04-04T14:07:39.851Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2082-0-1-Right-1-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311658/vpstonemason/catalog/acstone/ac2082-0-1-right-1-scaled-500x653-3bbae32e65e1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2082-0-1-right-1-scaled-500x653-3bbae32e65e1",
+      "uploadedAt": "2026-04-04T14:07:40.150Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/03/AC2061-New-York-0-1-min-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311658/vpstonemason/catalog/acstone/ac2061-new-york-0-1-min-scaled-687838891eaa.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2061-new-york-0-1-min-scaled-687838891eaa",
+      "uploadedAt": "2026-04-04T14:07:40.795Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/10/AC2042-Dark-Sea-scaled-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311659/vpstonemason/catalog/acstone/ac2042-dark-sea-scaled-500x653-56351c414e43.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2042-dark-sea-scaled-500x653-56351c414e43",
+      "uploadedAt": "2026-04-04T14:07:40.993Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2023/08/AC2082-0-1-Right-1-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311659/vpstonemason/catalog/acstone/ac2082-0-1-right-1-scaled-c853a4e3227f.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2082-0-1-right-1-scaled-c853a4e3227f",
+      "uploadedAt": "2026-04-04T14:07:41.706Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2025R-Calacatta-Oro-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311659/vpstonemason/catalog/acstone/ac2025r-calacatta-oro-500x653-f37a6a80a1e2.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2025r-calacatta-oro-500x653-f37a6a80a1e2",
+      "uploadedAt": "2026-04-04T14:07:41.786Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/10/AC2042-Dark-Sea-scaled.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311660/vpstonemason/catalog/acstone/ac2042-dark-sea-scaled-3f94068fca24.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2042-dark-sea-scaled-3f94068fca24",
+      "uploadedAt": "2026-04-04T14:07:42.653Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2041M-NOIR-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311660/vpstonemason/catalog/acstone/ac2041m-noir-500x653-7e58d9e18553.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2041m-noir-500x653-7e58d9e18553",
+      "uploadedAt": "2026-04-04T14:07:42.721Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2024/10/7R509836.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311661/vpstonemason/catalog/acstone/7r509836-452989b7a88d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/7r509836-452989b7a88d",
+      "uploadedAt": "2026-04-04T14:07:43.873Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2025R-Calacatta-Oro.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311662/vpstonemason/catalog/acstone/ac2025r-calacatta-oro-cccc64d4c141.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2025r-calacatta-oro-cccc64d4c141",
+      "uploadedAt": "2026-04-04T14:07:44.513Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0812N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311662/vpstonemason/catalog/acstone/ac0812n-500x653-64c2555405b0.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0812n-500x653-64c2555405b0",
+      "uploadedAt": "2026-04-04T14:07:44.647Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC0822N-0-500x653.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311663/vpstonemason/catalog/acstone/ac0822n-0-500x653-4e0ba0e4ab65.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0822n-0-500x653-4e0ba0e4ab65",
+      "uploadedAt": "2026-04-04T14:07:45.542Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0812N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311665/vpstonemason/catalog/acstone/ac0812n-735ac640446d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0812n-735ac640446d",
+      "uploadedAt": "2026-04-04T14:07:47.292Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC2041M-NOIR.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311665/vpstonemason/catalog/acstone/ac2041m-noir-0350614183c1.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac2041m-noir-0350614183c1",
+      "uploadedAt": "2026-04-04T14:07:47.325Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0801N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311666/vpstonemason/catalog/acstone/ac0801n-500x653-5b19c76bc2ed.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0801n-500x653-5b19c76bc2ed",
+      "uploadedAt": "2026-04-04T14:07:48.106Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/AC0822N-0.jpeg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311666/vpstonemason/catalog/acstone/ac0822n-0-665a38f1e0b8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0822n-0-665a38f1e0b8",
+      "uploadedAt": "2026-04-04T14:07:48.895Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0802N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311666/vpstonemason/catalog/acstone/ac0802n-500x653-252ee109637b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0802n-500x653-252ee109637b",
+      "uploadedAt": "2026-04-04T14:07:49.176Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0801N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311667/vpstonemason/catalog/acstone/ac0801n-c3317deb13ed.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0801n-c3317deb13ed",
+      "uploadedAt": "2026-04-04T14:07:50.033Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0814N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311668/vpstonemason/catalog/acstone/ac0814n-500x653-03bceabd38b3.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0814n-500x653-03bceabd38b3",
+      "uploadedAt": "2026-04-04T14:07:50.083Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/4、AC0810-scaled-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311668/vpstonemason/catalog/acstone/4-e3-80-81ac0810-scaled-500x653-e9d739b931b4.jpg",
+      "publicId": "vpstonemason/catalog/acstone/4-e3-80-81ac0810-scaled-500x653-e9d739b931b4",
+      "uploadedAt": "2026-04-04T14:07:50.864Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0802N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311669/vpstonemason/catalog/acstone/ac0802n-4ff6627a6e02.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0802n-4ff6627a6e02",
+      "uploadedAt": "2026-04-04T14:07:51.230Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC821N-2-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311670/vpstonemason/catalog/acstone/ac821n-2-500x653-6decee4fc146.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac821n-2-500x653-6decee4fc146",
+      "uploadedAt": "2026-04-04T14:07:51.958Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0814N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311670/vpstonemason/catalog/acstone/ac0814n-2366b0467952.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0814n-2366b0467952",
+      "uploadedAt": "2026-04-04T14:07:52.510Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2022/08/4、AC0810-scaled.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311670/vpstonemason/catalog/acstone/4-e3-80-81ac0810-scaled-9d5274fcd251.jpg",
+      "publicId": "vpstonemason/catalog/acstone/4-e3-80-81ac0810-scaled-9d5274fcd251",
+      "uploadedAt": "2026-04-04T14:07:53.034Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0808N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311671/vpstonemason/catalog/acstone/ac0808n-500x653-a9568038a87d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0808n-500x653-a9568038a87d",
+      "uploadedAt": "2026-04-04T14:07:53.329Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0806N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311672/vpstonemason/catalog/acstone/ac0806n-500x653-de3c67a1053b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0806n-500x653-de3c67a1053b",
+      "uploadedAt": "2026-04-04T14:07:54.071Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC821N-2.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311672/vpstonemason/catalog/acstone/ac821n-2-41ec59266ee4.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac821n-2-41ec59266ee4",
+      "uploadedAt": "2026-04-04T14:07:54.140Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0818N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311673/vpstonemason/catalog/acstone/ac0818n-500x653-b20ea118d94d.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0818n-500x653-b20ea118d94d",
+      "uploadedAt": "2026-04-04T14:07:54.858Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0808N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311673/vpstonemason/catalog/acstone/ac0808n-26db82ff16b8.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0808n-26db82ff16b8",
+      "uploadedAt": "2026-04-04T14:07:55.731Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0806N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311674/vpstonemason/catalog/acstone/ac0806n-077aa6e7be5e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0806n-077aa6e7be5e",
+      "uploadedAt": "2026-04-04T14:07:56.497Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0817N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311674/vpstonemason/catalog/acstone/ac0817n-500x653-97f1e040af04.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0817n-500x653-97f1e040af04",
+      "uploadedAt": "2026-04-04T14:07:56.556Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0805N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311675/vpstonemason/catalog/acstone/ac0805n-500x653-2f6a2cd31e27.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0805n-500x653-2f6a2cd31e27",
+      "uploadedAt": "2026-04-04T14:07:57.507Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0818N-1024x506.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311677/vpstonemason/catalog/acstone/ac0818n-1024x506-1b5f6783a592.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0818n-1024x506-1b5f6783a592",
+      "uploadedAt": "2026-04-04T14:07:58.959Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0817N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311677/vpstonemason/catalog/acstone/ac0817n-feaf35bdaeda.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0817n-feaf35bdaeda",
+      "uploadedAt": "2026-04-04T14:07:59.141Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/M0857N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311677/vpstonemason/catalog/acstone/m0857n-500x653-5a65620f1627.jpg",
+      "publicId": "vpstonemason/catalog/acstone/m0857n-500x653-5a65620f1627",
+      "uploadedAt": "2026-04-04T14:07:59.849Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0805N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311678/vpstonemason/catalog/acstone/ac0805n-9010f52862ed.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0805n-9010f52862ed",
+      "uploadedAt": "2026-04-04T14:08:00.011Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0823N-500x653.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311678/vpstonemason/catalog/acstone/ac0823n-500x653-f7b9af78daf5.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0823n-500x653-f7b9af78daf5",
+      "uploadedAt": "2026-04-04T14:08:00.575Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/M0857N-1024x569.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311679/vpstonemason/catalog/acstone/m0857n-1024x569-11b2e672504b.jpg",
+      "publicId": "vpstonemason/catalog/acstone/m0857n-1024x569-11b2e672504b",
+      "uploadedAt": "2026-04-04T14:08:00.957Z"
+    },
+    "https://acstone.com.au/wp-content/uploads/2020/10/AC0823N.jpg": {
+      "secureUrl": "https://res.cloudinary.com/drcw8n9gh/image/upload/v1775311680/vpstonemason/catalog/acstone/ac0823n-9514770d1b6e.jpg",
+      "publicId": "vpstonemason/catalog/acstone/ac0823n-9514770d1b6e",
+      "uploadedAt": "2026-04-04T14:08:02.330Z"
+    }
+  }
+}

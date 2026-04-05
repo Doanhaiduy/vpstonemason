@@ -1,4 +1,4 @@
-# THÔNG TIN DOANH NGHIỆP — VPStoneMason & Co.
+# THÔNG TIN DOANH NGHIỆP — PVstoneau
 
 > Tài liệu nội bộ cung cấp thông tin đầy đủ về doanh nghiệp để AI có thể trả lời chính xác mọi câu hỏi.
 
@@ -8,14 +8,16 @@
 
 | Mục | Chi tiết |
 |-----|----------|
-| **Tên doanh nghiệp** | VPStoneMason & Co. |
+| **Tên doanh nghiệp** | PVstoneau |
 | **Loại hình** | Family-owned business (Doanh nghiệp gia đình) |
 | **Lĩnh vực** | Fabrication & Installation — Stone Benchtops (Gia công & Lắp đặt đá benchtop) |
 | **Kinh nghiệm** | 15+ năm trong ngành đá tại Úc |
 | **Khu vực hoạt động** | Melbourne & Regional Victoria, Australia |
 | **Website** | https://vpstonemason.vercel.app/ |
+| **Fanpage** | https://www.facebook.com/PVStonemason |
+| **Tên fanpage** | PVstoneau |
 | **Email** | info@vpstonemason.com.au |
-| **Điện thoại** | (03) 9000 0000 |
+| **Điện thoại** | 0424439293 |
 | **Showroom** | 123 Stone Avenue, Richmond VIC 3121 |
 | **Giờ mở cửa** | Mon–Fri: 9:00 AM–5:00 PM · Sat: 10:00 AM–2:00 PM |
 
@@ -163,6 +165,7 @@
 - "Family-Owned. Quality-Driven. Australian-Made."
 
 ### Social Media Handles:
-- Facebook: @VPStoneMason
-- Instagram: @vpstonemason
-- Website: vpstonemason.vercel.app
+- Facebook Fanpage: PVstoneau — https://www.facebook.com/PVStonemason
+- Instagram: @PVstoneau
+- Website: https://vpstonemason.vercel.app/
+- Phone: 0424439293

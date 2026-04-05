@@ -1,4 +1,4 @@
-# LỊCH ĐĂNG BÀI & KẾ HOẠCH MARKETING — VPStoneMason & Co.
+# LỊCH ĐĂNG BÀI & KẾ HOẠCH MARKETING — PVstoneau
 
 > Content calendar và kế hoạch marketing chi tiết theo tuần/tháng.
 
@@ -192,7 +192,7 @@ If you have a moment, we'd really appreciate a Google Review — it helps other 
 It only takes 2 minutes and means the world to our family business!
 
 Thank you so much,
-VPStoneMason & Co.
+PVstoneau
 ```
 
 ---

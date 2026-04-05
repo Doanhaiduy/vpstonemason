@@ -1,4 +1,4 @@
-# BẢNG GIÁ THAM KHẢO & DỊCH VỤ — VPStoneMason & Co.
+# BẢNG GIÁ THAM KHẢO & DỊCH VỤ — PVstoneau
 
 > Tài liệu nội bộ về bảng giá tham khảo và chi tiết dịch vụ. Giá có thể thay đổi — luôn ghi rõ "giá tham khảo, cần đo thực tế".
 
@@ -141,7 +141,7 @@ For a more accurate quote, we'd love to:
 ✅ Schedule a FREE on-site measure, or
 ✅ If you can share your kitchen dimensions, we can provide a preliminary estimate.
 
-Feel free to call us on (03) 9000 0000 or visit our showroom at Richmond.
+Feel free to call us on 0424439293 or visit our showroom at Richmond.
 ```
 
 **Khi khách hỏi giá cụ thể 1 loại đá:**
@@ -169,7 +169,7 @@ Would you like us to arrange a FREE measure and detailed quote?
 Save up to 15% on selected Granite & Porcelain benchtops!
 ✅ Free consultation & measure
 ✅ Professional installation included
-📞 Call (03) 9000 0000 or visit our Richmond showroom
+📞 Call 0424439293 or visit our Richmond showroom
 *T&Cs apply. Offer ends [date].
 ```
 
@@ -184,7 +184,7 @@ Limited time offer — book your FREE measure today.
 ### Template 3: Referral Program
 ```
 💎 REFER A FRIEND, EARN REWARDS
-Know someone renovating? Refer them to VPStoneMason & Co. and receive:
+Know someone renovating? Refer them to PVstoneau and receive:
 🎉 $200 gift card when they complete their project
 Their benefit: 10% off their first order
 Everyone wins!

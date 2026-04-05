@@ -3,7 +3,16 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ChevronLeft, Eye, Save, Wand2, Loader2, Sparkles } from 'lucide-react';
+import {
+  Check,
+  ChevronLeft,
+  Eye,
+  Loader2,
+  Save,
+  Sparkles,
+  Wand2,
+  X,
+} from 'lucide-react';
 import { adminApi } from '@/lib/api';
 import { CloudinaryUpload } from '@/components/admin/CloudinaryUpload';
 import { Button } from '@/components/ui/Button';
@@ -15,11 +24,21 @@ const BLOG_STATUS_OPTIONS = [
   { value: 'published', label: 'Published' },
 ];
 
+type AIGeneratedData = {
+  title: string;
+  description: string;
+  content: string;
+  tags: string[];
+  totalTokens: number;
+  totalCost: number;
+};
+
 export default function CreateBlogPostPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [generatingAi, setGeneratingAi] = useState(false);
   const [aiTopic, setAiTopic] = useState('');
+  const [aiGeneratedData, setAiGeneratedData] = useState<AIGeneratedData | null>(null);
   const [form, setForm] = useState({
     title: '', excerpt: '', content: '', tags: '',
     status: 'draft',
@@ -55,15 +74,61 @@ export default function CreateBlogPostPage() {
         topic: aiTopic,
       });
 
-      if (data.title) setForm(p => ({
-        ...p,
-        title: data.title || p.title,
-        excerpt: data.description || p.excerpt,
-        content: data.content || p.content,
-        tags: Array.isArray(data.tags) ? data.tags.join(', ') : p.tags,
-      }));
-    } catch { alert('AI generation failed.'); }
+      setAiGeneratedData({
+        title: data.title || '',
+        description: data.description || '',
+        content: data.content || '',
+        tags: Array.isArray(data.tags) ? data.tags : [],
+        totalTokens: data.totalTokens || 0,
+        totalCost: data.totalCost || 0,
+      });
+    } catch (err: any) {
+      alert(err?.message || 'AI generation failed.');
+    }
     finally { setGeneratingAi(false); }
+  };
+
+  const handleApplyAi = (field: 'title' | 'excerpt' | 'content' | 'tags' | 'all') => {
+    if (!aiGeneratedData) return;
+
+    if (field === 'all') {
+      setForm((prev) => ({
+        ...prev,
+        title: aiGeneratedData.title || prev.title,
+        excerpt: aiGeneratedData.description || prev.excerpt,
+        content: aiGeneratedData.content || prev.content,
+        tags: aiGeneratedData.tags.length > 0 ? aiGeneratedData.tags.join(', ') : prev.tags,
+      }));
+      return;
+    }
+
+    if (field === 'title') {
+      setForm((prev) => ({ ...prev, title: aiGeneratedData.title || prev.title }));
+      return;
+    }
+
+    if (field === 'excerpt') {
+      setForm((prev) => ({
+        ...prev,
+        excerpt: aiGeneratedData.description || prev.excerpt,
+      }));
+      return;
+    }
+
+    if (field === 'content') {
+      setForm((prev) => ({
+        ...prev,
+        content: aiGeneratedData.content || prev.content,
+      }));
+      return;
+    }
+
+    if (field === 'tags') {
+      setForm((prev) => ({
+        ...prev,
+        tags: aiGeneratedData.tags.length > 0 ? aiGeneratedData.tags.join(', ') : prev.tags,
+      }));
+    }
   };
 
   const handlePreview = () => {
@@ -97,7 +162,7 @@ export default function CreateBlogPostPage() {
           <Sparkles className="w-5 h-5 text-indigo-600" />
           <h3 className="font-semibold text-indigo-900">AI Blog Generator</h3>
         </div>
-        <p className="text-sm text-indigo-600/80 mb-4">Enter a topic and our AI will generate a full blog post for you.</p>
+        <p className="text-sm text-indigo-600/80 mb-4">Enter a topic, generate content, then review and apply fields below.</p>
         <div className="flex gap-3">
           <input type="text" value={aiTopic} onChange={e => setAiTopic(e.target.value)} placeholder="e.g., How to choose kitchen benchtop stone" className="flex-1 px-4 py-2.5 bg-white border border-indigo-200 rounded-xl text-sm outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100"
             onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); handleAiGenerate(); } }} />
@@ -113,6 +178,82 @@ export default function CreateBlogPostPage() {
           </Button>
         </div>
       </div>
+
+      {aiGeneratedData && (
+        <div className="bg-white rounded-2xl border border-slate-200/80 p-6 mb-6 space-y-5">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 className="text-lg font-semibold text-slate-900">AI Generated Content Preview</h2>
+              <p className="text-sm text-slate-500 mt-1">Review first, then apply each field or apply all at once.</p>
+            </div>
+            <div className="text-xs text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg self-start sm:self-auto">
+              Tokens: {aiGeneratedData.totalTokens} | Cost: ${aiGeneratedData.totalCost.toFixed(6)}
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-slate-200 p-4">
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <h3 className="font-medium text-slate-900">Title</h3>
+              <Button type="button" variant="adminSoft" size="sm" onClick={() => handleApplyAi('title')}>
+                <Check className="w-4 h-4" /> Apply Title
+              </Button>
+            </div>
+            <p className="text-slate-700">{aiGeneratedData.title || '-'}</p>
+          </div>
+
+          <div className="rounded-xl border border-slate-200 p-4">
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <h3 className="font-medium text-slate-900">Excerpt</h3>
+              <Button type="button" variant="adminSoft" size="sm" onClick={() => handleApplyAi('excerpt')}>
+                <Check className="w-4 h-4" /> Apply Excerpt
+              </Button>
+            </div>
+            <p className="text-slate-700">{aiGeneratedData.description || '-'}</p>
+          </div>
+
+          <div className="rounded-xl border border-slate-200 p-4">
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <h3 className="font-medium text-slate-900">Tags</h3>
+              <Button type="button" variant="adminSoft" size="sm" onClick={() => handleApplyAi('tags')}>
+                <Check className="w-4 h-4" /> Apply Tags
+              </Button>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {aiGeneratedData.tags.length > 0 ? (
+                aiGeneratedData.tags.map((tag) => (
+                  <span key={tag} className="inline-flex items-center rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+                    {tag}
+                  </span>
+                ))
+              ) : (
+                <span className="text-sm text-slate-500">No tags generated.</span>
+              )}
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-slate-200 p-4">
+            <div className="flex items-center justify-between gap-3 mb-3">
+              <h3 className="font-medium text-slate-900">Content</h3>
+              <Button type="button" variant="adminSoft" size="sm" onClick={() => handleApplyAi('content')}>
+                <Check className="w-4 h-4" /> Apply Content
+              </Button>
+            </div>
+            <div
+              className="blog-prose max-w-none rounded-lg border border-slate-200 bg-slate-50 p-4 max-h-[420px] overflow-y-auto"
+              dangerouslySetInnerHTML={{ __html: aiGeneratedData.content || '<p>No content generated.</p>' }}
+            />
+          </div>
+
+          <div className="flex flex-wrap gap-3 pt-1">
+            <Button type="button" variant="adminPrimary" size="lg" onClick={() => handleApplyAi('all')}>
+              <Check className="w-4 h-4" /> Apply All
+            </Button>
+            <Button type="button" variant="adminSoft" size="lg" onClick={() => setAiGeneratedData(null)}>
+              <X className="w-4 h-4" /> Clear Preview
+            </Button>
+          </div>
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="bg-white rounded-2xl border border-slate-200/80 p-6 space-y-4">

@@ -1,4 +1,4 @@
-# CHIẾN LƯỢC CONTENT MARKETING — VPStoneMason & Co.
+# CHIẾN LƯỢC CONTENT MARKETING — PVstoneau
 
 > Kế hoạch tổng thể cho nội dung marketing trên mọi nền tảng: Blog, Facebook, Instagram, Email Newsletter.
 
@@ -7,7 +7,7 @@
 ## 1. MỤC TIÊU CONTENT MARKETING
 
 ### Mục tiêu chính:
-1. **Brand Awareness** — Để khách hàng Melbourne & VIC biết đến VPStoneMason
+1. **Brand Awareness** — Để khách hàng Melbourne & VIC biết đến PVstoneau
 2. **Lead Generation** — Thu hút enquiries và quote requests
 3. **Authority Building** — Trở thành "go-to expert" về đá benchtop tại Úc
 4. **SEO Traffic** — Thu hút organic traffic qua Google Search
@@ -152,7 +152,7 @@
 #NaturalStone #MarbleBenchtop #GraniteBenchtop 
 #KitchenInspiration #DreamKitchen #HomeImprovement
 #AustralianMade #MelbourneRenovation #InteriorDesign
-#VPStoneMason #PremiumStone #BenchtopMelbourne
+#PVstoneau #PremiumStone #BenchtopMelbourne
 ```
 
 ---
@@ -198,7 +198,7 @@
 #MelbourneRenovation #VictoriaHomes #AussieHomes 
 #KitchenInspo #DreamKitchen #HomeImprovement 
 #DesignInspo #RenovationJourney #KitchenMakeover
-#VPStoneMason #StoneCraft #AustralianCraftsmanship
+#PVstoneau #StoneCraft #AustralianCraftsmanship
 ```
 
 ---
