@@ -48,3 +48,7 @@ scripts/_tmp_*.json
 # Optional local Docker volumes/state
 *.pid
 
+docs/image_temp
+docs/content-media
+docs/examples
+docs/content-log.json

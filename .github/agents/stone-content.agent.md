@@ -20,25 +20,25 @@ Agent này nhận thông tin mẫu đá và tự động tạo **kịch bản ho
 
 ### Single mode (1 mẫu):
 ```
-/stone-content https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/amazonite-or-vp1017
+/stone-content https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/amazonite-or-pv1017
 ```
 hoặc:
 ```
 /stone-content
-- Tên đá: Amazonite VP1017
+- Tên đá: Amazonite PV1017
 - Mô tả: Seafoam green engineered stone with golden butterscotch flecks
-- Link ảnh: https://example.com/vp1017.jpg
+- Link ảnh: https://example.com/pv1017.jpg
 ```
 
 ### Multi mode (2-5 mẫu):
 ```
 /stone-content multi
-- VP1017: https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/amazonite-or-vp1017
-- VP1019: https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/arabescato-corchia-vp1019
-- VP6011: https://vpstonemason.vercel.app/catalog/artscut-zero/classic/calacatta-vp6011
+- PV1017: https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/amazonite-or-pv1017
+- PV1019: https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/arabescato-corchia-pv1019
+- PV6011: https://vpstonemason.vercel.app/catalog/artscut-zero/classic/calacatta-pv6011
 ```
 
-> **Lưu ý mã sản phẩm:** Trong DB dùng mã **VP** (VD: VP1017), nhưng khi search web/nhà sản xuất agent dùng mã **AC** gốc (VD: AC1017) vì đây là mã nhà sản xuất AC Stone Group.
+> **Lưu ý mã sản phẩm:** Trong DB dùng mã **PV** (VD: PV1017), nhưng khi search web/nhà sản xuất agent dùng mã **AC** gốc (VD: AC1017) vì đây là mã nhà sản xuất AC Stone Group.
 
 ---
 
@@ -67,6 +67,21 @@ Agent **bắt buộc search web** trước khi tạo prompt:
 
 ---
 
+## BƯỚC 0.6 (BẮT BUỘC): DOWNLOAD ẢNH ĐÁ VÀO IMAGE_TEMP
+
+Sau khi phân tích từng link sản phẩm, agent PHẢI tải ảnh slab/reference của từng mẫu về thư mục `docs/image_temp/`.
+
+**Quy tắc bắt buộc:**
+1. Mỗi mẫu phải có đúng 1 ảnh reference chính (ưu tiên ảnh slab rõ vân nhất).
+2. Đặt tên file theo chuẩn: `YYYY-MM-DD-[STONE_CODE]-reference.jpg`
+3. Ghi log mapping source URL -> local path trong `docs/image_temp/image-manifest.md`
+4. Trong output `.md`, bắt buộc có section "Reference Images (Local)" liệt kê đầy đủ đường dẫn local.
+5. Nếu thiếu ảnh reference của bất kỳ mẫu nào thì KHÔNG được coi là hoàn thành task.
+
+**Lưu ý quan trọng:** đường dẫn `docs/image_temp/...` chỉ dùng cho bước chuẩn bị upload ảnh. Nội dung prompt gửi cho AI phải nói theo kiểu "attached reference image" (ảnh đính kèm), không ghi path local.
+
+---
+
 ## BƯỚC 1: TẠO STONE DESCRIPTION CHUẨN
 
 Template (dùng chung cho mọi prompt):
@@ -74,7 +89,7 @@ Template (dùng chung cho mọi prompt):
 [[STONE_NAME]] is a [[COLOR_DESCRIPTION]] [[STONE_TYPE]] with [[VEINING_DESCRIPTION]], [[FINISH]] finish, [[THICKNESS]], CSF compliant, ideal for modern Melbourne [[APPLICATION]].
 ```
 
-Agent lưu biến: `STONE_NAME`, `STONE_DESCRIPTION`, `STONE_IMAGE_URL`, `STONE_CODE` (VP code), `AC_CODE` (AC code gốc)
+Agent lưu biến: `STONE_NAME`, `STONE_DESCRIPTION`, `STONE_IMAGE_URL`, `STONE_CODE` (PV code), `AC_CODE` (AC code gốc)
 
 ---
 
@@ -155,6 +170,7 @@ Create ONE SINGLE photorealistic interior photo (not a collage, not split-screen
 
 Use the uploaded stone sample as the exact benchtop material.
 The stone is [[STONE_NAME]]: [[STONE_DESCRIPTION]].
+Base all stone colour, veining, texture and finish decisions on the attached reference stone image.
 Keep the colour, veining and finish identical to the reference stone.
 
 Show a modern Australian [[SCENE_DESCRIPTION]] in a Melbourne home.
@@ -169,6 +185,7 @@ No AI artifacts, no plastic look, no CGI render feel.
 ```text
 Create ONE photorealistic close-up of a [[STONE_NAME]] benchtop edge.
 The stone: [[STONE_DESCRIPTION]].
+Use the attached reference stone image as the primary visual source for colour and veining accuracy.
 
 Show edge profile (pencil round, 20mm thickness) with natural light on veining and surface.
 Styled with: ceramic coffee cup, small herb plant, wooden chopping board.
@@ -229,6 +246,8 @@ BƯỚC 5: Video tự tải về
 **Video Prompt Template:**
 ```text
 A slow cinematic camera pan across a modern Melbourne kitchen with [[STONE_NAME]] benchtops: [[STONE_DESCRIPTION]]. Camera moves smoothly left to right along benchtop, showing surface texture and veining in natural daylight. Subtle depth of field, warm morning light. Photorealistic, stable camera, no shake. 5 seconds.
+
+Use the attached reference stone image to preserve accurate colour and veining throughout the shot.
 ```
 
 ### 4B: VIDEO – GOOGLE FLOW ANIMATE
@@ -252,6 +271,8 @@ BƯỚC 8: Download → lưu vào AI-Media/[[STONE_CODE]]/videos-flow/
 **Video Prompt:**
 ```text
 Smooth 5-second camera push-in towards the [[STONE_NAME]] benchtop, slowly revealing surface texture and veining. Soft natural daylight, shallow depth of field. Cinematic, stable camera, no sudden movements.
+
+Use the attached reference stone image as the visual material reference.
 ```
 
 ---
@@ -387,6 +408,33 @@ Agent cập nhật `docs/content-log.json` sau khi hoàn thành.
 
 ---
 
+## BƯỚC 8 (BẮT BUỘC): LƯU OUTPUT RA FILE MARKDOWN ĐÚNG TEMPLATE
+
+Agent PHẢI lưu kết quả thành file `.md` trong `docs/examples/`, không chỉ trả text trong chat.
+
+**Quy tắc đặt tên file:**
+- Single mode: `docs/examples/YYYY-MM-DD-[STONE_CODE]-content-script.md`
+- Multi mode: `docs/examples/YYYY-MM-DD-multi-[STONE_CODE_1]-[STONE_CODE_2]-...-content-script.md`
+
+**Thứ tự template bắt buộc trong file .md:**
+1. Tiêu đề + metadata (date, mode, stone list, code, links)
+2. Web research results
+3. Reference Images (Local paths in docs/image_temp)
+4. Stone description variables
+5. Scene rotation
+6. Image generation prompts
+7. Video generation prompts
+8. Facebook captions (main + individual)
+9. Final checklist
+10. Time estimate (optional)
+
+**Sau khi ghi file xong, agent phải trả về:**
+1. Đường dẫn file đã tạo
+2. Tóm tắt scene đã chọn
+3. Xác nhận đã cập nhật `docs/content-log.json`
+
+---
+
 ## QUY TẮC PROMPT (MỌI PROMPT)
 
 1. ✅ Luôn có: `photorealistic`, `real project photo`, `not CGI`, `Australian home`, `Melbourne`
@@ -397,6 +445,8 @@ Agent cập nhật `docs/content-log.json` sau khi hoàn thành.
 6. 📏 Kích thước FB: Feed 3:4 (1080×1440) hoặc 1:1 (1080×1080), Stories 9:16
 7. 🎨 Nhất quán: dùng cùng `STONE_DESCRIPTION` cho tất cả prompt
 8. 🎥 Video: `stable camera`, `smooth movement`, `no sudden cuts`
+9. 📝 Bắt buộc lưu output vào file `.md` đúng template trước khi trả kết quả
+10. 🖼️ Mỗi prompt bắt buộc có câu nêu rõ "dựa trên ảnh đá đính kèm" (attached reference image), không ghi đường dẫn local vào prompt
 
 ---
 
