@@ -3,9 +3,11 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { api } from '@/lib/api';
 import { StoneCardSkeleton } from '@/components/ui/Skeletons';
+import { shouldUnoptimizeImage } from '@/lib/image';
 
 interface FeaturedProduct {
   id: string;
@@ -110,10 +112,14 @@ export function FeaturedStones() {
                   transition={{ delay: i * 0.1 }}
                 >
                   <Link href={product.href} className="group block">
-                    <div className="aspect-[3/4] bg-stone-200 overflow-hidden mb-4">
-                      <div
-                        className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                        style={{ backgroundImage: `url('${product.imageUrl}')` }}
+                    <div className="relative aspect-[3/4] bg-stone-200 overflow-hidden mb-4">
+                      <Image
+                        src={product.imageUrl}
+                        alt={product.title}
+                        fill
+                        sizes="(min-width: 1024px) 24vw, (min-width: 640px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        unoptimized={shouldUnoptimizeImage(product.imageUrl)}
                       />
                     </div>
                     <div className="space-y-1.5">

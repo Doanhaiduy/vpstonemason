@@ -1,10 +1,33 @@
 const PUBLIC_API_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'https://vpstonemason-api.vercel.app/api';
+  process.env.NEXT_PUBLIC_API_URL || 'https://pvstone.com.au/api';
 const INTERNAL_API_URL = process.env.INTERNAL_API_URL || PUBLIC_API_URL;
 const API_URL = typeof window === 'undefined' ? INTERNAL_API_URL : PUBLIC_API_URL;
+const REQUEST_TIMEOUT_MS = Number(process.env.NEXT_PUBLIC_API_TIMEOUT_MS || process.env.API_TIMEOUT_MS || 10000);
 
 interface FetchOptions extends RequestInit {
   token?: string;
+}
+
+function isAbortError(error: unknown): boolean {
+  return error instanceof Error && error.name === 'AbortError';
+}
+
+async function fetchWithTimeout(input: string, init: RequestInit): Promise<Response> {
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+  if (init.signal) {
+    init.signal.addEventListener('abort', () => controller.abort(), { once: true });
+  }
+
+  try {
+    return await fetch(input, {
+      ...init,
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timeoutId);
+  }
 }
 
 async function tryRefreshAccessToken(): Promise<string | null> {
@@ -13,11 +36,19 @@ async function tryRefreshAccessToken(): Promise<string | null> {
   const refreshToken = localStorage.getItem('refreshToken');
   if (!refreshToken) return null;
 
-  const res = await fetch(`${API_URL}/auth/refresh`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ refreshToken }),
-  });
+  let res: Response;
+  try {
+    res = await fetchWithTimeout(`${API_URL}/auth/refresh`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ refreshToken }),
+    });
+  } catch (error) {
+    if (isAbortError(error)) {
+      return null;
+    }
+    throw error;
+  }
 
   if (!res.ok) {
     localStorage.removeItem('accessToken');
@@ -46,19 +77,34 @@ async function fetchApi<T>(endpoint: string, options: FetchOptions = {}): Promis
       headers['Authorization'] = `Bearer ${authToken}`;
     }
 
-    return fetch(`${API_URL}${endpoint}`, {
+    return fetchWithTimeout(`${API_URL}${endpoint}`, {
       ...fetchOptions,
       headers,
     });
   };
 
-  let res = await makeRequest(token);
+  let res: Response;
+  try {
+    res = await makeRequest(token);
+  } catch (error) {
+    if (isAbortError(error)) {
+      throw new Error(`Request timed out after ${REQUEST_TIMEOUT_MS}ms`);
+    }
+    throw error;
+  }
 
   const isAuthEndpoint = endpoint.startsWith('/auth/login') || endpoint.startsWith('/auth/refresh');
   if (res.status === 401 && token && !isAuthEndpoint) {
     const newAccessToken = await tryRefreshAccessToken();
     if (newAccessToken) {
-      res = await makeRequest(newAccessToken);
+      try {
+        res = await makeRequest(newAccessToken);
+      } catch (error) {
+        if (isAbortError(error)) {
+          throw new Error(`Request timed out after ${REQUEST_TIMEOUT_MS}ms`);
+        }
+        throw error;
+      }
     }
   }
 
@@ -104,9 +150,12 @@ export const api = {
     const query = params ? '?' + new URLSearchParams(params).toString() : '';
     return fetchApi<any>(`/catalog/products${query}`);
   },
-  getCatalogItem: (slug: string) => fetchApi<any>(`/catalog/${slug}`),
-  getCatalogChildren: (slug: string) => fetchApi<any[]>(`/catalog/${slug}/children`),
-  getCatalogBreadcrumb: (slug: string) => fetchApi<any[]>(`/catalog/${slug}/breadcrumb`),
+  getCatalogItem: (slug: string) =>
+    fetchApi<any>(`/catalog/${encodeURIComponent(slug)}`),
+  getCatalogChildren: (slug: string) =>
+    fetchApi<any[]>(`/catalog/${encodeURIComponent(slug)}/children`),
+  getCatalogBreadcrumb: (slug: string) =>
+    fetchApi<any[]>(`/catalog/${encodeURIComponent(slug)}/breadcrumb`),
 };
 
 // Admin API helpers

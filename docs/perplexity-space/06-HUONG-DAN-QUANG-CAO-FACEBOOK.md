@@ -1,4 +1,4 @@
-# HƯỚNG DẪN QUẢNG CÁO FACEBOOK & INSTAGRAM — PVstoneau
+# HƯỚNG DẪN QUẢNG CÁO FACEBOOK & INSTAGRAM — PVStoneau
 
 > Hướng dẫn chi tiết từ A-Z cách chạy quảng cáo Facebook/Instagram Ads cho ngành đá benchtop tại Úc.
 
@@ -258,11 +258,11 @@ Transform your kitchen with stunning [Stone Name] benchtops 💎
 ✅ Professional installation in as little as 5 days
 ✅ Free consultation & quote
 
-📞 0424439293
-📍 Visit our Richmond showroom
+📞 0450 938 079
+📍 Visit our Sunshine North showroom
 
 CTA Button: Get Quote
-Link: https://vpstonemason.vercel.app/contact
+Link: https://pvstone.com.au/contact
 ```
 
 **Template 2 — Before/After:**
@@ -279,7 +279,7 @@ Ready for YOUR transformation?
 👉 Book a FREE consultation today
 
 CTA Button: Learn More
-Link: https://vpstonemason.vercel.app/projects
+Link: https://pvstone.com.au/projects
 ```
 
 **Template 3 — Lead Generation:**
@@ -304,15 +304,15 @@ CTA Button: Get Quote
 
 **Template 4 — Testimonial/Social Proof:**
 ```
-Headline: See Why Melbourne Homeowners Choose PVstoneau
+Headline: See Why Melbourne Homeowners Choose PVStoneau
 Primary Text:
 ⭐⭐⭐⭐⭐ "Absolutely thrilled with our new kitchen benchtops. The team was professional from measure to install. Highly recommend!" — James & Sarah M., Brighton
 
 Join hundreds of happy homeowners across Melbourne.
 
-📞 0424439293
+📞 0450 938 079
 📘 Fanpage: https://www.facebook.com/PVStonemason
-🌐 https://vpstonemason.vercel.app/
+🌐 https://pvstone.com.au/
 
 CTA Button: Book Consultation
 ```
@@ -323,7 +323,7 @@ Headline: Safe, Stunning & Compliant Stone Benchtops
 Primary Text:
 Did you know? Since July 2024, traditional engineered stone is banned in Australia due to silica health risks.
 
-PVstoneau offers 100% CSF (Crystalline Silica Free) alternatives:
+PVStoneau offers 100% CSF (Crystalline Silica Free) alternatives:
 🪨 Same beautiful aesthetics
 🛡️ Zero health risk to fabricators
 ✅ Fully compliant with Australian regulations
@@ -332,7 +332,7 @@ PVstoneau offers 100% CSF (Crystalline Silica Free) alternatives:
 Learn more about your safe options:
 
 CTA Button: Learn More
-Link: https://vpstonemason.vercel.app/stones?category=csf-stone
+Link: https://pvstone.com.au/stones?category=csf-stone
 ```
 
 ### 4.2 Image/Video Specs:

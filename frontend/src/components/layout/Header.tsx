@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, ChevronDown } from 'lucide-react';
 
 import { useSiteConfig } from '@/lib/SiteConfigContext';
+import { toPhoneHref } from '@/lib/phone';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -145,7 +146,7 @@ export function Header() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
               <a
-                href={`tel:${config.phone.replace(/\s+/g, '')}`}
+                href={toPhoneHref(config.phone)}
                 className={`flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
                   useSolidHeader ? 'text-stone-700 hover:text-accent-gold' : 'text-white/90 hover:text-white'
                 }`}
@@ -212,7 +213,7 @@ export function Header() {
                 ))}
 
                 <div className="mt-auto pt-8 space-y-4">
-                  <a href={`tel:${config.phone.replace(/\s+/g, '')}`} className="btn-secondary w-full">
+                  <a href={toPhoneHref(config.phone)} className="btn-secondary w-full">
                     <Phone className="w-4 h-4 mr-2" />
                     Call {config.phone}
                   </a>

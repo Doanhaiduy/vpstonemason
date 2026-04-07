@@ -1,20 +1,56 @@
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import Script from 'next/script';
 import './globals.css';
 import { LayoutWrapper } from '@/components/layout/LayoutWrapper';
 import { getSiteConfig } from '@/lib/get-site-config';
 import { SiteConfigProvider } from '@/lib/SiteConfigContext';
+import { buildAlternates } from '@/lib/seo';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
 const META_PIXEL_ID = '914423308090374';
 
+const formatTime24h = (time12h: string): string => {
+  if (!time12h) return '';
+  const [time, modifier] = time12h.split(' ');
+  // eslint-disable-next-line prefer-const
+  let [hours, minutes] = time.split(':');
+  if (hours === '12') hours = '00';
+  if (modifier === 'PM') hours = String(parseInt(hours, 10) + 12);
+  return `${hours.padStart(2, '0')}:${minutes}`;
+};
+
+const normalizePhoneForSchema = (phone: string): string => {
+  const value = String(phone || '').trim();
+  if (!value) return '';
+
+  if (value.startsWith('+')) {
+    return `+${value.slice(1).replace(/\D/g, '')}`;
+  }
+
+  const digits = value.replace(/\D/g, '');
+  if (!digits) return '';
+
+  if (digits.startsWith('0')) {
+    return `+61${digits.slice(1)}`;
+  }
+
+  return digits;
+};
+
+const normalizeStateForSchema = (state: string): string => {
+  return String(state || '')
+    .split('(')[0]
+    .trim();
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const config = await getSiteConfig();
 
   return {
-    metadataBase: new URL(config.siteUrl || 'https://vpstonemason.vercel.app'),
+    metadataBase: new URL(config.siteUrl || 'https://pvstone.com.au'),
     title: {
       default: `${config.companyName} | ${config.tagline}`,
       template: `%s | ${config.companyName}`,
@@ -44,7 +80,7 @@ export async function generateMetadata(): Promise<Metadata> {
       follow: true,
       googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
     },
-    alternates: { canonical: '/' },
+    alternates: buildAlternates('/'),
   };
 }
 
@@ -56,26 +92,14 @@ export default async function RootLayout({
   const config = await getSiteConfig();
 
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en-AU" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <meta name="theme-color" content={config.themeColor} />
+        <meta name="language" content="en-AU" />
         <meta name="geo.region" content={config.geo.region} />
         <meta name="geo.placename" content={config.geo.placename} />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '${META_PIXEL_ID}');
-fbq('track', 'PageView');`,
-          }}
-        />
+        <meta name="geo.position" content={`${config.geo.latitude};${config.geo.longitude}`} />
+        <meta name="ICBM" content={`${config.geo.latitude}, ${config.geo.longitude}`} />
       </head>
       <body className="font-sans antialiased">
         <noscript>
@@ -92,54 +116,100 @@ fbq('track', 'PageView');`,
           <LayoutWrapper>{children}</LayoutWrapper>
         </SiteConfigProvider>
 
-        {/* LocalBusiness JSON-LD — dynamically populated from DB Config */}
+        {/* LocalBusiness + WebSite JSON-LD — @graph array */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'LocalBusiness',
-              '@id': config.siteUrl,
-              name: config.companyName,
-              description: config.seo.defaultDescription,
-              url: config.siteUrl,
-              telephone: config.phone,
-              email: config.email,
-              address: { 
-                '@type': 'PostalAddress', 
-                streetAddress: config.address.street, 
-                addressLocality: config.address.suburb, 
-                addressRegion: config.address.state, 
-                postalCode: config.address.postcode, 
-                addressCountry: 'AU' 
-              },
-              geo: { 
-                '@type': 'GeoCoordinates', 
-                latitude: config.geo.latitude, 
-                longitude: config.geo.longitude 
-              },
-              openingHoursSpecification: config.openingHours
-                .filter(h => !h.closed)
-                .map(h => ({
-                  '@type': 'OpeningHoursSpecification',
-                  dayOfWeek: h.day,
-                  opens: h.open.replace(' AM', ':00').replace(' PM', ':00'), // Simplified map
-                  closes: h.close.replace(' AM', ':00').replace(' PM', ':00'),
-                })),
-              priceRange: '$$',
-              sameAs: Object.values(config.socialLinks).filter(link => link !== ''),
-              aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
-              hasOfferCatalog: {
-                '@type': 'OfferCatalog',
-                name: 'Stone Benchtops',
-                itemListElement: [
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kitchen Benchtops' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bathroom Vanities' } },
-                ],
-              },
+              '@graph': [
+                {
+                  '@type': 'LocalBusiness',
+                  '@id': `${config.siteUrl}/#business`,
+                  name: config.companyName,
+                  description: config.seo.defaultDescription,
+                  inLanguage: 'en-AU',
+                  url: config.siteUrl,
+                  logo: `${config.siteUrl}/icon0.svg`,
+                  image: `${config.siteUrl}/web-app-manifest-512x512.png`,
+                  telephone: normalizePhoneForSchema(config.phone),
+                  email: config.email,
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: config.address.street,
+                    addressLocality: config.address.suburb,
+                    addressRegion: normalizeStateForSchema(config.address.state),
+                    postalCode: config.address.postcode,
+                    addressCountry: 'AU',
+                  },
+                  geo: {
+                    '@type': 'GeoCoordinates',
+                    latitude: config.geo.latitude,
+                    longitude: config.geo.longitude,
+                  },
+                  openingHoursSpecification: config.openingHours
+                    .filter(h => !h.closed)
+                    .map(h => ({
+                      '@type': 'OpeningHoursSpecification',
+                      dayOfWeek: h.day,
+                      opens: formatTime24h(h.open),
+                      closes: formatTime24h(h.close),
+                    })),
+                  areaServed: ['Australia', 'Victoria', 'Melbourne'],
+                  contactPoint: {
+                    '@type': 'ContactPoint',
+                    contactType: 'customer service',
+                    telephone: normalizePhoneForSchema(config.phone),
+                    email: config.email,
+                    areaServed: 'AU',
+                    availableLanguage: ['en-AU', 'en'],
+                  },
+                  priceRange: '$$',
+                  sameAs: Object.values(config.socialLinks).filter(link => link !== ''),
+                  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '127' },
+                  hasOfferCatalog: {
+                    '@type': 'OfferCatalog',
+                    name: 'Stone Benchtops',
+                    itemListElement: [
+                      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kitchen Benchtops' } },
+                      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Bathroom Vanities' } },
+                    ],
+                  },
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': `${config.siteUrl}/#website`,
+                  url: config.siteUrl,
+                  name: config.companyName,
+                  publisher: { '@id': `${config.siteUrl}/#business` },
+                  inLanguage: 'en-AU',
+                  potentialAction: {
+                    '@type': 'SearchAction',
+                    target: {
+                      '@type': 'EntryPoint',
+                      urlTemplate: `${config.siteUrl}/catalog/products?search={search_term_string}`,
+                    },
+                    'query-input': 'required name=search_term_string',
+                  },
+                },
+              ],
             }),
           }}
         />
+
+        {/* Meta Pixel — deferred to after interactive */}
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '${META_PIXEL_ID}');
+fbq('track', 'PageView');`}
+        </Script>
         <Analytics />
       </body>
     </html>

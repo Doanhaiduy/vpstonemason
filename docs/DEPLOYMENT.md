@@ -98,10 +98,10 @@ vercel --prod
 
 ```bash
 # Frontend
-vercel domains add vpstonemason.vercel.app --cwd frontend
+vercel domains add pvstone.com.au --cwd frontend
 
 # Backend
-vercel domains add vpstonemason-api.vercel.app --cwd backend
+vercel domains add api.pvstone.com.au --cwd backend
 ```
 
 ---
@@ -129,7 +129,7 @@ bash scripts/deploy.sh backend      # Backend only
 | `JWT_SECRET` | ✅ | `a1b2c3d4...` (random 64 char hex) |
 | `JWT_ACCESS_EXPIRATION` | ❌ | `15m` |
 | `JWT_REFRESH_EXPIRATION` | ❌ | `7d` |
-| `FRONTEND_URL` | ✅ | `https://vpstonemason.vercel.app` |
+| `FRONTEND_URL` | ✅ | `https://pvstone.com.au` |
 | `NODE_ENV` | ✅ | `production` |
 | `CLOUDINARY_CLOUD_NAME` | ✅ | `your-cloud-name` |
 | `CLOUDINARY_API_KEY` | ✅ | `1234567890` |
@@ -139,8 +139,8 @@ bash scripts/deploy.sh backend      # Backend only
 
 | Variable | Required | Example |
 |----------|----------|---------|
-| `NEXT_PUBLIC_API_URL` | ✅ | `https://vpstonemason-api.vercel.app/api` |
-| `NEXT_PUBLIC_SITE_URL` | ✅ | `https://vpstonemason.vercel.app` |
+| `NEXT_PUBLIC_API_URL` | ✅ | `https://pvstone.com.au/api` |
+| `NEXT_PUBLIC_SITE_URL` | ✅ | `https://pvstone.com.au` |
 | `GEMINI_API_KEY` | ✅ | `AIza...` |
 | `GEMINI_MODEL` | ✅ | `gemini-3.1-pro-preview` |
 | `CLOUDINARY_CLOUD_NAME` | ✅ | `your-cloud-name` |

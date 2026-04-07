@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 
 interface PageProps {
   params: { slug: string };
@@ -6,5 +6,5 @@ interface PageProps {
 
 export default function LegacyStoneRedirectPage({ params }: PageProps) {
   const { slug } = params;
-  redirect(`/catalog?q=${encodeURIComponent(slug)}`);
+  permanentRedirect(`/catalog?search=${encodeURIComponent(slug)}`);
 }

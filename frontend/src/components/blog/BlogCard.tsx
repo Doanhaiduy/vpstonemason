@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Calendar, Clock3 } from 'lucide-react';
 import type { BlogPost } from '@/types';
 import { cn } from '@/lib/utils';
+import { shouldUnoptimizeImage } from '@/lib/image';
 
 interface BlogCardProps {
   post: BlogPost;
@@ -38,9 +40,13 @@ export function BlogCard({ post, index = 0, compact = false }: BlogCardProps) {
       >
         <div className={cn('relative overflow-hidden bg-stone-200', compact ? 'aspect-[16/9]' : 'aspect-[16/10]')}>
           {coverUrl ? (
-            <div
-              className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-              style={{ backgroundImage: `url('${coverUrl}')` }}
+            <Image
+              src={coverUrl}
+              alt={post.title}
+              fill
+              sizes={compact ? '(min-width: 1024px) 33vw, 100vw' : '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'}
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              unoptimized={shouldUnoptimizeImage(coverUrl)}
             />
           ) : (
             <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-stone-900 to-stone-700 p-8 text-center text-sm font-semibold uppercase tracking-[0.18em] text-stone-200">

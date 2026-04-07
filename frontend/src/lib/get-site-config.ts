@@ -13,6 +13,16 @@ export async function getSiteConfig(): Promise<SiteConfig> {
   return cachedSiteConfig();
 }
 
+function normalizeHeroLink(value: string, fallback: string): string {
+  const trimmed = String(value || '').trim() || fallback;
+
+  if (trimmed === '/stones' || trimmed.startsWith('/stones?')) {
+    return '/catalog';
+  }
+
+  return trimmed;
+}
+
 function mergeWithDefaults(dbSettings: any): SiteConfig {
   const fallbackMap = siteConfig.googleMapsEmbed;
   const persistedMap = String(dbSettings.googleMapsEmbed || '').trim();
@@ -50,9 +60,9 @@ function mergeWithDefaults(dbSettings: any): SiteConfig {
       title: dbSettings.heroTitle || siteConfig.hero.title,
       subtitle: dbSettings.heroSubtitle || siteConfig.hero.subtitle,
       cta1Text: dbSettings.heroCta1Text || siteConfig.hero.cta1Text,
-      cta1Link: dbSettings.heroCta1Link || siteConfig.hero.cta1Link,
+      cta1Link: normalizeHeroLink(dbSettings.heroCta1Link, siteConfig.hero.cta1Link),
       cta2Text: dbSettings.heroCta2Text || siteConfig.hero.cta2Text,
-      cta2Link: dbSettings.heroCta2Link || siteConfig.hero.cta2Link,
+      cta2Link: normalizeHeroLink(dbSettings.heroCta2Link, siteConfig.hero.cta2Link),
     },
     aboutShort: dbSettings.aboutShort || siteConfig.aboutShort,
     geo: siteConfig.geo,

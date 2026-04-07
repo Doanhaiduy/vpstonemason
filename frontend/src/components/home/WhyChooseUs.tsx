@@ -27,7 +27,7 @@ export function WhyChooseUs() {
               Why Partner With Us
             </span>
             <h2 className="font-display text-display-sm md:text-display text-white mt-4 mb-4">
-              Why Choose vpstonemason
+              Why Choose PVStone
             </h2>
             <p className="text-stone-400 text-lg max-w-2xl mx-auto">
               We combine Australian craftsmanship with premium materials to deliver

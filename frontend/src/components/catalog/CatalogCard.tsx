@@ -1,9 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import type { CatalogItem } from '@/types/catalog';
+import { shouldUnoptimizeImage } from '@/lib/image';
 
 interface Props {
   item: CatalogItem;
@@ -43,9 +45,17 @@ export function CatalogCard({ item, href, index = 0, variant = 'default' }: Prop
         <div className={`relative ${aspectClass} bg-stone-200 overflow-hidden`}>
           {image ? (
             <div
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-[1.2s] ease-out group-hover:scale-110"
-              style={{ backgroundImage: `url('${image}')` }}
-            />
+              className="absolute inset-0 transition-transform duration-[1.2s] ease-out group-hover:scale-110"
+            >
+              <Image
+                src={image}
+                alt={`${item.title} ${typeLabel}`}
+                fill
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                className="object-cover"
+                unoptimized={shouldUnoptimizeImage(image)}
+              />
+            </div>
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-stone-300">

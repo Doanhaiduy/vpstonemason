@@ -18,6 +18,7 @@
  */
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { IconColourItem } from '@/types/gallery';
 import { ICON_COLLECTION_ITEMS } from '@/data/iconCollectionItems';
@@ -74,12 +75,15 @@ function GallerySlide({ item, index, totalItems }: GallerySlideProps) {
     >
       {/* Slab texture background */}
       <div className={styles.slabBg}>
-        <img
+        <Image
           src={item.slabImage}
           alt=""
-          aria-hidden="true"
           className={styles.slabBgImage}
-          loading={index < 2 ? 'eager' : 'lazy'}
+          fill
+          priority={index === 0}
+          sizes="100vw"
+          loading={index === 0 ? 'eager' : 'lazy'}
+          aria-hidden="true"
           draggable={false}
         />
       </div>
@@ -108,11 +112,14 @@ function GallerySlide({ item, index, totalItems }: GallerySlideProps) {
         {/* Center: lifestyle image */}
         <div className={styles.lifestyleCenter}>
           <div className={styles.lifestyleFrame}>
-            <img
+            <Image
               src={item.lifestyleImage}
               alt={`${item.name} lifestyle scene`}
               className={styles.lifestyleImage}
-              loading={index < 2 ? 'eager' : 'lazy'}
+              fill
+              priority={index === 0}
+              sizes="(max-width: 480px) 85vw, (max-width: 768px) 70vw, 38vw"
+              loading={index === 0 ? 'eager' : 'lazy'}
               draggable={false}
             />
           </div>

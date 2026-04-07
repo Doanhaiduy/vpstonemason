@@ -3,9 +3,11 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight, MapPin } from 'lucide-react';
 import { api } from '@/lib/api';
 import { ProjectCardSkeleton } from '@/components/ui/Skeletons';
+import { shouldUnoptimizeImage } from '@/lib/image';
 
 export function FeaturedProjects() {
   const [projects, setProjects] = useState<any[]>([]);
@@ -42,8 +44,16 @@ export function FeaturedProjects() {
                 transition={{ delay: i * 0.15 }} className={i === 0 ? 'md:row-span-2' : ''}
               >
                 <Link href={`/projects/${project.slug}`} className="group relative block overflow-hidden bg-stone-200 h-full">
-                  <div className={`w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105 ${i === 0 ? 'h-full min-h-[500px]' : 'aspect-video'}`}
-                    style={{ backgroundImage: `url('${project.images?.[0]?.url || ''}')` }} />
+                  <div className={`relative w-full transition-transform duration-700 group-hover:scale-105 ${i === 0 ? 'h-full min-h-[500px]' : 'aspect-video'}`}>
+                    <Image
+                      src={project.images?.[0]?.url || '/web-app-manifest-512x512.png'}
+                      alt={project.name}
+                      fill
+                      sizes={i === 0 ? '(min-width: 768px) 50vw, 100vw' : '(min-width: 768px) 50vw, 100vw'}
+                      className="object-cover"
+                      unoptimized={shouldUnoptimizeImage(project.images?.[0]?.url || '')}
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                     <div className="flex items-center gap-2 text-accent-gold text-xs font-medium tracking-wider uppercase mb-2">

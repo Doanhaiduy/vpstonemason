@@ -40,11 +40,11 @@ export class MailService {
   }) {
     const mailTo = this.configService.get<string>(
       'MAIL_TO',
-      'admin@vpstonemason.com',
+      'info@pvstone.com.au',
     );
     const mailFrom = this.configService.get<string>(
       'MAIL_FROM',
-      '"vpstonemason" <noreply@vpstonemason.com>',
+      '"PVStone" <noreply@pvstone.com.au>',
     );
 
     const subject = enquiry.stoneName
@@ -54,7 +54,7 @@ export class MailService {
     const html = `
       <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <div style="background: #1c1917; padding: 24px 32px;">
-          <h1 style="color: #bf9b30; margin: 0; font-size: 20px;">vpstonemason</h1>
+          <h1 style="color: #bf9b30; margin: 0; font-size: 20px;">PVStone</h1>
           <p style="color: #a8a29e; margin: 4px 0 0; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">New Enquiry Received</p>
         </div>
         <div style="padding: 32px; background: #fff; border: 1px solid #e7e5e4;">
@@ -106,24 +106,24 @@ export class MailService {
 
     const mailFrom = this.configService.get<string>(
       'MAIL_FROM',
-      '"vpstonemason" <noreply@vpstonemason.com>',
+      '"PVStone" <noreply@pvstone.com.au>',
     );
 
     try {
       await this.transporter.sendMail({
         from: mailFrom,
         to: toEmail,
-        subject: 'Thank you for your enquiry — vpstonemason',
+        subject: 'Thank you for your enquiry — PVStone',
         html: `
           <div style="font-family: 'Helvetica Neue', Arial, sans-serif; max-width: 600px; margin: 0 auto;">
             <div style="background: #1c1917; padding: 24px 32px;">
-              <h1 style="color: #bf9b30; margin: 0; font-size: 20px;">vpstonemason</h1>
+              <h1 style="color: #bf9b30; margin: 0; font-size: 20px;">PVStone</h1>
             </div>
             <div style="padding: 32px; background: #fff; border: 1px solid #e7e5e4;">
               <p style="color: #1c1917; font-size: 16px;">Hi ${toName},</p>
-              <p style="color: #44403c; line-height: 1.6;">Thank you for reaching out to vpstonemason. We've received your enquiry and our team will be in touch within 24 hours.</p>
-              <p style="color: #44403c; line-height: 1.6;">In the meantime, feel free to visit our showroom or browse our <a href="https://vpstonemason.vercel.app/catalog" style="color: #bf9b30;">stone collection</a>.</p>
-              <p style="color: #44403c; line-height: 1.6;">Warm regards,<br/><strong>The vpstonemason Team</strong></p>
+              <p style="color: #44403c; line-height: 1.6;">Thank you for reaching out to PVStone. We've received your enquiry and our team will be in touch within 24 hours.</p>
+              <p style="color: #44403c; line-height: 1.6;">In the meantime, feel free to visit our showroom or browse our <a href="https://pvstone.com.au/catalog" style="color: #bf9b30;">stone collection</a>.</p>
+              <p style="color: #44403c; line-height: 1.6;">Warm regards,<br/><strong>The PVStone Team</strong></p>
             </div>
           </div>
         `,

@@ -111,6 +111,107 @@ export class CatalogService {
     return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
+  private normalizeSlugPath(slugOrPath: string): string[] {
+    const rawValue = String(slugOrPath || '').trim();
+    const withoutEdgeSlashes = rawValue.replace(/^\/+|\/+$/g, '');
+
+    let decoded = withoutEdgeSlashes;
+    try {
+      decoded = decodeURIComponent(withoutEdgeSlashes);
+    } catch {
+      // Keep original value when decode fails.
+    }
+
+    const parts = decoded
+      .split('/')
+      .map((part) =>
+        String(part || '')
+          .trim()
+          .toLowerCase(),
+      )
+      .filter(Boolean);
+
+    return parts[0] === 'catalog' ? parts.slice(1) : parts;
+  }
+
+  private async resolveItemFromSlugPath(
+    slugOrPath: string,
+  ): Promise<CatalogItemDocument> {
+    const parts = this.normalizeSlugPath(slugOrPath);
+    if (parts.length === 0) {
+      throw new NotFoundException('Catalog item not found');
+    }
+
+    if (parts.length === 1) {
+      const item = await this.catalogModel
+        .findOne({ slug: parts[0], isActive: true })
+        .exec();
+
+      if (!item) throw new NotFoundException('Catalog item not found');
+      return item;
+    }
+
+    if (parts.length === 2) {
+      const [categorySlug, rangeSlug] = parts;
+
+      const category = await this.catalogModel
+        .findOne({ slug: categorySlug, type: 'category', isActive: true })
+        .select('_id')
+        .exec();
+
+      if (!category) throw new NotFoundException('Catalog item not found');
+
+      const range = await this.catalogModel
+        .findOne({
+          slug: rangeSlug,
+          type: 'range',
+          isActive: true,
+          parentId: category._id,
+        })
+        .exec();
+
+      if (!range) throw new NotFoundException('Catalog item not found');
+      return range;
+    }
+
+    if (parts.length === 3) {
+      const [categorySlug, rangeSlug, productSlug] = parts;
+
+      const category = await this.catalogModel
+        .findOne({ slug: categorySlug, type: 'category', isActive: true })
+        .select('_id')
+        .exec();
+
+      if (!category) throw new NotFoundException('Catalog item not found');
+
+      const range = await this.catalogModel
+        .findOne({
+          slug: rangeSlug,
+          type: 'range',
+          isActive: true,
+          parentId: category._id,
+        })
+        .select('_id')
+        .exec();
+
+      if (!range) throw new NotFoundException('Catalog item not found');
+
+      const product = await this.catalogModel
+        .findOne({
+          slug: productSlug,
+          type: 'product',
+          isActive: true,
+          parentId: range._id,
+        })
+        .exec();
+
+      if (!product) throw new NotFoundException('Catalog item not found');
+      return product;
+    }
+
+    throw new NotFoundException('Catalog item not found');
+  }
+
   private async ensureUniqueSlug(
     baseSlug: string,
     excludeId?: string,
@@ -175,14 +276,14 @@ export class CatalogService {
   }
 
   private normalizeFilterValue(value?: string): string {
-    return String(value || '').trim().toLowerCase();
+    return String(value || '')
+      .trim()
+      .toLowerCase();
   }
 
-  private normalizePublicSort(sort?: string):
-    | 'featured'
-    | 'title-asc'
-    | 'title-desc'
-    | 'newest' {
+  private normalizePublicSort(
+    sort?: string,
+  ): 'featured' | 'title-asc' | 'title-desc' | 'newest' {
     const normalized = this.normalizeFilterValue(sort);
     if (
       normalized === 'title-asc' ||
@@ -264,12 +365,17 @@ export class CatalogService {
 
     // Featured/default ordering keeps CMS displayOrder first.
     sorted.sort((a, b) => {
-      const orderDiff = Number(a.displayOrder || 0) - Number(b.displayOrder || 0);
+      const orderDiff =
+        Number(a.displayOrder || 0) - Number(b.displayOrder || 0);
       if (orderDiff !== 0) return orderDiff;
 
-      return String(a.title || '').localeCompare(String(b.title || ''), undefined, {
-        sensitivity: 'base',
-      });
+      return String(a.title || '').localeCompare(
+        String(b.title || ''),
+        undefined,
+        {
+          sensitivity: 'base',
+        },
+      );
     });
     return sorted;
   }
@@ -288,10 +394,7 @@ export class CatalogService {
    * Get a single item by slug, including its direct children
    */
   async getBySlug(slug: string) {
-    const item = await this.catalogModel
-      .findOne({ slug, isActive: true })
-      .exec();
-    if (!item) throw new NotFoundException('Catalog item not found');
+    const item = await this.resolveItemFromSlugPath(slug);
 
     const children = await this.catalogModel
       .find({ parentId: item._id, isActive: true })
@@ -305,10 +408,7 @@ export class CatalogService {
    * Get direct children of an item
    */
   async getChildren(slug: string) {
-    const parent = await this.catalogModel
-      .findOne({ slug, isActive: true })
-      .exec();
-    if (!parent) throw new NotFoundException('Parent item not found');
+    const parent = await this.resolveItemFromSlugPath(slug);
 
     return this.catalogModel
       .find({ parentId: parent._id, isActive: true })
@@ -320,10 +420,7 @@ export class CatalogService {
    * Build breadcrumb trail from item to root
    */
   async getBreadcrumb(slug: string) {
-    const item = await this.catalogModel
-      .findOne({ slug, isActive: true })
-      .exec();
-    if (!item) throw new NotFoundException('Item not found');
+    const item = await this.resolveItemFromSlugPath(slug);
 
     const breadcrumb: { title: string; slug: string; type: string }[] = [];
     let current: CatalogItemDocument | null = item;
@@ -491,7 +588,7 @@ export class CatalogService {
           finish: this.extractFinishValue(product.specifications),
         };
       })
-      .filter(Boolean) as any[];
+      .filter(Boolean);
 
     const categoryFacetMap = new Map<
       string,
@@ -508,7 +605,9 @@ export class CatalogService {
 
     for (const item of enriched) {
       if (item.categorySlug) {
-        const existingCategoryFacet = categoryFacetMap.get(item.categorySlug) || {
+        const existingCategoryFacet = categoryFacetMap.get(
+          item.categorySlug,
+        ) || {
           value: item.categorySlug,
           label: item.categoryTitle || item.categorySlug,
           count: 0,
@@ -582,7 +681,9 @@ export class CatalogService {
       },
       applied: {
         search,
-        category: selectedCategory ? String(selectedCategory.slug || '') : categoryFilter,
+        category: selectedCategory
+          ? String(selectedCategory.slug || '')
+          : categoryFilter,
         range: selectedRange ? String(selectedRange.slug || '') : rangeFilter,
         finish: finishFilter,
         sort,
@@ -594,10 +695,7 @@ export class CatalogService {
    * Get item by slug with full context: siblings, parent info
    */
   async getItemDetail(slug: string) {
-    const item = await this.catalogModel
-      .findOne({ slug, isActive: true })
-      .exec();
-    if (!item) throw new NotFoundException('Catalog item not found');
+    const item = await this.resolveItemFromSlugPath(slug);
 
     const [children, breadcrumb] = await Promise.all([
       this.catalogModel

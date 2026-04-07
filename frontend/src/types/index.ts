@@ -89,6 +89,7 @@ export interface BlogPost {
   seoDescription?: string;
   readTime?: number;
   createdAt: string;
+  updatedAt?: string;
 }
 
 export interface Pagination {

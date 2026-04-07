@@ -1,43 +1,19 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { api } from '@/lib/api';
 import { CatalogCard } from '@/components/catalog/CatalogCard';
-import { CatalogLoading } from '@/components/catalog/CatalogLoading';
-import { CatalogError } from '@/components/catalog/CatalogError';
+import { AnimateOnView } from '@/components/ui/AnimateOnView';
+import { shouldUnoptimizeImage } from '@/lib/image';
 import type { CatalogItem } from '@/types/catalog';
 
-export default function CatalogPage() {
-  const [categories, setCategories] = useState<CatalogItem[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
-  const fetchCategories = async () => {
-    setLoading(true);
-    setError(false);
-    try {
-      const data = await api.getCatalogCategories();
-      setCategories(data);
-    } catch {
-      setError(true);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  if (loading) return <CatalogLoading />;
-  if (error) return (
-    <div className="min-h-screen bg-stone-50 pt-32">
-      <CatalogError onRetry={fetchCategories} />
-    </div>
-  );
+export default async function CatalogPage() {
+  let categories: CatalogItem[] = [];
+  try {
+    categories = await api.getCatalogCategories();
+  } catch {
+    categories = [];
+  }
 
   return (
     <>
@@ -45,10 +21,19 @@ export default function CatalogPage() {
       <section className="relative h-[85vh] min-h-[600px] max-h-[900px] overflow-hidden bg-stone-900">
         {/* Background collage — use the first category's image */}
         {categories[0]?.imageDetail && (
-          <div
-            className="absolute inset-0 bg-cover bg-center animate-zoom-subtle opacity-40"
-            style={{ backgroundImage: `url('${categories[0].imageDetail || categories[0].imageMain}')` }}
-          />
+          <div className="absolute inset-0 animate-zoom-subtle opacity-40">
+            <Image
+              src={categories[0].imageDetail || categories[0].imageMain}
+              alt={categories[0].title}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+              unoptimized={shouldUnoptimizeImage(
+                categories[0].imageDetail || categories[0].imageMain,
+              )}
+            />
+          </div>
         )}
 
         {/* Gradient overlays */}
@@ -63,20 +48,12 @@ export default function CatalogPage() {
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-center">
           <div className="container-custom">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-3xl"
-            >
-              <motion.span
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-                className="inline-block text-accent-gold text-xs font-semibold tracking-[0.3em] uppercase mb-6"
-              >
-                Our Collections
-              </motion.span>
+            <AnimateOnView animateOnMount duration={1} className="max-w-3xl">
+              <AnimateOnView animateOnMount delay={0.3} duration={0.6} direction="right" distance={20}>
+                <span className="inline-block text-accent-gold text-xs font-semibold tracking-[0.3em] uppercase mb-6">
+                  Our Collections
+                </span>
+              </AnimateOnView>
 
               <h1 className="font-display text-4xl sm:text-5xl md:text-display lg:text-display-lg text-white mb-6 leading-[1.1]">
                 Surfaces that
@@ -84,38 +61,32 @@ export default function CatalogPage() {
                 <span className="italic text-accent-gold-light">define</span> spaces
               </h1>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-                className="text-white/50 text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10"
-              >
-                Discover our curated range of premium stone surfaces — from innovative Crystalline Silica-Free minerals to timeless natural stone.
-              </motion.p>
+              <AnimateOnView animateOnMount delay={0.5} duration={0.8} direction="none">
+                <p className="text-white/50 text-lg md:text-xl max-w-xl font-light leading-relaxed mb-10">
+                  Discover our curated range of premium stone surfaces — from innovative Crystalline Silica-Free minerals to timeless natural stone.
+                </p>
+              </AnimateOnView>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-                className="flex flex-wrap items-center gap-5"
-              >
-                <a
-                  href="#collections"
-                  className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase text-white/70 hover:text-accent-gold transition-colors duration-300 group"
-                >
-                  Explore Collections
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+              <AnimateOnView animateOnMount delay={0.7} duration={0.6}>
+                <div className="flex flex-wrap items-center gap-5">
+                  <a
+                    href="#collections"
+                    className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase text-white/70 hover:text-accent-gold transition-colors duration-300 group"
+                  >
+                    Explore Collections
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
 
-                <Link
-                  href="/catalog/products"
-                  className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase text-white/70 hover:text-accent-gold transition-colors duration-300 group"
-                >
-                  Browse All Products
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </motion.div>
-            </motion.div>
+                  <Link
+                    href="/catalog/products"
+                    className="inline-flex items-center gap-3 text-sm font-medium tracking-wider uppercase text-white/70 hover:text-accent-gold transition-colors duration-300 group"
+                  >
+                    Browse All Products
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </AnimateOnView>
+            </AnimateOnView>
           </div>
         </div>
 
@@ -126,19 +97,14 @@ export default function CatalogPage() {
       {/* Collections Grid — Asymmetric Editorial Layout */}
       <section id="collections" className="bg-stone-50 pb-24 md:pb-32 -mt-8">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 md:mb-16"
-          >
+          <AnimateOnView className="mb-12 md:mb-16">
             <span className="text-xs font-semibold tracking-[0.25em] uppercase text-accent-gold">
               Material Categories
             </span>
             <h2 className="font-display text-2xl md:text-display-sm text-stone-900 mt-2">
               Browse by Collection
             </h2>
-          </motion.div>
+          </AnimateOnView>
 
           {/* Asymmetric Grid: first card large, rest smaller */}
           {categories.length > 0 && (
@@ -178,11 +144,7 @@ export default function CatalogPage() {
           }} />
         </div>
         <div className="container-custom relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <AnimateOnView>
             <h2 className="font-display text-2xl md:text-display-sm text-white mb-4">
               Need guidance choosing the right surface?
             </h2>
@@ -192,7 +154,7 @@ export default function CatalogPage() {
             <Link href="/contact" className="btn-gold">
               Get Expert Advice
             </Link>
-          </motion.div>
+          </AnimateOnView>
         </div>
       </section>
     </>

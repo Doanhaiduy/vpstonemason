@@ -128,7 +128,7 @@ export async function POST(req: Request) {
       });
     }
 
-    const prompt = `You are a professional content writer for vpstonemason, a premium Australian stone benchtop showroom.
+    const prompt = `You are a professional content writer for PVStone, a premium Australian stone benchtop showroom.
 
 Write a complete blog post about the following topic: "${normalizedTopic}"
 

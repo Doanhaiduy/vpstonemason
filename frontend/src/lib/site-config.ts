@@ -60,18 +60,18 @@ export interface SiteConfig {
 }
 
 const siteConfig: SiteConfig = {
-  companyName: 'vpstonemason',
-  tagline: 'Premium Stone Benchtops in Australia',
-  phone: '(03) 9000 0000',
-  email: 'info@vpstonemason.com',
+  companyName: 'PVStone',
+  tagline: 'Premium Stone Benchtops Melbourne',
+  phone: '0450 938 079',
+  email: 'info@pvstone.com.au',
   address: {
-    street: '123 Stone Avenue',
-    suburb: 'Richmond',
+    street: '32 Spalding Ave',
+    suburb: 'Sunshine North',
     state: 'VIC',
-    postcode: '3121',
+    postcode: '3020',
   },
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://vpstonemason.vercel.app',
-  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://vpstonemason-api.vercel.app/api',
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://pvstone.com.au',
+  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'https://pvstone.com.au/api',
   openingHours: [
     { day: 'Monday', open: '9:00 AM', close: '5:00 PM', closed: false },
     { day: 'Tuesday', open: '9:00 AM', close: '5:00 PM', closed: false },
@@ -82,19 +82,21 @@ const siteConfig: SiteConfig = {
     { day: 'Sunday', open: '', close: '', closed: true },
   ],
   socialLinks: {
-    facebook: 'https://www.facebook.com/vpstonemason',
-    instagram: 'https://www.instagram.com/vpstonemason',
+    facebook: 'https://www.facebook.com/PVStonemason',
+    instagram: '',
     pinterest: '',
     youtube: '',
   },
   seo: {
-    titleSuffix: 'vpstonemason Australia',
-    defaultDescription: 'Premium natural & engineered stone benchtops for Australian kitchens, bathrooms & beyond. Visit our Melbourne showroom to explore granite, marble, quartz, porcelain & CSF stone.',
-    ogImage: '/og-image.jpg',
+    titleSuffix: 'PVStone Melbourne',
+    defaultDescription: 'Premium natural and engineered stone benchtops in Melbourne. Visit our Sunshine North showroom to explore granite, marble, quartz, porcelain and CSF-compliant stone.',
+    ogImage: '/web-app-manifest-512x512.png',
     locale: 'en_AU',
     keywords: [
       'stone benchtops Melbourne', 'kitchen benchtops Australia', 'marble benchtops Melbourne',
       'granite benchtops Melbourne', 'quartz benchtops Victoria', 'stone showroom Melbourne',
+      'stone benchtops Sunshine North', 'custom stone benchtops', 'porcelain benchtops Melbourne',
+      'premium stone benchtops', 'kitchen renovations Melbourne'
     ],
   },
   hero: {
@@ -107,12 +109,12 @@ const siteConfig: SiteConfig = {
   },
   aboutShort: 'Family-owned and operated in Australia, we bring over 15 years of expertise in stone fabrication and installation to every project.',
   geo: {
-    latitude: -37.8172,
-    longitude: 144.9559,
+    latitude: -37.7639,
+    longitude: 144.8338,
     region: 'AU-VIC',
-    placename: 'Richmond, Melbourne',
+    placename: 'Sunshine North, Melbourne',
   },
-  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509198!2d144.9537353!3d-37.8172099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ5JzAyLjAiUyAxNDTCsDU3JzEzLjUiRQ!5e0!3m2!1sen!2sau!4v1234567890',
+  googleMapsEmbed: 'https://www.google.com/maps?q=32+Spalding+Ave+Sunshine+North+VIC&output=embed',
   themeColor: '#1F1D1B',
   aiEnabled: true,
 };

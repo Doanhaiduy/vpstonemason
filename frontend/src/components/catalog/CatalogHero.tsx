@@ -1,8 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import type { CatalogBreadcrumbItem } from '@/types/catalog';
 import { CatalogBreadcrumb } from './CatalogBreadcrumb';
+import { shouldUnoptimizeImage } from '@/lib/image';
 
 interface Props {
   title: string;
@@ -25,10 +27,17 @@ export function CatalogHero({
     <section className="relative h-[70vh] min-h-[500px] max-h-[800px] overflow-hidden">
       {/* Background Image with Ken Burns */}
       {bgImage && (
-        <div
-          className="absolute inset-0 bg-cover bg-center animate-zoom-subtle"
-          style={{ backgroundImage: `url('${bgImage}')` }}
-        />
+        <div className="absolute inset-0 animate-zoom-subtle">
+          <Image
+            src={bgImage}
+            alt={`${title} background image`}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            unoptimized={shouldUnoptimizeImage(bgImage)}
+          />
+        </div>
       )}
 
       {/* Layered Gradient Overlays */}

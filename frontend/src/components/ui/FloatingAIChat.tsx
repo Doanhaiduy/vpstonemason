@@ -10,7 +10,7 @@ export function FloatingAIChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<{ role: 'user' | 'ai'; content: string }[]>([
-    { role: 'ai', content: 'Hi there! I am the vpstonemason AI Assistant. How can I help you find the perfect stone today?' },
+    { role: 'ai', content: 'Hi there! I am the PVStone AI Assistant. How can I help you find the perfect stone today?' },
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -37,7 +37,7 @@ export function FloatingAIChat() {
         body: JSON.stringify({ messages: [...messages, { role: 'user', content: userMessage }] }),
       });
       const data = await res.json();
-      setMessages(prev => [...prev, { role: 'ai', content: data.reply || 'Sorry, I encounted an error.' }]);
+      setMessages(prev => [...prev, { role: 'ai', content: data.reply || 'Sorry, I encountered an error.' }]);
     } catch {
       setMessages(prev => [...prev, { role: 'ai', content: 'Network error. Please try again later.' }]);
     } finally {
@@ -60,7 +60,7 @@ export function FloatingAIChat() {
               <div className="bg-stone-900 px-4 py-3 flex justify-between items-center text-white">
                 <div className="flex items-center gap-2">
                   <Sparkles className="w-4 h-4 text-accent-gold" />
-                  <span className="font-medium text-sm">vpstonemason AI</span>
+                  <span className="font-medium text-sm">PVStone AI</span>
                 </div>
                 <button onClick={() => setIsOpen(false)} className="text-stone-400 hover:text-white transition-colors">
                   <X className="w-4 h-4" />
@@ -116,6 +116,7 @@ export function FloatingAIChat() {
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(!isOpen)}
           className="w-14 h-14 bg-stone-900 text-white rounded-full shadow-xl flex items-center justify-center relative hover:bg-stone-800 transition-colors"
+          aria-label={isOpen ? 'Close AI chat' : 'Open AI chat'}
         >
           {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
           {!isOpen && (

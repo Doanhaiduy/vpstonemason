@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
+import { buildAlternates } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Stone Catalogue Moved | vpstonemason',
+  title: 'Stone Catalogue Moved',
   description: 'The stone catalogue has moved to our new collection routes.',
-  alternates: { canonical: '/catalog' },
+  alternates: buildAlternates('/catalog'),
   robots: {
     index: false,
     follow: true,

@@ -5,11 +5,15 @@ import Link from 'next/link';
 import { MapPin, Clock, Phone, Navigation } from 'lucide-react';
 import { useSiteConfig } from '@/lib/SiteConfigContext';
 import { toGoogleMapsEmbedUrl } from '@/lib/google-maps';
+import { toPhoneHref } from '@/lib/phone';
 
 export function ShowroomInfo() {
   const config = useSiteConfig();
 
-  const formattedAddress = `${config.address.street}, ${config.address.suburb} ${config.address.state} ${config.address.postcode}`;
+  const locality = [config.address.suburb, config.address.state, config.address.postcode]
+    .filter(Boolean)
+    .join(' ');
+  const formattedAddress = [config.address.street, locality].filter(Boolean).join(', ');
   const mapEmbedUrl = toGoogleMapsEmbedUrl(config.googleMapsEmbed);
   
   // Format hours concisely for display
@@ -40,6 +44,7 @@ export function ShowroomInfo() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0"
+              title="PVStone Showroom Location — Google Maps"
             />
           </motion.div>
 
@@ -64,7 +69,7 @@ export function ShowroomInfo() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-stone-900 mb-0.5">Address</h4>
+                  <p className="font-medium text-stone-900 mb-0.5">Address</p>
                   <p className="text-stone-500">{formattedAddress}</p>
                 </div>
               </div>
@@ -74,7 +79,7 @@ export function ShowroomInfo() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-stone-900 mb-0.5">Opening Hours</h4>
+                  <p className="font-medium text-stone-900 mb-0.5">Opening Hours</p>
                   <p className="text-stone-500">{weekHours} &nbsp;|&nbsp; {satHours}</p>
                 </div>
               </div>
@@ -84,8 +89,8 @@ export function ShowroomInfo() {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-stone-900 mb-0.5">Call Us</h4>
-                  <a href={`tel:${config.phone.replace(/\s+/g, '')}`} className="text-stone-500 hover:text-accent-gold transition-colors">
+                  <p className="font-medium text-stone-900 mb-0.5">Call Us</p>
+                  <a href={toPhoneHref(config.phone)} className="text-stone-500 hover:text-accent-gold transition-colors">
                     {config.phone}
                   </a>
                 </div>

@@ -45,7 +45,7 @@ export default function AdminLoginPage() {
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-indigo-500/30">
             <Gem className="w-7 h-7 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-white">vpstonemason</h1>
+          <h1 className="text-2xl font-bold text-white">PVStone</h1>
           <p className="text-slate-500 text-sm mt-1">Admin Panel</p>
         </div>
 
@@ -66,7 +66,7 @@ export default function AdminLoginPage() {
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                 <input type="email" value={email} onChange={e => setEmail(e.target.value)} required
-                  placeholder="admin@vpstonemason.com"
+                  placeholder="admin@pvstone.com.au"
                   className="w-full pl-11 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder:text-slate-500 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all" />
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function AdminLoginPage() {
           </form>
         </div>
 
-        <p className="text-center text-slate-600 text-xs mt-6">© {new Date().getFullYear()} vpstonemason All rights reserved.</p>
+        <p className="text-center text-slate-600 text-xs mt-6">© {new Date().getFullYear()} PVStone All rights reserved.</p>
       </motion.div>
     </div>
   );

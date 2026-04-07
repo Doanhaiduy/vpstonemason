@@ -48,7 +48,18 @@ scripts/_tmp_*.json
 # Optional local Docker volumes/state
 *.pid
 
-# docs/image_temp
-# docs/content-media
-# docs/examples
-# docs/content-log.json
+# Stone Content Agent — generated images & media (do NOT commit)
+docs/image_temp/*.jpg
+docs/image_temp/*.jpeg
+docs/image_temp/*.png
+docs/image_temp/*.webp
+docs/content-media/posts/*/raw/
+docs/content-media/posts/*/final/
+docs/content-media/posts/**/raw/
+docs/content-media/posts/**/final/
+.github/stone-content/reference-images/*.jpg
+.github/stone-content/reference-images/*.jpeg
+.github/stone-content/reference-images/*.png
+.github/stone-content/reference-images/*.webp
+.github/stone-content/output/*/
+!.github/stone-content/output/.gitkeep

@@ -1,0 +1,37 @@
+{
+  "lastSceneIndex": 2,
+  "history": [
+    {
+      "date": "2026-04-05",
+      "stoneName": "Amazonite OR AC1017",
+      "stoneCode": "AC1017",
+      "scenes": ["kitchen-island", "kitchen-l-shape", "bathroom-vanity", "bathroom-shower"],
+      "imagesGenerated": 6,
+      "videosGenerated": 2,
+      "captionLanguage": "vi"
+    },
+    {
+      "date": "2026-04-05",
+      "mode": "multi",
+      "stoneName": "Atlantis OR AC1016, Dolomite OR AC6010, Magma Gold OR AC1015, Amazonite OR AC1017, Opal OR AC0806",
+      "stoneCode": "AC1016, AC6010, AC1015, AC1017, AC0806",
+      "scenes": ["laundry", "outdoor-bbq", "fireplace", "kitchen-island", "kitchen-l-shape", "close-up-detail"],
+      "imagesGenerated": 10,
+      "videosGenerated": 1,
+      "captionLanguage": "en"
+    },
+    {
+      "date": "2026-04-05",
+      "mode": "multi",
+      "stoneName": "Atlantis OR AC1016, Dolomite OR AC6010, Magma Gold OR AC1015, Amazonite OR AC1017, Opal OR AC0806",
+      "stoneCode": "AC1016, AC6010, AC1015, AC1017, AC0806",
+      "scenes": ["laundry", "outdoor-bbq", "fireplace", "kitchen-island", "kitchen-l-shape", "close-up-detail"],
+      "imagesGenerated": 10,
+      "videosGenerated": 1,
+      "captionLanguage": "en",
+      "referenceImageFolder": "docs/image_temp",
+      "referenceImageManifest": "docs/image_temp/image-manifest.md",
+      "notes": "Regenerated with attached image reference requirement in prompts"
+    }
+  ]
+}

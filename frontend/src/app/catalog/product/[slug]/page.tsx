@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { permanentRedirect } from 'next/navigation';
 import { api } from '@/lib/api';
 import type { CatalogDetailResponse } from '@/types/catalog';
 
@@ -21,11 +21,11 @@ export default async function CatalogProductLookupPage({ params }: PageProps) {
       : [...breadcrumbSlugs, itemSlug];
 
     if (slugs.length > 0) {
-      redirect(`/catalog/${slugs.join('/')}`);
+      permanentRedirect(`/catalog/${slugs.join('/')}`);
     }
   } catch {
     // Ignore and fallback to catalog root.
   }
 
-  redirect('/catalog');
+  permanentRedirect('/catalog');
 }

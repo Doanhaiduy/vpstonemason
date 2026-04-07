@@ -37,6 +37,6 @@ async function bootstrap() {
 
   const port = configService.get<number>('port') || 4000;
   await app.listen(port);
-  console.log(`🚀 vpstonemason API running on http://localhost:${port}/api`);
+  console.log(`🚀 PVStone API running on http://localhost:${port}/api`);
 }
 bootstrap();

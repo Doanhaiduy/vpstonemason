@@ -12,12 +12,12 @@ Every page has unique, optimised metadata:
 
 | Page | Title | Description | Canonical | Keywords |
 |------|-------|-------------|-----------|----------|
-| Home | vpstonemason \| Premium Stone Benchtops Melbourne | ✅ 155 chars | `/` | 12 keywords |
+| Home | PVStone \| Premium Stone Benchtops Melbourne | ✅ 155 chars | `/` | 12 keywords |
 | Stones | Stone Catalogue — Granite, Marble, Quartz... | ✅ 160 chars | `/stones` | 5 keywords |
 | Projects | Our Projects — Kitchen & Bathroom Installations | ✅ 155 chars | `/projects` | 4 keywords |
 | About | About Us — 15+ Years of Stone Craftsmanship | ✅ 150 chars | `/about` | 4 keywords |
 | Contact | Contact Us — Get a Free Stone Benchtop Quote | ✅ 158 chars | `/contact` | 4 keywords |
-| Showroom | Visit Our Showroom — Richmond, Melbourne | ✅ 150 chars | `/showroom` | 4 keywords |
+| Showroom | Visit Our Showroom — Sunshine North, Melbourne | ✅ 150 chars | `/showroom` | 4 keywords |
 | Blog | Blog — Stone Benchtop Tips, Trends & Guides | ✅ 155 chars | `/blog` | 4 keywords |
 
 ### Open Graph & Twitter Cards ✅
@@ -54,10 +54,10 @@ Every page has unique, optimised metadata:
 ```json
 {
   "@type": "LocalBusiness",
-  "name": "vpstonemason",
-  "telephone": "(03) 9000 0000",
-  "address": { "streetAddress": "123 Stone Avenue", "addressLocality": "Richmond", "addressRegion": "VIC" },
-  "geo": { "latitude": -37.8172, "longitude": 144.9559 },
+  "name": "PVStone",
+  "telephone": "0450 938 079",
+  "address": { "streetAddress": "32 Spalding Ave", "addressLocality": "Sunshine North", "addressRegion": "VIC" },
+  "geo": { "latitude": -37.7639, "longitude": 144.8338 },
   "openingHoursSpecification": [...],
   "aggregateRating": { "ratingValue": "4.9", "reviewCount": "127" },
   "hasOfferCatalog": { "itemListElement": ["Kitchen Benchtops", "Bathroom Vanities", "Splashbacks", "Outdoor Kitchens"] }
@@ -68,8 +68,8 @@ Every page has unique, optimised metadata:
 ```json
 {
   "@type": "Organization",
-  "name": "vpstonemason",
-  "contactPoint": { "telephone": "(03) 9000 0000", "contactType": "customer service", "areaServed": "AU" }
+  "name": "PVStone",
+  "contactPoint": { "telephone": "0450 938 079", "contactType": "customer service", "areaServed": "AU" }
 }
 ```
 
@@ -80,7 +80,7 @@ Every page has unique, optimised metadata:
 | Factor | Status | Implementation |
 |--------|--------|---------------|
 | NAP consistency | ✅ | Same name/address/phone on all pages |
-| Geo meta tags | ✅ | `geo.region=AU-VIC`, `geo.placename=Richmond, Melbourne` |
+| Geo meta tags | ✅ | `geo.region=AU-VIC`, `geo.placename=Sunshine North, Melbourne` |
 | Google Maps embed | ✅ | Contact + Showroom pages |
 | Local keywords | ✅ | "Melbourne", "Victoria", "Australia" in all metadata |
 | Area served | ✅ | 100km radius from Melbourne CBD in JSON-LD |
@@ -135,7 +135,7 @@ After deploying to production:
 
 1. Add property in Google Search Console
 2. Verify ownership (DNS TXT record or HTML tag)
-3. Submit sitemap: `https://vpstonemason.vercel.app/sitemap.xml`
+3. Submit sitemap: `https://pvstone.com.au/sitemap.xml`
 4. Request indexing for key pages
 5. Monitor Core Web Vitals
 6. Set up Google Business Profile linking to website

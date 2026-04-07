@@ -1,4 +1,4 @@
-# MẪU BÀI ĐĂNG SOCIAL MEDIA — PVstoneau
+# MẪU BÀI ĐĂNG SOCIAL MEDIA — PVStoneau
 
 > Templates bài đăng sẵn cho Facebook & Instagram, phân loại theo chủ đề.
 
@@ -22,12 +22,12 @@ The homeowner wanted a [modern/classic/luxury/warm] feel, and this [stone name] 
 Swipe to see more angles! 👉
 
 Ready for your own kitchen transformation?
-📞 0424439293
+📞 0450 938 079
 📘 Fanpage: https://www.facebook.com/PVStonemason
-🌐 https://vpstonemason.vercel.app/
-📍 123 Stone Avenue, Richmond
+🌐 https://pvstone.com.au/
+📍 32 Spalding Ave Sunshine North VIC
 
-#KitchenRenovation #StoneBenchtops #MelbourneKitchen #[StoneType] #PVstoneau #KitchenDesign #HomeRenovation #[Suburb]Homes #DreamKitchen #PremiumStone
+#KitchenRenovation #StoneBenchtops #MelbourneKitchen #[StoneType] #PVStoneau #KitchenDesign #HomeRenovation #[Suburb]Homes #DreamKitchen #PremiumStone
 ```
 
 ### Template 1.2 — Before/After:
@@ -46,9 +46,9 @@ Details:
 
 Thinking about your own kitchen makeover?
 👉 Book a FREE consultation today!
-📞 0424439293
+📞 0450 938 079
 
-#BeforeAndAfter #KitchenMakeover #MelbourneRenovation #StoneBenchtops #PVstoneau #KitchenTransformation #HomeImprovement
+#BeforeAndAfter #KitchenMakeover #MelbourneRenovation #StoneBenchtops #PVStoneau #KitchenTransformation #HomeImprovement
 ```
 
 ---
@@ -70,12 +70,12 @@ Why we love it:
 🎨 Finish: [Polished / Honed / Matt]
 💰 From ~$[X]/m² installed
 
-See it in person at our Richmond showroom — photos can't capture how beautiful this stone truly is! 🏛️
+See it in person at our Sunshine North showroom — photos can't capture how beautiful this stone truly is! 🏛️
 
-📞 0424439293
-🌐 https://vpstonemason.vercel.app/stones/[slug]
+📞 0450 938 079
+🌐 https://pvstone.com.au/stones/[slug]
 
-#[StoneName] #[StoneType] #StoneBenchtops #KitchenDesign #MelbourneHomes #PremiumStone #PVstoneau #NaturalStone
+#[StoneName] #[StoneType] #StoneBenchtops #KitchenDesign #MelbourneHomes #PremiumStone #PVStoneau #NaturalStone
 ```
 
 ### Template 2.2 — Stone Comparison:
@@ -99,7 +99,7 @@ Swipe to compare these two beauties! 👉
 Comment below which one you'd pick! ⬇️
 A = [Stone A] | B = [Stone B]
 
-#StoneBenchtops #KitchenDesign #HomeRenovation #PVstoneau #StoneComparison #MelbourneKitchen
+#StoneBenchtops #KitchenDesign #HomeRenovation #PVStoneau #StoneComparison #MelbourneKitchen
 ```
 
 ---
@@ -122,7 +122,7 @@ Keep your beautiful [stone type] looking brand new with these simple tips:
 
 Got questions about stone care? Drop them below! 👇
 
-#StoneCare #KitchenTips #BenchtopMaintenance #PVstoneau #HomeHacks #MelbourneHomes
+#StoneCare #KitchenTips #BenchtopMaintenance #PVStoneau #HomeHacks #MelbourneHomes
 ```
 
 ### Template 3.2 — Buying Guide:
@@ -142,11 +142,11 @@ Planning a kitchen renovation? Read this first! 👇
 5️⃣ GET A PROPER QUOTE — Always get an on-site measure for accurate pricing!
 
 We offer FREE consultations & quotes 💎
-📞 0424439293 | 📍 Richmond showroom
+📞 0450 938 079 | 📍 Sunshine North showroom
 
 Save this post for later! 🔖
 
-#KitchenRenovation #StoneBenchtops #BuyingGuide #MelbourneReno #PVstoneau #HomeRenovationTips
+#KitchenRenovation #StoneBenchtops #BuyingGuide #MelbourneReno #PVStoneau #HomeRenovationTips
 ```
 
 ### Template 3.3 — CSF Education:
@@ -163,12 +163,12 @@ What does this mean for you?
 ✅ New CSF (Crystalline Silica Free) engineered stone is available
 ❌ Traditional quartz benchtops can no longer be sold
 
-At PVstoneau, ALL our products are 100% compliant 🛡️
+At PVStoneau, ALL our products are 100% compliant 🛡️
 
 Have questions? We're here to help!
-📞 0424439293
+📞 0450 938 079
 
-#CSFStone #EngineeredStoneBan #SilicaFree #AustralianRegulations #PVstoneau #SafeStone #KitchenRenovation
+#CSFStone #EngineeredStoneBan #SilicaFree #AustralianRegulations #PVStoneau #SafeStone #KitchenRenovation
 ```
 
 ---
@@ -193,7 +193,7 @@ Each piece is:
 
 It's truly a combination of technology + craftsmanship! 🇦🇺
 
-#BehindTheScenes #StoneFabrication #CNCMachine #Stonemason #PVstoneau #AustralianMade #Craftsmanship
+#BehindTheScenes #StoneFabrication #CNCMachine #Stonemason #PVStoneau #AustralianMade #Craftsmanship
 ```
 
 ### Template 4.2 — Installation Day:
@@ -212,7 +212,7 @@ What happens on installation day:
 
 The whole process takes just [X] hours! And we always leave the site spotless 🧹
 
-#InstallationDay #StoneBenchtops #MelbourneHomes #PVstoneau #KitchenRenovation #[Suburb]
+#InstallationDay #StoneBenchtops #MelbourneHomes #PVStoneau #KitchenRenovation #[Suburb]
 ```
 
 ---
@@ -234,9 +234,9 @@ Thank you [Customer First Name] for trusting us with your [project type]! We're 
 Your words mean the world to us 💎
 
 Thinking about renovating? Join hundreds of happy Melbourne homeowners!
-📞 0424439293
+📞 0450 938 079
 
-#CustomerReview #HappyCustomer #StoneBenchtops #PVstoneau #Melbourne #5Stars #TestimonialThursday
+#CustomerReview #HappyCustomer #StoneBenchtops #PVStoneau #Melbourne #5Stars #TestimonialThursday
 ```
 
 ---
@@ -254,7 +254,7 @@ D) Modern Grey Porcelain 🩶
 
 Drop your choice in the comments! We'd love to know 👇
 
-#KitchenDesign #InteriorDesign #HomeRenovation #Poll #PVstoneau #DesignInspiration
+#KitchenDesign #InteriorDesign #HomeRenovation #Poll #PVStoneau #DesignInspiration
 ```
 
 ### Template 6.2 — This or That:
@@ -268,7 +268,7 @@ Slide 4: Natural Stone vs Engineered
 
 Let us know your picks! 💬
 
-#ThisOrThat #KitchenDesign #StoneBenchtops #InteriorDesign #PVstoneau
+#ThisOrThat #KitchenDesign #StoneBenchtops #InteriorDesign #PVStoneau
 ```
 
 ### Template 6.3 — Did You Know:
@@ -282,7 +282,7 @@ Let us know your picks! 💬
 
 Double tap if you learned something new! 👆
 
-#DidYouKnow #StoneFacts #NaturalStone #PVstoneau #InterestingFacts
+#DidYouKnow #StoneFacts #NaturalStone #PVStoneau #InterestingFacts
 ```
 
 ---
@@ -307,14 +307,14 @@ ALL prices include:
 
 ⏰ Offer ends [Date] — don't miss out!
 
-📞 0424439293
-📍 Richmond showroom
+📞 0450 938 079
+📍 Sunshine North showroom
 📘 Fanpage: https://www.facebook.com/PVStonemason
-🌐 https://vpstonemason.vercel.app/
+🌐 https://pvstone.com.au/
 
 *T&Cs apply. While stocks last.
 
-#Sale #KitchenRenovation #StoneBenchtops #MelbourneDeals #PVstoneau #LimitedOffer
+#Sale #KitchenRenovation #StoneBenchtops #MelbourneDeals #PVStoneau #LimitedOffer
 ```
 
 ---
@@ -330,7 +330,7 @@ Text overlay:
 → to perfect polish...
 → to YOUR dream kitchen 💎"
 Audio: Trending upbeat audio
-Caption: "The journey of your benchtop — from our workshop to your home! Which stone would you choose? 🪨✨ #StoneBenchtops #KitchenRenovation #PVstoneau"
+Caption: "The journey of your benchtop — from our workshop to your home! Which stone would you choose? 🪨✨ #StoneBenchtops #KitchenRenovation #PVStoneau"
 ```
 
 ### Reel 2 — Touch Test:
@@ -341,7 +341,7 @@ Text overlay:
 Polished → smooth & glossy
 Honed → soft & silky
 Leathered → textured & grip"
-Caption: "Which finish do you prefer? Comment below! 👇 #StoneFinishes #BenchtopDesign #PVstoneau"
+Caption: "Which finish do you prefer? Comment below! 👇 #StoneFinishes #BenchtopDesign #PVStoneau"
 ```
 
 ### Reel 3 — Myth Busting:
@@ -350,7 +350,7 @@ Caption: "Which finish do you prefer? Comment below! 👇 #StoneFinishes #Bencht
 Text overlay:
 "MYTH: Marble is too fragile for kitchens ❌
 TRUTH: With proper sealing, marble kitchens last decades! ✅"
-Caption: "Stop letting myths hold you back from your dream kitchen! 💎 #MarbleBenchtop #MythBusted #PVstoneau"
+Caption: "Stop letting myths hold you back from your dream kitchen! 💎 #MarbleBenchtop #MythBusted #PVStoneau"
 ```
 
 ---
@@ -359,7 +359,7 @@ Caption: "Stop letting myths hold you back from your dream kitchen! 💎 #Marble
 
 ### Set A — General Posts:
 ```
-#StoneBenchtops #KitchenDesign #MelbourneHomes #HomeRenovation #KitchenRenovation #NaturalStone #PremiumStone #PVstoneau #InteriorDesign #DreamKitchen
+#StoneBenchtops #KitchenDesign #MelbourneHomes #HomeRenovation #KitchenRenovation #NaturalStone #PremiumStone #PVStoneau #InteriorDesign #DreamKitchen
 ```
 
 ### Set B — Product Posts:

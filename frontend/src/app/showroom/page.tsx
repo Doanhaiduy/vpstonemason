@@ -1,10 +1,11 @@
-'use client';
-
-import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Clock, Phone, Car, Navigation, CalendarCheck } from 'lucide-react';
-import { useSiteConfig } from '@/lib/SiteConfigContext';
+import { getSiteConfig } from '@/lib/get-site-config';
 import { toGoogleMapsEmbedUrl } from '@/lib/google-maps';
+import { shouldUnoptimizeImage } from '@/lib/image';
+import { toPhoneHref } from '@/lib/phone';
+import { AnimateOnView } from '@/components/ui/AnimateOnView';
 
 const showroomImages = [
   'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
@@ -12,25 +13,36 @@ const showroomImages = [
   'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
 ];
 
-export default function ShowroomPage() {
-  const config = useSiteConfig();
-  const formattedAddress = `${config.address.street}, ${config.address.suburb} ${config.address.state} ${config.address.postcode}`;
+export default async function ShowroomPage() {
+  const config = await getSiteConfig();
+  const locality = [config.address.suburb, config.address.state, config.address.postcode]
+    .filter(Boolean)
+    .join(' ');
+  const formattedAddress = [config.address.street, locality].filter(Boolean).join(', ');
   const mapEmbedUrl = toGoogleMapsEmbedUrl(config.googleMapsEmbed);
 
   return (
     <>
       <section className="relative pt-32 pb-20 bg-stone-900">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('${showroomImages[0]}')` }} />
+          <Image
+            src={showroomImages[0]}
+            alt="PVStone showroom interior"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            unoptimized={shouldUnoptimizeImage(showroomImages[0])}
+          />
         </div>
         <div className="container-custom relative z-10 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <AnimateOnView animateOnMount>
             <span className="text-accent-gold text-sm font-medium tracking-[0.2em] uppercase">Visit Us</span>
             <h1 className="font-display text-display-sm md:text-display text-white mt-4 mb-4">Our Showroom</h1>
             <p className="text-stone-400 text-lg max-w-xl mx-auto">
               Experience our entire stone range in person. Touch, compare, and find your perfect stone.
             </p>
-          </motion.div>
+          </AnimateOnView>
         </div>
       </section>
 
@@ -40,16 +52,22 @@ export default function ShowroomPage() {
             {/* Gallery */}
             <div className="space-y-4">
               {showroomImages.map((img, i) => (
-                <motion.div
+                <AnimateOnView
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  delay={i * 0.1}
                   className={`overflow-hidden bg-stone-200 ${i === 0 ? 'aspect-video' : 'aspect-[2/1]'}`}
                 >
-                  <div className="w-full h-full bg-cover bg-center hover:scale-105 transition-transform duration-700" style={{ backgroundImage: `url('${img}')` }} />
-                </motion.div>
+                  <div className="relative w-full h-full hover:scale-105 transition-transform duration-700">
+                    <Image
+                      src={img}
+                      alt={`Showroom preview ${i + 1}`}
+                      fill
+                      sizes={i === 0 ? '(min-width: 1024px) 40vw, 100vw' : '(min-width: 1024px) 40vw, 100vw'}
+                      className="object-cover"
+                      unoptimized={shouldUnoptimizeImage(img)}
+                    />
+                  </div>
+                </AnimateOnView>
               ))}
             </div>
 
@@ -66,14 +84,14 @@ export default function ShowroomPage() {
                 <div className="flex items-start gap-4 p-4 bg-stone-50">
                   <MapPin className="w-5 h-5 text-accent-gold mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-stone-900">Address</h4>
+                    <p className="font-medium text-stone-900">Address</p>
                     <p className="text-stone-600">{formattedAddress}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-stone-50">
                   <Clock className="w-5 h-5 text-accent-gold mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-stone-900">Opening Hours</h4>
+                    <p className="font-medium text-stone-900">Opening Hours</p>
                     <div className="text-stone-600 text-sm space-y-1 mt-1">
                       {config.openingHours.map(h => (
                         <p key={h.day}>{h.day}: {h.closed ? 'Closed' : `${h.open} – ${h.close}`}</p>
@@ -84,14 +102,14 @@ export default function ShowroomPage() {
                 <div className="flex items-start gap-4 p-4 bg-stone-50">
                   <Phone className="w-5 h-5 text-accent-gold mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-stone-900">Phone</h4>
-                    <a href={`tel:${config.phone.replace(/\s+/g, '')}`} className="text-stone-600 hover:text-accent-gold transition-colors">{config.phone}</a>
+                    <p className="font-medium text-stone-900">Phone</p>
+                    <a href={toPhoneHref(config.phone)} className="text-stone-600 hover:text-accent-gold transition-colors">{config.phone}</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-stone-50">
                   <Car className="w-5 h-5 text-accent-gold mt-0.5" />
                   <div>
-                    <h4 className="font-medium text-stone-900">Parking</h4>
+                    <p className="font-medium text-stone-900">Parking</p>
                     <p className="text-stone-600">Free parking available on site. Walk-ins welcome — no appointment needed.</p>
                   </div>
                 </div>
@@ -119,6 +137,7 @@ export default function ShowroomPage() {
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
+          title="PVStone Showroom Location — Google Maps"
         />
       </section>
     </>

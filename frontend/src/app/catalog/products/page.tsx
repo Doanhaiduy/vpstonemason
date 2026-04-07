@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
@@ -16,6 +17,7 @@ import { api } from '@/lib/api';
 import { Select } from '@/components/ui/Select';
 import { CatalogLoading } from '@/components/catalog/CatalogLoading';
 import { CatalogError } from '@/components/catalog/CatalogError';
+import { shouldUnoptimizeImage } from '@/lib/image';
 import type { CatalogProductsResponse } from '@/types/catalog';
 
 const SORT_OPTIONS = [
@@ -405,9 +407,13 @@ export default function CatalogProductsPage() {
                     <Link href={`/catalog/${product.categorySlug}/${product.rangeSlug}/${product.slug}`}>
                       <div className="aspect-[3/4] bg-stone-100 overflow-hidden relative">
                         {cardImage ? (
-                          <div
-                            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                            style={{ backgroundImage: `url('${cardImage}')` }}
+                          <Image
+                            src={cardImage}
+                            alt={product.title}
+                            fill
+                            sizes="(min-width: 1280px) 24vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            unoptimized={shouldUnoptimizeImage(cardImage)}
                           />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center text-stone-400 text-sm">

@@ -2,8 +2,12 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { useSiteConfig } from '@/lib/SiteConfigContext';
+import { shouldUnoptimizeImage } from '@/lib/image';
+
+const HERO_IMAGE = 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80';
 
 export function HeroBanner() {
   const config = useSiteConfig();
@@ -12,12 +16,17 @@ export function HeroBanner() {
     <section className="relative h-screen min-h-[700px] max-h-[1000px] flex items-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80')`,
-          }}
-        />
+        <div className="absolute inset-0 scale-105">
+          <Image
+            src={HERO_IMAGE}
+            alt="Premium stone benchtop kitchen"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            unoptimized={shouldUnoptimizeImage(HERO_IMAGE)}
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-stone-950/50 to-stone-950/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-stone-950/20" />
       </div>

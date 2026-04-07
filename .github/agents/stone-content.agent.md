@@ -8,10 +8,10 @@ user-invocable: true
 
 # 🪨 Stone Content Generator – Agent Workflow
 
-Agent này nhận thông tin mẫu đá và tự động tạo **kịch bản hoàn chỉnh** gồm: hướng dẫn gen ảnh, video, caption Facebook, và checklist đầu ra.
+Agent này nhận thông tin mẫu đá và tự động tạo **kịch bản hoàn chỉnh** gồm: hướng dẫn gen ảnh (Google Flow), video, caption Facebook, và checklist đầu ra.
 
 **Hỗ trợ 2 chế độ:**
-- **Single mode**: 1 mẫu đá → 6 ảnh + 2 video + caption
+- **Single mode**: 1 mẫu đá → 6 ảnh + 1 video + caption
 - **Multi mode**: 2-5 mẫu đá → 2 ảnh/mẫu + 1 video tổng + caption tổng
 
 ---
@@ -20,7 +20,7 @@ Agent này nhận thông tin mẫu đá và tự động tạo **kịch bản ho
 
 ### Single mode (1 mẫu):
 ```
-/stone-content https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/amazonite-or-pv1017
+/stone-content https://pvstone.com.au/catalog/artscut-zero/luxury-plus/amazonite-or-pv1017
 ```
 hoặc:
 ```
@@ -33,9 +33,9 @@ hoặc:
 ### Multi mode (2-5 mẫu):
 ```
 /stone-content multi
-- PV1017: https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/amazonite-or-pv1017
-- PV1019: https://vpstonemason.vercel.app/catalog/artscut-zero/luxury-plus/arabescato-corchia-pv1019
-- PV6011: https://vpstonemason.vercel.app/catalog/artscut-zero/classic/calacatta-pv6011
+- PV1017: https://pvstone.com.au/catalog/artscut-zero/luxury-plus/amazonite-or-pv1017
+- PV1019: https://pvstone.com.au/catalog/artscut-zero/luxury-plus/arabescato-corchia-pv1019
+- PV6011: https://pvstone.com.au/catalog/artscut-zero/classic/calacatta-pv6011
 ```
 
 > **Lưu ý mã sản phẩm:** Trong DB dùng mã **PV** (VD: PV1017), nhưng khi search web/nhà sản xuất agent dùng mã **AC** gốc (VD: AC1017) vì đây là mã nhà sản xuất AC Stone Group.
@@ -67,18 +67,20 @@ Agent **bắt buộc search web** trước khi tạo prompt:
 
 ---
 
-## BƯỚC 0.6 (BẮT BUỘC): DOWNLOAD ẢNH ĐÁ VÀO IMAGE_TEMP
+## BƯỚC 0.6 (BẮT BUỘC): DOWNLOAD ẢNH ĐÁ VÀO REFERENCE-IMAGES
 
-Sau khi phân tích từng link sản phẩm, agent PHẢI tải ảnh slab/reference của từng mẫu về thư mục `docs/image_temp/`.
+Sau khi phân tích từng link sản phẩm, agent PHẢI tải ảnh slab/reference của từng mẫu về thư mục `.github/stone-content/reference-images/`.
 
 **Quy tắc bắt buộc:**
 1. Mỗi mẫu phải có đúng 1 ảnh reference chính (ưu tiên ảnh slab rõ vân nhất).
 2. Đặt tên file theo chuẩn: `YYYY-MM-DD-[STONE_CODE]-reference.jpg`
-3. Ghi log mapping source URL -> local path trong `docs/image_temp/image-manifest.md`
-4. Trong output `.md`, bắt buộc có section "Reference Images (Local)" liệt kê đầy đủ đường dẫn local.
-5. Nếu thiếu ảnh reference của bất kỳ mẫu nào thì KHÔNG được coi là hoàn thành task.
+3. Ghi log mapping source URL -> local path trong `.github/stone-content/reference-images/image-manifest.md`
+4. Validate bắt buộc sau download: response MIME phải là `image/*`, file phải có magic bytes ảnh hợp lệ, không được là HTML/error page.
+5. Nếu file không hợp lệ hoặc hỏng, phải tải lại từ nguồn khác hoặc dừng và báo lỗi rõ ràng; không được dùng file lỗi để tạo prompt.
+6. Trong output `.md`, bắt buộc có section "Reference Images (Local)" liệt kê đầy đủ đường dẫn local.
+7. Nếu thiếu ảnh reference hợp lệ của bất kỳ mẫu nào thì KHÔNG được coi là hoàn thành task.
 
-**Lưu ý quan trọng:** đường dẫn `docs/image_temp/...` chỉ dùng cho bước chuẩn bị upload ảnh. Nội dung prompt gửi cho AI phải nói theo kiểu "attached reference image" (ảnh đính kèm), không ghi path local.
+**Lưu ý quan trọng:** đường dẫn `.github/stone-content/reference-images/...` chỉ dùng cho bước chuẩn bị upload ảnh. Nội dung prompt gửi cho AI phải nói theo kiểu "attached reference image" (ảnh đính kèm), không ghi path local.
 
 ---
 
@@ -95,33 +97,70 @@ Agent lưu biến: `STONE_NAME`, `STONE_DESCRIPTION`, `STONE_IMAGE_URL`, `STONE_
 
 ## BƯỚC 2: CHỌN CẢNH (SCENE ROTATION)
 
-Agent xoay vòng qua 12 cảnh, ghi lại vào `docs/content-log.json`:
+Agent xoay vòng qua **24 cảnh** chia thành 6 nhóm, ghi lại vào `.github/stone-content/content-log.json`:
 
+### 🍳 KITCHEN (6 scenes)
 | # | Scene ID | Mô tả | Prompt keyword |
 |---|----------|-------|----------------|
-| 1 | `kitchen-island` | Đảo bếp lớn | modern Australian kitchen, island benchtop |
-| 2 | `kitchen-l-shape` | Bếp chữ L | L-shaped kitchen, timber cabinetry |
-| 3 | `bathroom-vanity` | Lavabo đôi | bathroom double vanity, frameless mirror |
-| 4 | `bathroom-shower` | Tường đá shower | bathroom shower niche, stone wall cladding |
-| 5 | `laundry` | Phòng giặt | laundry benchtop, undermount sink |
-| 6 | `outdoor-bbq` | Bếp ngoài trời | outdoor kitchen, BBQ area, Melbourne backyard |
-| 7 | `fireplace` | Lò sưởi | fireplace surround, living room |
-| 8 | `close-up-detail` | Cận cảnh mép đá | close-up edge detail, coffee cup |
+| 1 | `kitchen-island` | Đảo bếp hiện đại | modern Australian kitchen, large waterfall-edge island benchtop, pendant lights above, timber floor, open plan living |
+| 2 | `kitchen-l-shape` | Bếp chữ L gỗ tự nhiên | L-shaped kitchen layout, warm timber cabinetry, stone benchtop wrapping around corner, subway tile splashback |
+| 3 | `kitchen-galley` | Bếp hẹp song song | narrow galley kitchen, dual benchtops facing each other, bright natural light from end window, compact Melbourne apartment |
+| 4 | `kitchen-butler-pantry` | Butler's pantry | butler's pantry behind main kitchen, stone benchtop with undermount sink, open shelving, coffee machine nook |
+| 5 | `kitchen-splashback` | Splashback toàn bộ | full-height stone splashback behind cooktop, matching benchtop material, integrated rangehood, dramatic veining running floor to ceiling |
+| 6 | `kitchen-breakfast-bar` | Quầy ăn sáng | raised breakfast bar with stone waterfall end, two bar stools, morning light, fruit bowl and coffee cups |
 
-**Single mode**: chọn 4 cảnh tiếp theo + 1 close-up + 1 slab gốc = 6 ảnh
-**Multi mode**: chọn 1 cảnh chính + 1 close-up/mẫu = 2 ảnh/mẫu
+### 🛁 BATHROOM (4 scenes)
+| # | Scene ID | Mô tả | Prompt keyword |
+|---|----------|-------|----------------|
+| 7 | `bathroom-vanity` | Lavabo đôi sang trọng | luxury double vanity, frameless mirror, wall-mounted tapware, stone extending up wall behind, warm LED strip lighting |
+| 8 | `bathroom-shower-niche` | Vách kính shower | walk-in shower with full stone wall cladding, frameless glass panel, recessed niche shelf, rainfall showerhead, matte black fixtures |
+| 9 | `bathroom-freestanding-tub` | Bồn tắm độc lập | freestanding bathtub on stone floor, stone feature wall behind, floor-to-ceiling window with frosted glass, spa-like atmosphere |
+| 10 | `bathroom-powder-room` | Phòng tắm nhỏ | compact powder room, floating stone vanity, round mirror with brass frame, botanical wallpaper accent, designer basin |
+
+### 🏠 LIVING & FUNCTIONAL (5 scenes)
+| # | Scene ID | Mô tả | Prompt keyword |
+|---|----------|-------|----------------|
+| 11 | `laundry` | Phòng giặt hiện đại | modern laundry room, stone benchtop over front-loader washer/dryer, undermount sink, matte white cabinetry, folding area |
+| 12 | `fireplace-surround` | Lò sưởi | modern fireplace surround with stone cladding, minimalist living room, low-profile flame, stacked firewood niche |
+| 13 | `home-office` | Bàn làm việc đá | home office desk made from polished stone slab, laptop, minimalist desk lamp, bookshelves, window with garden view |
+| 14 | `wine-cellar-bar` | Quầy bar/rượu | home bar countertop with stone surface, wine glass rack above, mood lighting, bottle display, timber and stone combination |
+| 15 | `staircase-feature` | Bậc cầu thang đá | floating staircase with stone treads, glass balustrade, double-height void, natural light from skylight above |
+
+### 🌿 OUTDOOR (4 scenes)
+| # | Scene ID | Mô tả | Prompt keyword |
+|---|----------|-------|----------------|
+| 16 | `outdoor-bbq` | Bếp ngoài trời BBQ | outdoor kitchen island with built-in BBQ, stone benchtop, undercover alfresco area, Melbourne backyard, native garden |
+| 17 | `outdoor-pool-edge` | Mép hồ bơi | pool surrounds with stone coping, infinity edge, sun loungers, tropical landscaping, blue sky |
+| 18 | `outdoor-entertaining` | Khu tiếp khách ngoài trời | outdoor dining area, long stone table surface, pergola overhead, string lights, evening entertaining setup |
+| 19 | `balcony-kitchenette` | Bếp nhỏ ban công | apartment balcony mini-kitchen, stone countertop, compact sink, city skyline backdrop, potted herbs |
+
+### 🏢 COMMERCIAL (3 scenes)
+| # | Scene ID | Mô tả | Prompt keyword |
+|---|----------|-------|----------------|
+| 20 | `cafe-counter` | Quầy café | specialty coffee shop counter, stone benchtop, espresso machine, display pastries, industrial pendant lights, exposed brick wall |
+| 21 | `reception-desk` | Quầy lễ tân | hotel or office reception desk, stone front panel with backlit feature, modern minimalist lobby, brand signage |
+| 22 | `restaurant-bar` | Quầy bar nhà hàng | upscale restaurant bar countertop, stone surface, cocktail setup, ambient moody lighting, leather bar stools |
+
+### 📸 DETAIL & IN-PROGRESS (2 scenes — luôn dùng ít nhất 1 trong mỗi set)
+| # | Scene ID | Mô tả | Prompt keyword |
+|---|----------|-------|----------------|
+| 23 | `close-up-detail` | Cận cảnh vân đá | extreme close-up of stone benchtop edge, pencil round edge profile, 20mm thickness, natural light catching surface veining, a ceramic coffee cup and small herb pot nearby, macro photography, shallow depth of field |
+| 24 | `mid-installation` | Đang thi công (KHÔNG CÓ NGƯỜI) | mid-installation kitchen benchtop, stone slab being fitted onto cabinetry, silicone tubes and spirit level visible on surface, protective corner guards still attached, plastic sheeting on floor, raw unpainted walls, NO PEOPLE, empty construction site, professional documentation photo |
+
+> **Quy tắc chọn cảnh:**
+> - Agent đọc `content-log.json` → chọn cảnh CHƯA dùng gần đây
+> - **Single mode**: chọn 4 cảnh khác nhau + 1 close-up + 1 slab gốc = 6 ảnh
+> - **Multi mode**: chọn 1 cảnh khác nhau/mẫu + 1 close-up cho mẫu chính = 2 ảnh/mẫu
+> - **Mid-installation**: dùng 1 lần mỗi 3-4 bài đăng để tạo đa dạng (KHÔNG bao giờ có người trong ảnh)
 
 ---
 
-## BƯỚC 3: TẠO KỊCH BẢN GEN ẢNH
+## BƯỚC 3: TẠO KỊCH BẢN GEN ẢNH (GOOGLE FLOW)
 
-### === ASPECT RATIO CHÍNH XÁC ===
+### === ASPECT RATIO ===
 
 **Google Flow** (https://labs.google/fx/tools/flow):
 `16:9` | `4:3` | `1:1` | `3:4` | `9:16`
-
-**Meta AI** (https://meta.ai):
-`16:9` | `1:1` | `9:16`
 
 **Kích thước tối ưu Facebook:**
 | Loại | Ratio | Kích thước | Mục đích |
@@ -131,13 +170,11 @@ Agent xoay vòng qua 12 cảnh, ghi lại vào `docs/content-log.json`:
 | Stories/Reels | **9:16** | 1080×1920 | Full-screen vertical |
 | Cover/Banner | **16:9** | 1200×628 | Link preview, cover photo |
 
-> **Khuyến nghị:** Dùng **3:4 (Google Flow)** cho ảnh feed chính, **1:1** cho carousel và Meta AI.
+> **Khuyến nghị:** Dùng **3:4 (Google Flow)** cho ảnh feed chính, **1:1** cho carousel.
 
 ---
 
-### 3A: GEN ẢNH BẰNG GOOGLE FLOW (Ảnh chính – chất lượng cao)
-
-#### 📖 HƯỚNG DẪN TỪNG BƯỚC – GOOGLE FLOW:
+### HƯỚNG DẪN TỪNG BƯỚC – GOOGLE FLOW:
 
 ```
 BƯỚC 1: Mở Chrome → vào: https://labs.google/fx/tools/flow
@@ -162,7 +199,7 @@ BƯỚC 9: Xem kết quả:
 BƯỚC 10: Lặp lại BƯỚC 6-9 cho từng prompt (đổi aspect ratio nếu cần)
 ```
 
-#### ⚡ PROMPT TEMPLATES:
+### ⚡ PROMPT TEMPLATES:
 
 **Template A – Hero Scene (kitchen/bathroom/laundry/outdoor):**
 ```text
@@ -196,61 +233,7 @@ Macro photography, shallow depth of field, warm natural light, editorial quality
 
 ---
 
-### 3B: GEN ẢNH BULK BẰNG META AI + AUTO META
-
-#### 📖 HƯỚNG DẪN TỪNG BƯỚC – AUTO META:
-
-```
-═══ CÀI ĐẶT (chỉ lần đầu) ═══
-BƯỚC 1: Mở Chrome → vào chromewebstore.google.com
-BƯỚC 2: Search "Meta Automator" → click "Add to Chrome"
-BƯỚC 3: Click icon 🧩 trên toolbar → Pin 📌 Meta Automator
-BƯỚC 4: Vào chrome://settings/downloads
-         → Tắt "Ask where to save each file"
-         → Đặt thư mục: AI-Media/[[STONE_CODE]]/images-meta
-
-═══ SỬ DỤNG ═══
-BƯỚC 5: Vào https://meta.ai → đăng nhập Facebook
-BƯỚC 6: Click icon Auto Meta trên toolbar
-         → Overlay hiện lên:
-         ┌──────────────────────────────────┐
-         │ Auto Meta Automator              │
-         │ ⚙️ Settings | + Add | ▶️ Start  │
-         └──────────────────────────────────┘
-BƯỚC 7: ⚙️ Settings:
-         ✅ Auto-Download: ON
-         ⏱️ Wait time: 15-20 giây
-         ✅ Stealth Mode: ON (nếu có)
-BƯỚC 8: Click "+ Add Prompt" → chọn Type: Image
-BƯỚC 9: Paste prompt → lặp lại cho các prompt còn lại
-BƯỚC 10: Click "▶️ Start" → chờ máy chạy tự động
-BƯỚC 11: Kiểm tra thư mục AI-Media/[[STONE_CODE]]/images-meta
-```
-
-> **Meta AI chỉ hỗ trợ: 16:9 | 1:1 | 9:16** — dùng 1:1 cho feed post, 9:16 cho Stories.
-
----
-
-## BƯỚC 4: TẠO KỊCH BẢN GEN VIDEO (2 video)
-
-### 4A: VIDEO – META AI + AUTO META
-
-```
-BƯỚC 1: Trong Auto Meta → click "+ Add Prompt"
-BƯỚC 2: ⚠️ Chọn Type: "VIDEO" (không phải Image)
-BƯỚC 3: Paste prompt video
-BƯỚC 4: Click "▶️ Start" → chờ 30-60 giây
-BƯỚC 5: Video tự tải về
-```
-
-**Video Prompt Template:**
-```text
-A slow cinematic camera pan across a modern Melbourne kitchen with [[STONE_NAME]] benchtops: [[STONE_DESCRIPTION]]. Camera moves smoothly left to right along benchtop, showing surface texture and veining in natural daylight. Subtle depth of field, warm morning light. Photorealistic, stable camera, no shake. 5 seconds.
-
-Use the attached reference stone image to preserve accurate colour and veining throughout the shot.
-```
-
-### 4B: VIDEO – GOOGLE FLOW ANIMATE
+## BƯỚC 4: TẠO KỊCH BẢN GEN VIDEO (GOOGLE FLOW ANIMATE)
 
 ```
 BƯỚC 1: Mở https://labs.google/fx/tools/flow
@@ -265,7 +248,7 @@ BƯỚC 4: Upload ảnh hero làm Starting Frame
 BƯỚC 5: Chọn Duration: 5 giây
 BƯỚC 6: Paste prompt chuyển động
 BƯỚC 7: Click "Generate Video" → chờ 1-2 phút
-BƯỚC 8: Download → lưu vào AI-Media/[[STONE_CODE]]/videos-flow/
+BƯỚC 8: Download → lưu vào thư mục post raw/
 ```
 
 **Video Prompt:**
@@ -280,78 +263,86 @@ Use the attached reference stone image as the visual material reference.
 ## BƯỚC 5: TẠO CAPTION FACEBOOK (TIẾNG ANH)
 
 > **⚠️ QUAN TRỌNG: Tất cả caption phải bằng tiếng Anh** (thị trường Úc/Melbourne)
+> **⚠️ QUAN TRỌNG: Caption phải sử dụng emoji sang trọng xuyên suốt** để tạo cảm giác premium
 
-### 5A: Caption cho từng ảnh riêng (image caption)
+### 5A: Caption cho từng ảnh riêng (image captions)
 
-Mỗi ảnh/video khi đăng FB cần có caption riêng ngắn gọn:
+Mỗi ảnh/video khi đăng FB cần có caption riêng ngắn gọn với emoji premium:
 
 ```text
-Ảnh hero kitchen:    "[[STONE_NAME]] — Bringing elegance to this Melbourne kitchen. Polished finish, natural beauty. 💎 #StoneBenchtops #Melbourne"
-Ảnh bathroom:        "[[STONE_NAME]] — Luxury bathroom vanity with stunning veining. 🛁 #BathroomDesign #StoneVanity"
-Ảnh close-up:        "The details make all the difference — [[STONE_NAME]] up close. ✨ #StoneDetails #NaturalBeauty"
-Ảnh slab:            "Meet [[STONE_NAME]] — available now at our Sunshine North showroom. 📍 #PremiumStone #NewArrival"
-Video pan:           "Walk through this stunning [[STONE_NAME]] kitchen installation. 🎥 #KitchenDesign #StoneKitchen"
-Video close-up:      "Feel the texture — [[STONE_NAME]] in natural light. 🌿 #StoneTexture #InteriorDesign"
+Ảnh hero kitchen:    "✦ [[STONE_NAME]] — Bringing effortless elegance to this Melbourne kitchen. Polished finish, natural beauty. 💎✨ #StoneBenchtops #Melbourne"
+Ảnh bathroom:        "🪞 [[STONE_NAME]] — Luxury bathroom vanity with stunning veining. Pure sophistication. 🤍✨ #BathroomDesign #StoneVanity"
+Ảnh close-up:        "✨ The details make all the difference — [[STONE_NAME]] up close. Every vein tells a story. 🔍💫 #StoneDetails #NaturalBeauty"
+Ảnh slab:            "🪨 Meet [[STONE_NAME]] — Now available at our Sunshine North showroom. Ready to elevate your space. 📍✦ #PremiumStone #NewArrival"
+Video:               "🎬 Walk through this stunning [[STONE_NAME]] kitchen installation. Luxury in motion. ✨🏠 #KitchenDesign #StoneKitchen"
 ```
 
 ### 5B: Caption bài đăng chính (SINGLE MODE – 1 mẫu)
 
 ```text
-✨ [[STONE_NAME]] – [[HEADLINE_ENGLISH]] ✨
+✦ [[STONE_NAME]] ✦
+[[HEADLINE_ENGLISH]] 💎
 
-[[1-2 SENTENCE_DESCRIPTION_ENGLISH]]
+[[1-2 SENTENCE_DESCRIPTION_ENGLISH — viết sang trọng, gợi cảm xúc]]
 
-💎 Key Features:
-✅ [[FEATURE_1]]
-✅ [[FEATURE_2]]
-✅ [[FEATURE_3]]
-✅ CSF Compliant – Safe for your family
+━━━━━━━━━━━━━━━━━━
 
-🏡 Perfect for: [[Kitchen Benchtops / Bathroom Vanities / Islands / Splashbacks]]
+🏆 Why Choose [[STONE_NAME]]:
+◆ [[FEATURE_1]]
+◆ [[FEATURE_2]]
+◆ [[FEATURE_3]]
+◆ 100% CSF Compliant — Safe for your family ✅
 
-📩 DM us or call for a FREE quote today!
+🏠 Perfect for:
+◇ Kitchen Benchtops & Islands
+◇ Bathroom Vanities
+◇ Splashbacks & Feature Walls
 
-#VPStoneMason #StoneBenchtops #Melbourne #KitchenDesign #BathroomDesign #StoneInstallation #EngineeredStone #AustralianHomes #HomeRenovation #MelbourneHomes #Benchtops #[[STONE_HASHTAG]] #CSFStone #PremiumStone #InteriorDesign
+━━━━━━━━━━━━━━━━━━
 
-— — — — —
-🏢 PVstoneau - Premium Stone Benchtops Melbourne
-📍 Showroom: 32 Spalding Ave Sunshine North VIC
-📞 Phone: 0424 439 293
-✉️ Email: info@vpstonemason.com.au
-🌐 Website: https://vpstonemason.vercel.app/
-🕒 Opening Hours:
-Mon–Fri: 9:00 AM – 5:00 PM
-Sat: 10:00 AM – 2:00 PM
+📩 DM us or call for a FREE measure & quote today!
+
+#PVStoneau #StoneBenchtops #Melbourne #KitchenDesign #BathroomDesign #StoneInstallation #EngineeredStone #AustralianHomes #HomeRenovation #MelbourneHomes #Benchtops #[[STONE_HASHTAG]] #CSFStone #PremiumStone #InteriorDesign #LuxuryKitchen #StoneDesign
+
+━━━━━━━━━━━━━━━━━━
+🏢 PVStoneau — Premium Stone Benchtops Melbourne
+📍 32 Spalding Ave, Sunshine North VIC
+📞 0450 938 079
+✉️ info@pvstone.com.au
+🌐 pvstone.com.au
+🕐 Mon–Fri 9AM–5PM | Sat 10AM–2PM
 ```
 
 ### 5C: Caption bài đăng chính (MULTI MODE – 2-5 mẫu)
 
 ```text
-✨ [[COLLECTION_NAME]] Collection – [[NUMBER]] Premium Stones for Your Dream Home ✨
+✦ [[COLLECTION_NAME]] Collection ✦
+[[NUMBER]] Premium Stones for Your Dream Home 💎
 
-Explore our [[NUMBER]] newest arrivals from [[COLLECTION_NAME]]:
+Discover our newest arrivals — each one a masterpiece of natural beauty:
 
-🔹 [[STONE_1_NAME]]: [[SHORT_DESC_1]]
-🔹 [[STONE_2_NAME]]: [[SHORT_DESC_2]]
-🔹 [[STONE_3_NAME]]: [[SHORT_DESC_3]]
-🔹 [[STONE_4_NAME]]: [[SHORT_DESC_4]]
-🔹 [[STONE_5_NAME]]: [[SHORT_DESC_5]]
+◆ 🪨 [[STONE_1_NAME]] — [[SHORT_DESC_1]]
+◆ 🪨 [[STONE_2_NAME]] — [[SHORT_DESC_2]]
+◆ 🪨 [[STONE_3_NAME]] — [[SHORT_DESC_3]]
+◆ 🪨 [[STONE_4_NAME]] — [[SHORT_DESC_4]]
+◆ 🪨 [[STONE_5_NAME]] — [[SHORT_DESC_5]]
 
-All CSF Compliant ✅ | Available for viewing at our showroom
+━━━━━━━━━━━━━━━━━━
 
-📩 DM us or call 0424 439 293 for a FREE quote!
+✅ All 100% CSF Compliant | 🏆 Premium Quality Guaranteed
+📍 Available for viewing at our showroom
 
-#VPStoneMason #StoneBenchtops #Melbourne #KitchenDesign #BathroomDesign #EngineeredStone #AustralianHomes #HomeRenovation #MelbourneHomes #PremiumStone #CSFStone #InteriorDesign #[[STONE_1_HASHTAG]] #[[STONE_2_HASHTAG]] #[[STONE_3_HASHTAG]]
+📩 DM us or call 0450 938 079 for a FREE quote!
 
-— — — — —
-🏢 PVstoneau - Premium Stone Benchtops Melbourne
-📍 Showroom: 32 Spalding Ave Sunshine North VIC
-📞 Phone: 0424 439 293
-✉️ Email: info@vpstonemason.com.au
-🌐 Website: https://vpstonemason.vercel.app/
-🕒 Opening Hours:
-Mon–Fri: 9:00 AM – 5:00 PM
-Sat: 10:00 AM – 2:00 PM
+#PVStoneau #StoneBenchtops #Melbourne #KitchenDesign #BathroomDesign #EngineeredStone #AustralianHomes #HomeRenovation #MelbourneHomes #PremiumStone #CSFStone #InteriorDesign #[[STONE_1_HASHTAG]] #[[STONE_2_HASHTAG]] #[[STONE_3_HASHTAG]]
+
+━━━━━━━━━━━━━━━━━━
+🏢 PVStoneau — Premium Stone Benchtops Melbourne
+📍 32 Spalding Ave, Sunshine North VIC
+📞 0450 938 079
+✉️ info@pvstone.com.au
+🌐 pvstone.com.au
+🕐 Mon–Fri 9AM–5PM | Sat 10AM–2PM
 ```
 
 ---
@@ -360,78 +351,100 @@ Sat: 10:00 AM – 2:00 PM
 
 ### Single mode (1 mẫu):
 ```
-📋 CHECKLIST – [[STONE_NAME]]
+📋 CHECKLIST — [[STONE_NAME]]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🖼️ ẢNH (6 ảnh):
-  □ Ảnh 1: Hero Scene (3:4 – 1080×1440) ← Google Flow
-  □ Ảnh 2: Scene 2 (3:4 – 1080×1440) ← Google Flow
-  □ Ảnh 3: Scene 3 (1:1 – 1080×1080) ← Google Flow
-  □ Ảnh 4: Scene 4 (3:4 – 1080×1440) ← Google Flow
-  □ Ảnh 5: Close-up (1:1 – 1080×1080) ← Google Flow
-  □ Ảnh 6: Slab gốc (1:1 – 1080×1080) ← Ảnh gốc resize
+🖼️ ẢNH (6 ảnh — Google Flow):
+  □ Ảnh 1: Hero Scene (3:4 — 1080×1440)
+  □ Ảnh 2: Scene 2 (3:4 — 1080×1440)
+  □ Ảnh 3: Scene 3 (1:1 — 1080×1080)
+  □ Ảnh 4: Scene 4 (3:4 — 1080×1440)
+  □ Ảnh 5: Close-up (1:1 — 1080×1080)
+  □ Ảnh 6: Slab gốc (1:1 — 1080×1080) — Ảnh gốc resize
 
-🎬 VIDEO (2 video):
-  □ Video 1: Camera pan (5 giây) ← Meta AI
-  □ Video 2: Push-in (5 giây) ← Google Flow Animate
+🎬 VIDEO (1 video — Google Flow Animate):
+  □ Video 1: Push-in/pan (5 giây)
 
 📝 CAPTION:
-  □ 1 caption bài đăng chính (tiếng Anh)
-  □ 6 caption riêng cho từng ảnh (tiếng Anh)
-  □ 2 caption riêng cho video (tiếng Anh)
-  □ Thông tin PVstoneau: ✅
+  □ 1 caption bài đăng chính (tiếng Anh, có emoji sang trọng)
+  □ 6 caption riêng cho từng ảnh (tiếng Anh, có emoji)
+  □ 1 caption video (tiếng Anh)
+  □ Thông tin PVStoneau: ✅
 ```
 
 ### Multi mode (2-5 mẫu):
 ```
-📋 CHECKLIST – [[NUMBER]] STONES
+📋 CHECKLIST — [[NUMBER]] STONES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-🖼️ ẢNH (2 ảnh × [[NUMBER]] mẫu = [[TOTAL]] ảnh):
+🖼️ ẢNH (2 ảnh × [[NUMBER]] mẫu = [[TOTAL]] ảnh — Google Flow):
   Mỗi mẫu: 1 hero scene (3:4) + 1 close-up/slab (1:1)
 
-🎬 VIDEO (1 video tổng):
+🎬 VIDEO (1 video tổng — Google Flow Animate):
   □ Slideshow hoặc pan video kết hợp các mẫu
 
 📝 CAPTION:
-  □ 1 caption bài đăng chính (multi format, tiếng Anh)
-  □ [[TOTAL]] caption riêng cho từng ảnh (tiếng Anh)
+  □ 1 caption bài đăng chính (multi format, tiếng Anh, có emoji sang trọng)
+  □ [[TOTAL]] caption riêng cho từng ảnh (tiếng Anh, có emoji)
   □ 1 caption video (tiếng Anh)
-  □ Thông tin PVstoneau: ✅
+  □ Thông tin PVStoneau: ✅
 ```
 
 ---
 
 ## BƯỚC 7 (TỰ ĐỘNG): CẬP NHẬT CONTENT LOG
 
-Agent cập nhật `docs/content-log.json` sau khi hoàn thành.
+Agent cập nhật `.github/stone-content/content-log.json` sau khi hoàn thành.
 
 ---
 
 ## BƯỚC 8 (BẮT BUỘC): LƯU OUTPUT RA FILE MARKDOWN ĐÚNG TEMPLATE
 
-Agent PHẢI lưu kết quả thành file `.md` trong `docs/examples/`, không chỉ trả text trong chat.
+Agent PHẢI lưu kết quả thành file `.md` trong `.github/stone-content/scripts/`, không chỉ trả text trong chat.
 
 **Quy tắc đặt tên file:**
-- Single mode: `docs/examples/YYYY-MM-DD-[STONE_CODE]-content-script.md`
-- Multi mode: `docs/examples/YYYY-MM-DD-multi-[STONE_CODE_1]-[STONE_CODE_2]-...-content-script.md`
+- Single mode: `.github/stone-content/scripts/YYYY-MM-DD-HHMM-[STONE_CODE]-content-script.md`
+- Multi mode: `.github/stone-content/scripts/YYYY-MM-DD-HHMM-multi-[STONE_CODE_1]-[STONE_CODE_2]-...-content-script.md`
 
 **Thứ tự template bắt buộc trong file .md:**
 1. Tiêu đề + metadata (date, mode, stone list, code, links)
 2. Web research results
-3. Reference Images (Local paths in docs/image_temp)
+3. Reference Images (Local paths in `.github/stone-content/reference-images/`)
 4. Stone description variables
 5. Scene rotation
-6. Image generation prompts
-7. Video generation prompts
-8. Facebook captions (main + individual)
+6. Image generation prompts (Google Flow only)
+7. Video generation prompt (Google Flow Animate only)
+8. Facebook captions (main + individual, với emoji sang trọng)
 9. Final checklist
 10. Time estimate (optional)
 
 **Sau khi ghi file xong, agent phải trả về:**
 1. Đường dẫn file đã tạo
 2. Tóm tắt scene đã chọn
-3. Xác nhận đã cập nhật `docs/content-log.json`
+3. Xác nhận đã cập nhật `.github/stone-content/content-log.json`
+
+---
+
+## BƯỚC 9 (BẮT BUỘC): TẠO SẴN THƯ MỤC LƯU TRỮ
+
+Ngay sau khi gen xong kịch bản, agent **PHẢI** tự động tạo sẵn cây thư mục cho User:
+
+**Single Post:**
+```
+.github/stone-content/output/YYYY-MM-DD-HHMM-[STONE_CODE]/
+  ├── raw/          ← Nơi User tải ảnh gen AI về
+  └── final/        ← Nơi chứa ảnh đã đóng logo
+```
+
+**Multi Post:**
+```
+.github/stone-content/output/YYYY-MM-DD-HHMM-collection/
+  ├── [STONE_CODE_1]/raw/
+  ├── [STONE_CODE_2]/raw/
+  └── final/
+```
+
+Lệnh watermark: `.github/stone-content/tools/watermark.cmd [POST-FOLDER-NAME]`
 
 ---
 
@@ -450,15 +463,25 @@ Agent PHẢI lưu kết quả thành file `.md` trong `docs/examples/`, không c
 
 ---
 
-## CẤU TRÚC THƯ MỤC
+## CẤU TRÚC THƯ MỤC TỔNG THỂ
 
 ```
-/AI-Media/
-  /[[STONE_CODE]]/
-    /images-flow/     ← Ảnh từ Google Flow
-    /images-meta/     ← Ảnh từ Meta AI
-    /videos-flow/     ← Video từ Google Flow Animate
-    /videos-meta/     ← Video từ Meta AI
-    /prompts.txt      ← Prompt đã dùng
-    /caption.txt      ← Caption đã tạo
+.github/stone-content/
+  ├── agent.md                    ← File agent chính (file này)
+  ├── rules.md                    ← Rules & Negative Rules
+  ├── content-log.json            ← Lịch sử scene rotation
+  ├── reference-images/           ← Ảnh slab reference (gitignored)
+  │   ├── image-manifest.md
+  │   └── *.jpg / *.png
+  ├── scripts/                    ← Output content scripts (.md)
+  │   └── YYYY-MM-DD-HHMM-*.md
+  ├── tools/                      ← Watermark & utility scripts
+  │   ├── add_watermark_and_label.py
+  │   ├── watermark.cmd
+  │   └── download-reference-images.ps1
+  └── output/                     ← Generated post images (gitignored)
+      ├── YYYY-MM-DD-HHMM-VP1017/
+      │   ├── raw/
+      │   └── final/
+      └── .gitkeep
 ```

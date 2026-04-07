@@ -18,9 +18,7 @@ export default () => {
     frontend: {
       url:
         process.env.FRONTEND_URL ||
-        (isProduction
-          ? 'https://vpstonemason.vercel.app'
-          : 'http://localhost:3000'),
+        (isProduction ? 'https://pvstone.com.au' : 'http://localhost:3000'),
     },
     throttle: {
       ttl: parseInt(process.env.THROTTLE_TTL || '60', 10),

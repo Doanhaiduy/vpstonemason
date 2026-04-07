@@ -1,4 +1,4 @@
-# DANH MỤC SẢN PHẨM — PVstoneau
+# DANH MỤC SẢN PHẨM — PVStoneau
 
 > Catalogue đầy đủ các loại đá đang kinh doanh, bao gồm đặc tính, ứng dụng, bảo quản và gợi ý bán hàng.
 
@@ -6,7 +6,7 @@
 
 ## 📋 TỔNG QUAN DANH MỤC
 
-PVstoneau cung cấp 6 dòng sản phẩm đá chính:
+PVStoneau cung cấp 6 dòng sản phẩm đá chính:
 
 | STT | Loại đá | Slug | Mô tả ngắn |
 |-----|---------|------|-------------|
@@ -98,7 +98,7 @@ PVstoneau cung cấp 6 dòng sản phẩm đá chính:
 - **Ứng dụng**: Kitchen, Bathroom, Splashback
 - **Edge profiles**: Pencil Round, Bullnose, Mitred, Shark Nose
 - **Bảo quản**: Seal mỗi 6-12 tháng. Dùng chất tẩy pH trung tính. Lau đổ ngay để tránh ố.
-- **SEO Title**: Calacatta Gold Marble Benchtops | PVstoneau
+- **SEO Title**: Calacatta Gold Marble Benchtops | PVStoneau
 - **SEO Description**: Premium Calacatta Gold marble for luxury kitchen benchtops in Australia.
 - **Featured**: ✅ Có
 

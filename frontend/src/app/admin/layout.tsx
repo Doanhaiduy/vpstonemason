@@ -26,7 +26,7 @@ const sidebarLinks = [
 ];
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://vpstonemason.vercel.app';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://pvstone.com.au';
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [user, setUser] = useState<any>(null);
   const [isAuthReady, setIsAuthReady] = useState(false);
@@ -193,7 +193,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               <Gem className="w-4 h-4 text-white" />
             </div>
             <div>
-              <span className="font-semibold text-white text-sm tracking-tight">vpstonemason</span>
+              <span className="font-semibold text-white text-sm tracking-tight">PVStone</span>
               <span className="block text-[10px] text-slate-400 -mt-0.5">Admin Console</span>
             </div>
           </Link>

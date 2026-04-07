@@ -1,4 +1,4 @@
-# HƯỚNG DẪN TRẢ LỜI KHÁCH HÀNG — PVstoneau
+# HƯỚNG DẪN TRẢ LỜI KHÁCH HÀNG — PVStoneau
 
 > Scripts, templates và quy tắc trả lời khách hàng qua mọi kênh: Facebook, Instagram, Email, Phone, Website.
 
@@ -49,12 +49,12 @@ For an accurate quote, we'd love to know:
 2. Approximate kitchen size (or we can measure for FREE!)
 3. Your suburb?
 
-Feel free to call us on 0424439293 or pop into our Richmond showroom! We'd love to help 💎
+Feel free to call us on 0450 938 079 or pop into our Sunshine North showroom! We'd love to help 💎
 ```
 
 **Email Response:**
 ```
-Subject: RE: Stone Benchtop Enquiry — PVstoneau
+Subject: RE: Stone Benchtop Enquiry — PVStoneau
 
 Dear [Name],
 
@@ -76,16 +76,16 @@ To provide you with an accurate, itemised quote, we would be happy to:
 ✅ Welcome you to our showroom to view our extensive slab collection
 
 Please feel free to contact us at your convenience:
-📞 0424439293
-📘 Fanpage: PVstoneau — https://www.facebook.com/PVStonemason
-📍 123 Stone Avenue, Richmond VIC 3121
+📞 0450 938 079
+📘 Fanpage: PVStoneau — https://www.facebook.com/PVStonemason
+📍 32 Spalding Ave Sunshine North VIC
 🕐 Mon–Fri 9AM–5PM | Sat 10AM–2PM
 
 We look forward to helping you with your project.
 
 Warm regards,
 [Your Name]
-PVstoneau
+PVStoneau
 Premium Stone Benchtops Melbourne
 ```
 
@@ -111,9 +111,9 @@ Would you like to:
 📐 Book a FREE measure? 
 🏛️ Visit our showroom to see the actual slab in person?
 
-We have [Stone Name] on display at our Richmond showroom — seeing it in person really makes a difference! 
+We have [Stone Name] on display at our Sunshine North showroom — seeing it in person really makes a difference! 
 
-Call us: 0424439293 💎
+Call us: 0450 938 079 💎
 ```
 
 ---
@@ -140,7 +140,7 @@ My recommendation: [Personalised suggestion based on their needs]
 
 The best way to decide is to see both in person at our showroom — the look and feel of each stone is quite different once you touch them!
 
-📍 123 Stone Avenue, Richmond VIC 3121
+📍 32 Spalding Ave Sunshine North VIC
 Would you like to book a time to visit? 😊
 ```
 
@@ -160,10 +160,10 @@ To book your FREE consultation & on-site measure, we just need:
 5. Preferred day/time for the measure
 
 Alternatively, you can:
-📞 Call us directly: 0424439293
-📧 Email: info@vpstonemason.com.au
-📘 Fanpage: PVstoneau — https://www.facebook.com/PVStonemason
-🌐 Book online: https://vpstonemason.vercel.app/contact
+📞 Call us directly: 0450 938 079
+📧 Email: info@pvstone.com.au
+📘 Fanpage: PVStoneau — https://www.facebook.com/PVStonemason
+🌐 Book online: https://pvstone.com.au/contact
 
 We typically schedule measures within 3-5 business days. Our team will be in touch shortly to confirm your appointment!
 
@@ -205,7 +205,7 @@ Dear [Name],
 
 Thank you for bringing this to our attention. We sincerely apologise for the inconvenience you've experienced.
 
-At PVstoneau, customer satisfaction is our highest priority, and we take all feedback seriously.
+At PVStoneau, customer satisfaction is our highest priority, and we take all feedback seriously.
 
 [Acknowledge the specific issue:]
 We understand that [restate their complaint briefly]. This is not the standard of service we pride ourselves on, and we want to make it right.
@@ -223,7 +223,7 @@ We value your trust and will work to resolve this promptly.
 
 Sincere apologies,
 [Your Name]
-Director, PVstoneau
+Director, PVStoneau
 ```
 
 ---
@@ -321,7 +321,7 @@ Shall we get started with booking your FREE measure? 😊
 
 ### Welcome Email (sau khi khách gửi enquiry):
 ```
-Subject: Thanks for contacting PVstoneau! 🏠
+Subject: Thanks for contacting PVStoneau! 🏠
 
 Hi [Name],
 
@@ -330,15 +330,15 @@ Thank you for your enquiry! We're excited to help bring your vision to life.
 One of our stone specialists will be in touch within 24 hours to discuss your project in detail.
 
 In the meantime, feel free to:
-🏛️ Visit our showroom: 123 Stone Avenue, Richmond VIC 3121
-📱 Browse our gallery: https://vpstonemason.vercel.app/stones
+🏛️ Visit our showroom: 32 Spalding Ave Sunshine North VIC
+📱 Browse our gallery: https://pvstone.com.au/stones
 📘 Visit our fanpage: https://www.facebook.com/PVStonemason
-📖 Read our blog: https://vpstonemason.vercel.app/blog
+📖 Read our blog: https://pvstone.com.au/blog
 
 We look forward to working with you!
 
 Warm regards,
-The PVstoneau Team
+The PVStoneau Team
 ```
 
 ### Follow-up Email (3 ngày sau quote, chưa confirm):
@@ -360,13 +360,13 @@ Feel free to reach out anytime — we're here to help!
 
 Best regards,
 [Your Name]
-PVstoneau
-📞 0424439293
+PVStoneau
+📞 0450 938 079
 ```
 
 ### Post-Installation Email:
 ```
-Subject: Thank you for choosing PVstoneau! ⭐
+Subject: Thank you for choosing PVStoneau! ⭐
 
 Dear [Name],
 
@@ -380,8 +380,8 @@ A few quick things:
 
 We'd truly appreciate it if you could:
 ⭐ Leave us a Google Review: [Link]
-📘 Follow our fanpage: PVstoneau — https://www.facebook.com/PVStonemason
-📸 Share a photo on Instagram and tag @PVstoneau
+📘 Follow our fanpage: PVStoneau — https://www.facebook.com/PVStonemason
+📸 Share a photo on Instagram and tag @PVStoneau
 
 If you have any questions or concerns about your new benchtops, please don't hesitate to contact us.
 
@@ -389,5 +389,5 @@ Thank you for trusting us with your home!
 
 Warm regards,
 [Your Name]
-PVstoneau
+PVStoneau
 ```

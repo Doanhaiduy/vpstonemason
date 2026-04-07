@@ -283,7 +283,7 @@ export class AiService {
         ? `Keywords: ${normalizedKeywords.join(', ')}`
         : '';
 
-    const prompt = `Generate a catchy, SEO-friendly blog title for vpstonemason (premium Australian stone showroom).
+    const prompt = `Generate a catchy, SEO-friendly blog title for PVStone (premium Australian stone showroom).
 Topic: "${normalizedTopic}"
 ${keywordText}
 
@@ -386,7 +386,7 @@ Requirements:
         ? `Keywords: ${normalizedKeywords.join(', ')}`
         : '';
 
-    const prompt = `Write a complete HTML blog article for vpstonemason.
+    const prompt = `Write a complete HTML blog article for PVStone.
 Title: "${normalizedTitle}"
 Description: "${normalizedDescription}"
 ${keywordText}
@@ -438,7 +438,7 @@ Requirements:
         ? `Keywords: ${normalizedKeywords.join(', ')}`
         : 'Keywords: kitchen benchtop, stone surface, Melbourne showroom';
 
-    const prompt = `You are a professional writer for vpstonemason, a premium Australian stone showroom.
+    const prompt = `You are a professional writer for PVStone, a premium Australian stone showroom.
 
 Write one complete blog post package about: "${normalizedTopic}".
 ${categoryText}

@@ -1,4 +1,4 @@
-# PHÂN TÍCH ĐỐI THỦ CẠNH TRANH — PVstoneau
+# PHÂN TÍCH ĐỐI THỦ CẠNH TRANH — PVStoneau
 
 > Phân tích các đối thủ chính trong khu vực Melbourne & Victoria để xây dựng chiến lược cạnh tranh.
 
@@ -10,7 +10,7 @@
 - **Số lượng đối thủ**: 100+ doanh nghiệp (từ nhỏ đến lớn)
 - **Mức độ cạnh tranh**: Cao — nhưng nhiều cơ hội differentiation
 - **Phân khúc**: Budget → Mid-range → Premium → Ultra-luxury
-- **PVstoneau nhắm vào**: Mid-range đến Premium
+- **PVStoneau nhắm vào**: Mid-range đến Premium
 
 ### Phân loại đối thủ:
 | Loại | Mô tả | Ví dụ |
@@ -92,7 +92,7 @@ Học được gì:
 
 ---
 
-## 3. PHÂN TÍCH SWOT — PVstoneau
+## 3. PHÂN TÍCH SWOT — PVStoneau
 
 ### Strengths (Điểm mạnh):
 - ✅ Website hiện đại, premium design (Next.js, animations)
@@ -111,7 +111,7 @@ Học được gì:
 
 ### Opportunities (Cơ hội):
 - 🌟 CSF ban → thị trường đang reshuffle, cơ hội cho player mới
-- 🌟 Đối thủ yếu digital → PVstoneau có thể dominate online
+- 🌟 Đối thủ yếu digital → PVStoneau có thể dominate online
 - 🌟 Content marketing chưa được khai thác bởi đối thủ
 - 🌟 Natural stone comeback → phù hợp với range hiện có
 - 🌟 Growing renovation market Melbourne
@@ -155,7 +155,7 @@ Học được gì:
 
 ### 4.2 Content Gap Analysis:
 
-| Topic | Đối thủ có? | PVstoneau | Cơ hội |
+| Topic | Đối thủ có? | PVStoneau | Cơ hội |
 |-------|------------|-------------|--------|
 | Detailed blog posts | Ít | Cần tạo | 🟢 Lớn |
 | Video content | Gần như không | Cần tạo | 🟢 Rất lớn |

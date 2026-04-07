@@ -1,4 +1,4 @@
-# CHIẾN LƯỢC SEO & QUẢN LÝ WEBSITE — PVstoneau
+# CHIẾN LƯỢC SEO & QUẢN LÝ WEBSITE — PVStoneau
 
 > Hướng dẫn tối ưu SEO và quản lý website để tăng organic traffic từ Google.
 
@@ -70,36 +70,36 @@ granite benchtop geelong
 
 ### Homepage (`/`):
 ```
-Title: Premium Stone Benchtops Melbourne | Kitchen & Bathroom | PVstoneau
-Meta: Premium stone benchtops in Melbourne. Granite, marble, porcelain & CSF stone. Free quotes, expert installation. Call 0424439293.
+Title: Premium Stone Benchtops Melbourne | Kitchen & Bathroom | PVStoneau
+Meta: Premium stone benchtops in Melbourne. Granite, marble, porcelain & CSF stone. Free quotes, expert installation. Call 0450 938 079.
 H1: Premium Stone Benchtops Melbourne — Natural & Engineered Stone
 ```
 
 ### Stones Page (`/stones`):
 ```
 Title: Stone Catalogue — Granite, Marble, Quartz & Porcelain Benchtops Melbourne
-Meta: Browse 100+ premium stone benchtops. Granite, marble, quartz, porcelain & CSF. Visit our Richmond showroom or get a free quote.
+Meta: Browse 100+ premium stone benchtops. Granite, marble, quartz, porcelain & CSF. Visit our Sunshine North showroom or get a free quote.
 H1: Premium Stone Benchtop Catalogue
 ```
 
 ### About (`/about`):
 ```
-Title: About PVstoneau — 15+ Years Stone Craftsmanship Melbourne
+Title: About PVStoneau — 15+ Years Stone Craftsmanship Melbourne
 Meta: Family-owned Melbourne stonemasons with 15+ years experience. Expert fabrication & installation of stone benchtops.
-H1: About PVstoneau
+H1: About PVStoneau
 ```
 
 ### Blog (`/blog`):
 ```
-Title: Stone Benchtop Blog — Tips, Trends & Inspiration | PVstoneau
+Title: Stone Benchtop Blog — Tips, Trends & Inspiration | PVStoneau
 Meta: Expert advice on kitchen stone benchtops. Renovation tips, design trends, stone care guides from Melbourne's trusted stonemasons.
 H1: Stone Benchtop Blog
 ```
 
 ### Contact (`/contact`):
 ```
-Title: Get a Free Quote — Stone Benchtops Melbourne | PVstoneau
-Meta: Request a free stone benchtop quote. Free consultation & on-site measure in Melbourne. Call 0424439293.
+Title: Get a Free Quote — Stone Benchtops Melbourne | PVStoneau
+Meta: Request a free stone benchtop quote. Free consultation & on-site measure in Melbourne. Call 0450 938 079.
 H1: Get a Free Stone Benchtop Quote
 ```
 

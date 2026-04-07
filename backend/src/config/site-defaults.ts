@@ -4,15 +4,15 @@
  * Used by ShowroomService when creating initial DB settings
  */
 export const siteDefaults = {
-  companyName: 'vpstonemason',
-  tagline: 'Premium Stone Benchtops in Australia',
-  phone: '(03) 9000 0000',
-  email: 'info@vpstonemason.com',
+  companyName: 'PVStone',
+  tagline: 'Premium Stone Benchtops Melbourne',
+  phone: '0450 938 079',
+  email: 'info@pvstone.com.au',
   address: {
-    street: '123 Stone Avenue',
-    suburb: 'Richmond',
+    street: '32 Spalding Ave',
+    suburb: 'Sunshine North',
     state: 'VIC',
-    postcode: '3121',
+    postcode: '',
   },
   openingHours: [
     { day: 'Monday', open: '9:00 AM', close: '5:00 PM', closed: false },

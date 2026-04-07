@@ -13,6 +13,7 @@ import { EnquiriesService } from './enquiries.service';
 import { Public, Roles } from '../../common/decorators';
 import { RolesGuard } from '../../common/guards/roles.guard';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { CreateEnquiryDto } from './dto/create-enquiry.dto';
 
 @Controller('enquiries')
 export class EnquiriesController {
@@ -20,21 +21,7 @@ export class EnquiriesController {
 
   @Public()
   @Post()
-  create(
-    @Body()
-    body: {
-      name: string;
-      email: string;
-      phone?: string;
-      suburb?: string;
-      projectType?: string;
-      budgetRange?: string;
-      stoneId?: string;
-      stoneName?: string;
-      message: string;
-      source?: string;
-    },
-  ) {
+  create(@Body() body: CreateEnquiryDto) {
     return this.enquiriesService.create(body);
   }
 

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Instagram, Facebook, Clock, Youtube } from 'lucide-react';
 import { useSiteConfig } from '@/lib/SiteConfigContext';
+import { toPhoneHref } from '@/lib/phone';
 
 const footerLinks = {
   'Collections': [
@@ -28,6 +29,9 @@ const footerLinks = {
 
 export function Footer() {
   const config = useSiteConfig();
+  const addressLine2 = [config.address.suburb, config.address.state, config.address.postcode]
+    .filter(Boolean)
+    .join(' ');
   
   const weekHours = config.openingHours.find(h => h.day === 'Monday')?.open 
     ? `Mon–Fri: ${config.openingHours.find(h => h.day === 'Monday')?.open.replace(':00', '')}–${config.openingHours.find(h => h.day === 'Monday')?.close.replace(':00', '')}`
@@ -78,7 +82,7 @@ export function Footer() {
             </p>
 
             <div className="space-y-3">
-              <a href={`tel:${config.phone.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-stone-300 hover:text-accent-gold transition-colors">
+              <a href={toPhoneHref(config.phone)} className="flex items-center gap-3 text-stone-300 hover:text-accent-gold transition-colors">
                 <Phone className="w-4 h-4 text-accent-gold" />
                 {config.phone}
               </a>
@@ -88,7 +92,7 @@ export function Footer() {
               </a>
               <div className="flex items-start gap-3 text-stone-300">
                 <MapPin className="w-4 h-4 text-accent-gold mt-0.5" />
-                <span>{config.address.street}<br />{config.address.suburb} {config.address.state} {config.address.postcode}</span>
+                <span>{config.address.street}<br />{addressLine2}</span>
               </div>
               <div className="flex items-start gap-3 text-stone-300">
                 <Clock className="w-4 h-4 text-accent-gold mt-0.5" />
@@ -100,9 +104,9 @@ export function Footer() {
           {/* Link Columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-sm font-semibold tracking-wider uppercase mb-6 text-white">
+              <p className="text-sm font-semibold tracking-wider uppercase mb-6 text-white">
                 {title}
-              </h4>
+              </p>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
@@ -129,17 +133,17 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             {config.socialLinks.instagram && (
-              <a href={config.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors">
+              <a href={config.socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="Follow us on Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
             )}
             {config.socialLinks.facebook && (
-              <a href={config.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors">
+              <a href={config.socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="Follow us on Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
             )}
             {config.socialLinks.youtube && (
-              <a href={config.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors">
+              <a href={config.socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white transition-colors" aria-label="Subscribe on YouTube">
                 <Youtube className="w-5 h-5" />
               </a>
             )}

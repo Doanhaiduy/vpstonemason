@@ -6,11 +6,12 @@ import { WhyChooseUs } from '@/components/home/WhyChooseUs';
 import { ShowroomInfo } from '@/components/home/ShowroomInfo';
 import { FeaturedStones } from '@/components/home/FeaturedStones';
 import IconCollectionGallery from '@/components/home/IconCollectionGallery';
+import { buildAlternates } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'vpstonemason | Premium Stone Benchtops Melbourne, Australia',
-  description: 'Discover premium granite, marble, quartz, porcelain & CSF stone benchtops at our Melbourne showroom. Expert fabrication & installation for kitchens, bathrooms & beyond. Free quotes available.',
-  alternates: { canonical: '/' },
+  title: 'Premium Stone Benchtops Melbourne',
+  description: 'Discover premium granite, marble, quartz, porcelain and CSF-compliant stone benchtops at our Sunshine North Melbourne showroom. Expert fabrication and installation with free quotes.',
+  alternates: buildAlternates('/'),
 };
 
 export default function HomePage() {

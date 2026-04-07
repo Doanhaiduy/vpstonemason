@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+import { shouldUnoptimizeImage } from '@/lib/image';
 
 interface Props {
   images: string[];
@@ -70,9 +72,17 @@ export function CatalogGallery({ images, title }: Props) {
                 onClick={() => openLightbox(i)}
               >
                 <div
-                  className={`w-full ${i === 0 && images.length >= 3 ? 'h-full min-h-[300px] md:min-h-[450px]' : 'aspect-[4/3]'} bg-cover bg-center transition-transform duration-700 group-hover:scale-105`}
-                  style={{ backgroundImage: `url('${img}')` }}
-                />
+                  className={`relative w-full ${i === 0 && images.length >= 3 ? 'h-full min-h-[300px] md:min-h-[450px]' : 'aspect-[4/3]'}`}
+                >
+                  <Image
+                    src={img}
+                    alt={`Gallery image ${i + 1}`}
+                    fill
+                    sizes={i === 0 && images.length >= 3 ? '(min-width: 768px) 66vw, 100vw' : '(min-width: 768px) 33vw, 50vw'}
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    unoptimized={shouldUnoptimizeImage(img)}
+                  />
+                </div>
                 <div className="absolute inset-0 bg-stone-950/0 group-hover:bg-stone-950/20 transition-colors duration-300 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 scale-75 group-hover:scale-100">
                     <ZoomIn className="w-5 h-5 text-white" />
@@ -135,14 +145,16 @@ export function CatalogGallery({ images, title }: Props) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
-              className="max-w-[90vw] max-h-[85vh] relative"
+              className="relative w-[90vw] h-[85vh] max-w-[1400px]"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={images[activeIndex]}
                 alt={`Gallery image ${activeIndex + 1}`}
-                className="max-w-full max-h-[85vh] object-contain"
+                fill
+                sizes="90vw"
+                className="object-contain"
+                unoptimized={shouldUnoptimizeImage(images[activeIndex])}
               />
             </motion.div>
           </motion.div>

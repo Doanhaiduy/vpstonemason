@@ -3,9 +3,14 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { api } from '@/lib/api';
 import { CategoryCardSkeleton } from '@/components/ui/Skeletons';
+import { shouldUnoptimizeImage } from '@/lib/image';
+
+const CATEGORY_FALLBACK_IMAGE =
+  'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80';
 
 export function CategoryCards() {
   const [categories, setCategories] = useState<any[]>([]);
@@ -35,9 +40,18 @@ export function CategoryCards() {
             : categories.map((cat, i) => (
               <motion.div key={cat._id || cat.slug} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }}>
                 <Link href={`/catalog/${cat.slug}`} className="group relative block aspect-[4/3] overflow-hidden bg-stone-200">
-                  <div className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url('${cat.imageDetail || cat.imageMain || 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80'}')` }}
-                  />
+                  <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
+                    <Image
+                      src={cat.imageDetail || cat.imageMain || CATEGORY_FALLBACK_IMAGE}
+                      alt={cat.title}
+                      fill
+                      sizes="(min-width: 1024px) 32vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                      unoptimized={shouldUnoptimizeImage(
+                        cat.imageDetail || cat.imageMain || CATEGORY_FALLBACK_IMAGE,
+                      )}
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent transition-all duration-500 group-hover:from-stone-950/90" />
                   <div className="absolute inset-0 flex flex-col justify-end p-6">
                     <h3 className="font-display text-2xl text-white mb-1">{cat.title}</h3>

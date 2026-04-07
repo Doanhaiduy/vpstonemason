@@ -1,8 +1,11 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
+import { AnimateOnView } from '@/components/ui/AnimateOnView';
+import { shouldUnoptimizeImage } from '@/lib/image';
+
+const ABOUT_HERO_IMAGE = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80';
+const ABOUT_STORY_IMAGE = 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80';
 
 const steps = [
   { num: '01', title: 'Consultation', desc: 'Visit our showroom or schedule a call to discuss your project requirements, style preferences, and budget.' },
@@ -18,16 +21,24 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-900">
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80')` }} />
+          <Image
+            src={ABOUT_HERO_IMAGE}
+            alt="Stone benchtop craftsmanship"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+            unoptimized={shouldUnoptimizeImage(ABOUT_HERO_IMAGE)}
+          />
         </div>
         <div className="container-custom relative z-10 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <AnimateOnView animateOnMount>
             <span className="text-accent-gold text-sm font-medium tracking-[0.2em] uppercase">Our Story</span>
-            <h1 className="font-display text-display-sm md:text-display text-white mt-4 mb-4">About vpstonemason</h1>
+            <h1 className="font-display text-display-sm md:text-display text-white mt-4 mb-4">About PVStone</h1>
             <p className="text-stone-400 text-lg max-w-xl mx-auto">
               Family-owned craftsmanship, serving Australian homes for over 15 years.
             </p>
-          </motion.div>
+          </AnimateOnView>
         </div>
       </section>
 
@@ -35,17 +46,24 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <div className="aspect-[4/5] bg-stone-200 overflow-hidden">
-                <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80')` }} />
+            <AnimateOnView direction="left" distance={30}>
+              <div className="relative aspect-[4/5] bg-stone-200 overflow-hidden">
+                <Image
+                  src={ABOUT_STORY_IMAGE}
+                  alt="PVStone fabrication quality"
+                  fill
+                  sizes="(min-width: 1024px) 42vw, 100vw"
+                  className="object-cover"
+                  unoptimized={shouldUnoptimizeImage(ABOUT_STORY_IMAGE)}
+                />
               </div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            </AnimateOnView>
+            <AnimateOnView direction="right" distance={30}>
               <span className="text-accent-gold text-sm font-medium tracking-[0.2em] uppercase">Est. 2009</span>
               <h2 className="section-title mt-4 mb-6">Craftsmanship Meets Innovation</h2>
               <div className="space-y-4 text-stone-600 leading-relaxed">
                 <p>
-                  vpstonemason was founded with a simple vision: to bring the world&apos;s finest natural and
+                  PVStone was founded with a simple vision: to bring the world&apos;s finest natural and
                   engineered stones to Australian homes, backed by exceptional craftsmanship and customer service.
                 </p>
                 <p>
@@ -71,7 +89,7 @@ export default function AboutPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </AnimateOnView>
           </div>
         </div>
       </section>
@@ -80,20 +98,17 @@ export default function AboutPage() {
       <section className="section-padding bg-stone-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <AnimateOnView>
               <span className="text-accent-gold text-sm font-medium tracking-[0.2em] uppercase">How We Work</span>
               <h2 className="section-title mt-4">Our Process</h2>
-            </motion.div>
+            </AnimateOnView>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
             {steps.map((step, i) => (
-              <motion.div
+              <AnimateOnView
                 key={step.num}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+                delay={i * 0.1}
                 className="text-center p-6"
               >
                 <div className="font-display text-5xl text-stone-200 mb-4">{step.num}</div>
@@ -102,7 +117,7 @@ export default function AboutPage() {
                 {i < steps.length - 1 && (
                   <ArrowRight className="w-5 h-5 text-stone-300 mx-auto mt-4 hidden md:block" />
                 )}
-              </motion.div>
+              </AnimateOnView>
             ))}
           </div>
         </div>
