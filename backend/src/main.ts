@@ -13,8 +13,22 @@ async function bootstrap() {
   app.use(helmet());
 
   // CORS
+  const allowedOrigins = configService.get<string[]>('frontend.allowedOrigins') || [];
+
   app.enableCors({
-    origin: configService.get<string>('frontend.url'),
+    origin: (origin, callback) => {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+
+      callback(new Error(`CORS blocked for origin: ${origin}`), false);
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
   });
