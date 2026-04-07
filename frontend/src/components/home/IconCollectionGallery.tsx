@@ -125,10 +125,10 @@ function GallerySlide({ item, index, totalItems }: GallerySlideProps) {
           </div>
         </div>
 
-        {/* Bottom: View Colour button */}
+        {/* Bottom: CTA button */}
         <div className={styles.bottomRow}>
           <Link href={item.url} className={styles.viewColourBtn}>
-            View Colour
+            Explore This Stone
             <ArrowRight />
           </Link>
         </div>

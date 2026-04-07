@@ -134,12 +134,18 @@ Agent xoay vòng qua **24 cảnh** chia thành 6 nhóm, ghi lại vào `.github/
 | 18 | `outdoor-entertaining` | Khu tiếp khách ngoài trời | outdoor dining area, long stone table surface, pergola overhead, string lights, evening entertaining setup |
 | 19 | `balcony-kitchenette` | Bếp nhỏ ban công | apartment balcony mini-kitchen, stone countertop, compact sink, city skyline backdrop, potted herbs |
 
-### 🏢 COMMERCIAL (3 scenes)
+### 🏢 COMMERCIAL & ENTERPRISE (9 scenes)
 | # | Scene ID | Mô tả | Prompt keyword |
 |---|----------|-------|----------------|
 | 20 | `cafe-counter` | Quầy café | specialty coffee shop counter, stone benchtop, espresso machine, display pastries, industrial pendant lights, exposed brick wall |
-| 21 | `reception-desk` | Quầy lễ tân | hotel or office reception desk, stone front panel with backlit feature, modern minimalist lobby, brand signage |
+| 21 | `reception-desk` | Quầy lễ tân khách sạn | luxury hotel reception desk, stone front panel with backlit veining feature, modern minimalist lobby, fresh flowers, ambient downlights |
 | 22 | `restaurant-bar` | Quầy bar nhà hàng | upscale restaurant bar countertop, stone surface, cocktail setup, ambient moody lighting, leather bar stools |
+| 23 | `company-office` | Văn phòng công ty | executive boardroom table with polished stone surface, ergonomic chairs, floor-to-ceiling glass walls, city skyline view, corporate interior |
+| 24 | `elevator-lobby` | Sảnh thang máy | premium elevator lobby, stone wall cladding flanking lift doors, polished stone floor, recessed ceiling lights, luxury commercial building |
+| 25 | `hotel-lobby` | Sảnh khách sạn | grand hotel lobby, stone reception counter, stone feature wall behind concierge, marble-effect flooring, chandelier, luggage area |
+| 26 | `hotel-bathroom` | Phòng tắm khách sạn | five-star hotel bathroom suite, stone vanity extending wall-to-wall, large format mirror, rain shower with stone accent wall, plush towels, amenity tray |
+| 27 | `corridor-feature-wall` | Tường hành lang | long corridor with stone feature wall panels on one side, recessed LED strip lighting along edges, polished concrete floor, modern art pieces |
+| 28 | `luxury-retail` | Cửa hàng cao cấp | luxury retail store, stone display counter for jewellery/watches, spot lighting, minimalist merchandising, glass display cases |
 
 ### 📸 DETAIL & IN-PROGRESS (2 scenes — luôn dùng ít nhất 1 trong mỗi set)
 | # | Scene ID | Mô tả | Prompt keyword |
@@ -229,6 +235,84 @@ Styled with: ceramic coffee cup, small herb plant, wooden chopping board.
 
 Macro photography, shallow depth of field, warm natural light, editorial quality.
 1:1 square composition. No AI artifacts, no plastic look.
+```
+
+**Template C – Product Moodboard / Flatlay (STYLE CỐ ĐỊNH — luôn dùng style này):**
+
+> Mỗi content set sẽ thêm 1 ảnh dạng "product moodboard / flatlay" theo style cố định dưới đây.
+> Style này KHÔNG BAO GIỜ THAY ĐỔI — agent luôn apply phong cách này mà không cần user gửi lại ảnh reference.
+> Upload lên Google Flow: 1 ảnh reference = ảnh stone slab.
+> Ảnh style reference lưu tại: `.github/stone-content/reference-images/style-moodboard-flatlay.jpg`
+
+**STYLE CỐ ĐỊNH — "Editorial Stone Moodboard" (KHÔNG THAY ĐỔI):**
+```
+PHONG CÁCH CHỤP:
+- Góc chụp: Bird's-eye / top-down (chụp từ trên xuống vuông góc)
+- Nền: Matte light-grey linen texture (vải lanh nhạt, không bóng, không vân gỗ)
+- Bố cục: Asymmetrical flat-lay — các mẫu đá xếp lệch nhau, overlap nhẹ, tạo nhịp thị giác
+- Ánh sáng: Soft diffused overhead — bóng đổ cực nhẹ (soft shadow, không harsh), ánh sáng ban ngày tự nhiên
+- Màu sắc: Neutral editorial palette — trắng ngà, xám nhạt, beige, vàng đồng (brass accents)
+- Cảm giác: Magazine editorial, cao cấp, minimalist nhưng không trống trải
+
+STYLING PROPS BẮT BUỘC (chọn 3-5):
+- Bát đồng thau nhỏ (brass bowl)
+- San hô trắng trang trí (decorative white coral)
+- Cuộn dây thừng tự nhiên (natural jute twine spool)
+- Nhánh dried flowers hoặc dried eucalyptus
+- Mảnh vải linen tự nhiên xếp gọn
+- Miếng đá thô tự nhiên nhỏ (raw stone piece)
+
+BỐ CỤC MẪU ĐÁ:
+- 3-6 mẫu đá kích thước khác nhau (lớn/vừa/nhỏ) xếp lệch nhau
+- Mẫu đá lớn nhất ở trung tâm-lệch, các mẫu nhỏ bao quanh
+- Có labels/annotations nhỏ kiểu handwritten arrows: "warm veining details", "soft marble finish", "luxurious finish", "linear texture play", "subtle white tones"
+- Heading typography: "COLOUR OF THE MONTH" + tên màu chủ đạo (ALL CAPS, sans-serif, editorial font)
+```
+
+```text
+Create ONE photorealistic top-down flat-lay product moodboard.
+
+STONE SAMPLES: Create 3-5 rectangular stone sample tiles inspired by [[STONE_NAME]]: [[STONE_DESCRIPTION]].
+Use the attached reference stone image for exact colour and veining.
+Arrange samples in varying sizes (one large ~15×25cm, two medium ~10×15cm, one-two small ~8×8cm).
+Place samples overlapping slightly in an asymmetrical editorial layout.
+
+BACKGROUND: Matte light-grey linen fabric texture, smooth and neutral. No wood grain, no marble, no coloured background.
+
+STYLING PROPS (include 3-5):
+A small brass bowl, decorative white coral piece, natural jute twine spool, dried eucalyptus sprig, raw stone fragments.
+Place props around the edges and corners — they complement, never compete with the stone samples.
+
+TYPOGRAPHY OVERLAYS (important — include as part of the image):
+- Top-left corner: "COLOUR OF THE MONTH" in small caps tracking, then below in large bold sans-serif: "[[COLOUR_THEME]]" (e.g., "WHITE", "GREY", "WARM")
+- Small handwritten-style annotation arrows pointing to different samples: "warm veining details", "soft marble finish", "luxurious finish"
+
+PHOTOGRAPHY STYLE:
+- Bird's-eye / perfectly top-down camera angle (90° overhead)
+- Soft diffused natural daylight — very subtle shadows, no harsh contrast
+- Neutral editorial colour grading — whites are true white, no yellow cast, no blue cast
+- Clean, high-end materials catalogue aesthetic (think Vogue Living, Elle Decoration)
+
+1:1 square composition. Ultra-clean, editorial product photography.
+No AI artifacts, no plastic look, no HDR glow, no 3D rendering feel.
+```
+
+**Template D – Mid-Installation (đang thi công, KHÔNG CÓ NGƯỜI):**
+```text
+Create ONE SINGLE photorealistic photo of a stone installation in progress.
+
+Use the uploaded stone sample as the exact slab material.
+The stone is [[STONE_NAME]]: [[STONE_DESCRIPTION]].
+Base all stone colour, veining, texture and finish on the attached reference stone image.
+
+Show a mid-installation scene in a [[SCENE_TYPE]] (e.g., modern kitchen):
+- Stone slab has been placed on cabinetry but NOT fully finished.
+- Visible construction elements: [[SELECT 3-4: silicone tubes on benchtop / spirit level resting on surface / seam setter clamps joining two slabs / protective corner guards still attached / masking tape along edges / plastic sheeting covering floor / raw plasterboard walls unpainted / cabinet handles not yet installed / sink cut-out visible but tap not fitted]].
+- One section is clean and polished, the adjacent section still has protective film or dust.
+
+ABSOLUTELY NO PEOPLE in the frame. The site is empty — workers are on break.
+Professional construction documentation photography, slightly raw and unpolished lighting ([[overhead work lights OR natural light from unfinished windows]]).
+[[ASPECT_RATIO]] composition. No AI artifacts, no fantasy elements.
 ```
 
 ---

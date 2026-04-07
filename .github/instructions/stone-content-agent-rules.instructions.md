@@ -45,13 +45,13 @@ Sau khi truy cập link sản phẩm, bạn phải đồng thời tải ảnh đ
 
 ### BƯỚC 2: XOAY VÒNG CẢNH (SCENE ROTATION)
 Để tránh đăng hoài 1 góc bếp nhàm chán, bạn phải đọc file lịch sử `.github/stone-content/content-log.json` để biết bài trước đã đăng cảnh gì, sau đó chọn cảnh mới.
-**Danh sách 24 cảnh (6 nhóm) — chỉ dùng cảnh finished HOẶC mid-installation, KHÔNG dùng cảnh có người:**
+**Danh sách 30 cảnh (6 nhóm) — chỉ dùng cảnh finished HOẶC mid-installation, KHÔNG dùng cảnh có người:**
 
 **🍳 Kitchen (6):** `kitchen-island`, `kitchen-l-shape`, `kitchen-galley`, `kitchen-butler-pantry`, `kitchen-splashback`, `kitchen-breakfast-bar`
 **🛁 Bathroom (4):** `bathroom-vanity`, `bathroom-shower-niche`, `bathroom-freestanding-tub`, `bathroom-powder-room`
 **🏠 Living (5):** `laundry`, `fireplace-surround`, `home-office`, `wine-cellar-bar`, `staircase-feature`
 **🌿 Outdoor (4):** `outdoor-bbq`, `outdoor-pool-edge`, `outdoor-entertaining`, `balcony-kitchenette`
-**🏢 Commercial (3):** `cafe-counter`, `reception-desk`, `restaurant-bar`
+**🏢 Commercial & Enterprise (9):** `cafe-counter`, `reception-desk`, `restaurant-bar`, `company-office`, `elevator-lobby`, `hotel-lobby`, `hotel-bathroom`, `corridor-feature-wall`, `luxury-retail`
 **📸 Detail/WIP (2):** `close-up-detail`, `mid-installation` (KHÔNG CÓ NGƯỜI, dùng 1/3-4 bài)
 
 *Note: Nếu user đưa 5 mẫu đá cùng lúc, mỗi mẫu đá sẽ được gán 1 cảnh khác nhau hoàn toàn.*
