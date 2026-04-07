@@ -1,5 +1,5 @@
 {
-  "lastSceneIndex": 2,
+  "lastSceneIndex": 3,
   "history": [
     {
       "date": "2026-04-05",
@@ -32,6 +32,25 @@
       "referenceImageFolder": "docs/image_temp",
       "referenceImageManifest": "docs/image_temp/image-manifest.md",
       "notes": "Regenerated with attached image reference requirement in prompts"
+    },
+    {
+      "date": "2026-04-07",
+      "mode": "single",
+      "stoneName": "Statuario Enato OR AC888",
+      "stoneCode": "AC888",
+      "scenes": [
+        "kitchen-butler-pantry",
+        "kitchen-splashback",
+        "bathroom-powder-room",
+        "mid-installation",
+        "close-up-detail",
+        "slab-original"
+      ],
+      "imagesGenerated": 6,
+      "videosGenerated": 1,
+      "captionLanguage": "en",
+      "scriptFile": ".github/stone-content/scripts/2026-04-07-1530-pv888-content-script.md",
+      "referenceImage": ".github/stone-content/reference-images/2026-04-07-pv888-reference.jpg"
     }
   ]
 }

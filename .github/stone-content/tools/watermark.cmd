@@ -1,6 +1,7 @@
 @echo off
 setlocal
-cd /d "%~dp0..\.."
+set "SCRIPT_DIR=%~dp0"
+set "PY_SCRIPT=%SCRIPT_DIR%add_watermark_and_label.py"
 REM ═══════════════════════════════════════════════════════
 REM   PVStoneau - Watermark & Label Tool
 REM   Usage: watermark.cmd <post-folder-name> [options]
@@ -36,20 +37,24 @@ shift
 goto argloop
 
 :run
+if not exist "%PY_SCRIPT%" (
+  echo.
+  echo ❌ Tool script not found: %PY_SCRIPT%
+  exit /b 1
+)
+
 where py >nul 2>nul
 if %errorlevel%==0 (
-  py -3 "docs\content-media\tools\add_watermark_and_label.py" --post "%POST_NAME%" %EXTRA_ARGS%
+  py -3 "%PY_SCRIPT%" --post "%POST_NAME%" %EXTRA_ARGS%
 ) else (
-  python "docs\content-media\tools\add_watermark_and_label.py" --post "%POST_NAME%" %EXTRA_ARGS%
+  python "%PY_SCRIPT%" --post "%POST_NAME%" %EXTRA_ARGS%
 )
 
 if errorlevel 1 (
   echo.
   echo ❌ Processing failed.
-  pause
   exit /b 1
 )
 
 echo.
 echo ✅ Completed! Check the "final" folder inside your post directory.
-pause

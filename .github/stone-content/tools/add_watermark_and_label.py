@@ -5,12 +5,19 @@ Designed around a folder-based workflow:
   - SINGLE stone post:  posts/2026-04-05-VP1017/raw/  →  .../final/
   - MULTI stone post:   posts/2026-04-05-collection/VP1017/raw/  →  .../final/
 
+Supports both folder roots:
+    - .github/stone-content/posts/
+    - .github/stone-content/output/
+
 The stone code is detected from the FOLDER name (not the image filename),
 so AI-generated images with random names work perfectly.
 
 Quick usage:
-  python tools/add_watermark_and_label.py --post 2026-04-05-VP1017
-  python tools/add_watermark_and_label.py --post 2026-04-05-collection
+    # From tools folder:
+    python add_watermark_and_label.py --post 2026-04-05-VP1017
+
+    # From stone-content folder:
+    python tools/add_watermark_and_label.py --post 2026-04-05-collection
 
 Full usage:
   python tools/add_watermark_and_label.py --input-dir <path> --stone-code VP1017
@@ -19,10 +26,8 @@ Full usage:
 from __future__ import annotations
 
 import argparse
-import json
 import re
 import sys
-from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -34,6 +39,7 @@ SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"}
 SCRIPT_DIR = Path(__file__).resolve().parent
 CONTENT_MEDIA_DIR = SCRIPT_DIR.parent
 POSTS_DIR = CONTENT_MEDIA_DIR / "posts"
+OUTPUT_DIR = CONTENT_MEDIA_DIR / "output"
 
 # Stone name lookup (VP code → display name).
 # Agent auto-generates this, or user can edit.
@@ -77,7 +83,7 @@ Examples:
     group.add_argument(
         "--post",
         type=str,
-        help="Post folder name inside content-media/posts/ (e.g. 2026-04-05-VP1017)",
+        help="Post folder name inside content-media/output/ or content-media/posts/ (e.g. 2026-04-05-VP1017)",
     )
     group.add_argument(
         "--input-dir",
@@ -363,9 +369,16 @@ def resolve_jobs(args: argparse.Namespace) -> List[Tuple[Path, Path, str, str]]:
         return jobs
 
     # Post mode
-    post_dir = POSTS_DIR / args.post
+    post_dir = OUTPUT_DIR / args.post
     if not post_dir.exists():
-        print(f"❌ Post folder not found: {post_dir}")
+        post_dir = POSTS_DIR / args.post
+
+    if not post_dir.exists():
+        print(
+            "❌ Post folder not found in either location:\n"
+            f"   - {OUTPUT_DIR / args.post}\n"
+            f"   - {POSTS_DIR / args.post}"
+        )
         sys.exit(1)
 
     post_type = detect_post_type(post_dir)

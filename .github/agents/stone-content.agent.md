@@ -237,37 +237,15 @@ Macro photography, shallow depth of field, warm natural light, editorial quality
 1:1 square composition. No AI artifacts, no plastic look.
 ```
 
-**Template C – Product Moodboard / Flatlay (STYLE CỐ ĐỊNH — luôn dùng style này):**
+**Template C – Product Moodboard / Flatlay (Flexible by Stone Colour):**
 
-> Mỗi content set sẽ thêm 1 ảnh dạng "product moodboard / flatlay" theo style cố định dưới đây.
-> Style này KHÔNG BAO GIỜ THAY ĐỔI — agent luôn apply phong cách này mà không cần user gửi lại ảnh reference.
+> BẮT BUỘC SỬ DỤNG: Mỗi khi tạo nội dung bài post (Content Set), agent LUÔN PHẢI TẠO 1 prompt dùng Template C này bên cạnh các ảnh interior/scene khác.
+> Hình thức là "product moodboard / flatlay" (bird's-eye view, chụp từ trên xuống), NHƯNG AI phải linh hoạt điều chỉnh:
+> - Màu nền (background color).
+> - Đồ vật trang trí (styling props).
+> - Nội dung chữ (typography & text).
+> Tất cả phải đồng điệu / tông xuyệt tông với màu sắc chính của mẫu đá (VD: đá xám đậm -> nền xám/đen + than củi/gốm tối màu; đá có vân đỏ -> nền tương phản + hoa hồng/vải nhung đỏ).
 > Upload lên Google Flow: 1 ảnh reference = ảnh stone slab.
-> Ảnh style reference lưu tại: `.github/stone-content/reference-images/style-moodboard-flatlay.jpg`
-
-**STYLE CỐ ĐỊNH — "Editorial Stone Moodboard" (KHÔNG THAY ĐỔI):**
-```
-PHONG CÁCH CHỤP:
-- Góc chụp: Bird's-eye / top-down (chụp từ trên xuống vuông góc)
-- Nền: Matte light-grey linen texture (vải lanh nhạt, không bóng, không vân gỗ)
-- Bố cục: Asymmetrical flat-lay — các mẫu đá xếp lệch nhau, overlap nhẹ, tạo nhịp thị giác
-- Ánh sáng: Soft diffused overhead — bóng đổ cực nhẹ (soft shadow, không harsh), ánh sáng ban ngày tự nhiên
-- Màu sắc: Neutral editorial palette — trắng ngà, xám nhạt, beige, vàng đồng (brass accents)
-- Cảm giác: Magazine editorial, cao cấp, minimalist nhưng không trống trải
-
-STYLING PROPS BẮT BUỘC (chọn 3-5):
-- Bát đồng thau nhỏ (brass bowl)
-- San hô trắng trang trí (decorative white coral)
-- Cuộn dây thừng tự nhiên (natural jute twine spool)
-- Nhánh dried flowers hoặc dried eucalyptus
-- Mảnh vải linen tự nhiên xếp gọn
-- Miếng đá thô tự nhiên nhỏ (raw stone piece)
-
-BỐ CỤC MẪU ĐÁ:
-- 3-6 mẫu đá kích thước khác nhau (lớn/vừa/nhỏ) xếp lệch nhau
-- Mẫu đá lớn nhất ở trung tâm-lệch, các mẫu nhỏ bao quanh
-- Có labels/annotations nhỏ kiểu handwritten arrows: "warm veining details", "soft marble finish", "luxurious finish", "linear texture play", "subtle white tones"
-- Heading typography: "COLOUR OF THE MONTH" + tên màu chủ đạo (ALL CAPS, sans-serif, editorial font)
-```
 
 ```text
 Create ONE photorealistic top-down flat-lay product moodboard.
@@ -277,21 +255,20 @@ Use the attached reference stone image for exact colour and veining.
 Arrange samples in varying sizes (one large ~15×25cm, two medium ~10×15cm, one-two small ~8×8cm).
 Place samples overlapping slightly in an asymmetrical editorial layout.
 
-BACKGROUND: Matte light-grey linen fabric texture, smooth and neutral. No wood grain, no marble, no coloured background.
+BACKGROUND: Choose a beautifully curated, matte background material (e.g., linen, art paper, matte painted wood) in a colour that perfectly matches, complements, or highlights the dominant colour of the [[STONE_NAME]] stone samples. DO NOT just use plain white/grey unless the stone is white/grey.
 
 STYLING PROPS (include 3-5):
-A small brass bowl, decorative white coral piece, natural jute twine spool, dried eucalyptus sprig, raw stone fragments.
-Place props around the edges and corners — they complement, never compete with the stone samples.
+Select creative styling props that strongly echo and match the EXACT colour palette and vibe of the stone (e.g., if the stone is red/warm, use burgundy dried flora, warm tinted glass, red fabric samples; if the stone is black/dark, use dark ceramics, charcoal, ebony wood fragments). 
+Place props around the edges and corners — they should enhance the colour theme, never compete with the stone samples.
 
-TYPOGRAPHY OVERLAYS (important — include as part of the image):
-- Top-left corner: "COLOUR OF THE MONTH" in small caps tracking, then below in large bold sans-serif: "[[COLOUR_THEME]]" (e.g., "WHITE", "GREY", "WARM")
-- Small handwritten-style annotation arrows pointing to different samples: "warm veining details", "soft marble finish", "luxurious finish"
+TYPOGRAPHY OVERLAYS (important — include as part of the image, format to match the colour palette):
+- Top-left corner: A short engaging heading in small caps tracking (e.g. "COLOUR FOCUS", "STYLE EDIT", "MOODBOARD"), then below in large bold sans-serif: "[[RELEVANT_COLOUR_THEME_OR_VIBE_NAME]]".
+- Small handwritten-style annotation arrows pointing to different samples with custom, relevant text describing the specific stone's properties (e.g., "bold dark veining", "striking warm tones", "deep crystalline details", "elegant finish").
 
 PHOTOGRAPHY STYLE:
 - Bird's-eye / perfectly top-down camera angle (90° overhead)
 - Soft diffused natural daylight — very subtle shadows, no harsh contrast
-- Neutral editorial colour grading — whites are true white, no yellow cast, no blue cast
-- Clean, high-end materials catalogue aesthetic (think Vogue Living, Elle Decoration)
+- High-end materials catalogue aesthetic (think Vogue Living, Elle Decoration), intensely colour-coordinated.
 
 1:1 square composition. Ultra-clean, editorial product photography.
 No AI artifacts, no plastic look, no HDR glow, no 3D rendering feel.
